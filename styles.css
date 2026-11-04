@@ -280,6 +280,8 @@ select {
     opacity: 0.88;
 }
 
+
+
 .boton:disabled:hover {
     transform: none;
 }
