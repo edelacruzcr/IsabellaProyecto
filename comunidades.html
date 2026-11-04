@@ -11,19 +11,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
     <script src="scripts.js" defer></script>
 </head>
 <body>
     <a class="enlace-saltar" href="#contenido">Saltar al contenido</a>
-  
-    <!-- ==================== SECCIÓN CABECERA ==================== -->
+
+    <!-- Cabecera -->
     <header class="cabecera">
         <div class="cabecera__contenedor">
             <a href="index.html" class="cabecera__logo"><img src="assets/campeche.svg" alt="" aria-hidden="true"><span>EcoCampeche</span></a>
 
             <nav class="navegacion" id="menu-principal" aria-label="Navegación principal">
                 <ul class="navegacion__lista">
-                    <!-- Menú Desplegable: Inicio -->
+
                     <li class="navegacion__grupo">
                         <details class="navegacion__desplegable">
                             <summary>
@@ -42,7 +43,7 @@
                         </details>
                     </li>
 
-                    <!-- Menú Desplegable: Comunidades -->
+
                     <li class="navegacion__grupo">
                         <details class="navegacion__desplegable activo">
                             <summary>
@@ -59,7 +60,7 @@
                         </details>
                     </li>
 
-                    <!-- Menú Desplegable: Problemática -->
+
                     <li class="navegacion__grupo">
                         <details class="navegacion__desplegable">
                             <summary>
@@ -76,7 +77,7 @@
                         </details>
                     </li>
 
-                    <!-- Menú Desplegable: Desarrolladores / Nosotros -->
+
                     <li class="navegacion__grupo">
                         <details class="navegacion__desplegable">
                             <summary>
@@ -97,7 +98,7 @@
     </header>
 
     <main id="contenido">
-        <!-- ==================== SECCIÓN COMUNIDADES ==================== -->
+        <!-- Comunidades -->
         <section class="encabezado-pagina" aria-labelledby="titulo-pagina">
             <div class="contenedor">
                 <p class="antetitulo">Personas y territorio</p>
@@ -124,10 +125,10 @@
             </div>
         </section>
 
-        <!-- ==================== CARRUSEL A PANTALLA SUMERGIDA: COMUNIDADES ==================== -->
+        <!-- Carrusel a pantalla sumergida: comunidades -->
         <section class="carrusel-sumergido" id="carrusel-comunidades" aria-label="Galería inmersiva del territorio comunitario">
             <div class="carrusel-sumergido__pista">
-                <!-- Diapositiva 1 -->
+
                 <div class="carrusel-sumergido__diapositiva activa">
                     <img class="carrusel-sumergido__fondo" src="assets/photo_1_2026-11-03_22-52-02.jpg" alt="Panorama territorial de Campeche" loading="lazy">
                     <div class="carrusel-sumergido__capa" aria-hidden="true"></div>
@@ -144,7 +145,7 @@
                     </div>
                 </div>
 
-                <!-- Diapositiva 2 -->
+
                 <div class="carrusel-sumergido__diapositiva">
                     <img class="carrusel-sumergido__fondo" src="assets/photo_4_2026-11-03_22-52-02.jpg" alt="Calles y puntos de recolección en Campeche" loading="lazy">
                     <div class="carrusel-sumergido__capa" aria-hidden="true"></div>
@@ -160,7 +161,7 @@
                     </div>
                 </div>
 
-                <!-- Diapositiva 3 -->
+
                 <div class="carrusel-sumergido__diapositiva">
                     <img class="carrusel-sumergido__fondo" src="assets/photo_7_2026-11-03_22-52-02.jpg" alt="Espacios comunes y áreas comunitarias" loading="lazy">
                     <div class="carrusel-sumergido__capa" aria-hidden="true"></div>
@@ -177,7 +178,7 @@
                 </div>
             </div>
 
-            <!-- Controles -->
+
             <button class="carrusel-sumergido__control carrusel-sumergido__control--anterior" type="button" aria-label="Diapositiva anterior">
                 <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
             </button>
@@ -187,7 +188,7 @@
             <div class="carrusel-sumergido__indicadores" aria-label="Selector de diapositivas"></div>
         </section>
 
-        <!-- ==================== BARRA DE IMPACTO COMUNITARIO ==================== -->
+        <!-- Barra de impacto comunitario -->
         <section class="barra-impacto" aria-label="Métricas de comunidad">
             <div class="contenedor">
                 <div class="rejilla-impacto">
@@ -246,7 +247,7 @@
         </section>
     </main>
 
-    <!-- ==================== SECCIÓN FOOTER ==================== -->
+    <!-- Footer -->
     <footer class="pie">
         <div class="contenedor pie__contenido">
             <a href="index.html" class="pie__marca"><i class="fa-solid fa-leaf" aria-hidden="true"></i> EcoCampeche</a>

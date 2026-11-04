@@ -14,7 +14,26 @@ Sitio estático para compartir información sobre residuos sólidos, salud públ
 
 ## Desarrollo
 
-El proyecto utiliza HTML, CSS y JavaScript sin bibliotecas adicionales. Los estilos compartidos están en `styles.css` y el comportamiento en `scripts.js`; no requiere instalar dependencias ni configurar un servidor de aplicaciones.
+El proyecto utiliza HTML, CSS y JavaScript sin bibliotecas adicionales.
+
+### Archivos principales
+
+- [styles.css](./styles.css): variables, estilos globales, componentes compartidos y pie de página.
+- [styles2.css](./styles2.css): reglas adaptables y estilos de secciones específicas, como carruseles, videos y componentes comunitarios. Se carga después de `styles.css` para conservar el orden de la cascada.
+- [scripts.js](./scripts.js): interacciones compartidas. Se carga con `defer` y cada inicializador comprueba si los elementos que necesita existen en la página.
+- Los archivos HTML contienen el contenido y la estructura de cada página. Los comentarios HTML marcan las secciones principales; la apariencia y el comportamiento se mantienen en los archivos compartidos.
+
+### Comportamientos de JavaScript
+
+- `inicializarMenuMovil`: abre y cierra el menú, controla sus submenús y permite cerrarlo con Escape o al pulsar fuera.
+- `inicializarNavegacionActiva`: identifica la página y el enlace actuales a partir de la URL.
+- `inicializarReporteComunitario`: valida los datos y descarga un reporte local; no transmite información.
+- `inicializarVisorImagenes`: muestra las imágenes de la galería en un diálogo accesible.
+- `inicializarCarruselesSumergidos`: conecta controles, indicadores, avance automático y gestos táctiles.
+- `inicializarVideosSumergidos`: silencia el autoplay, pausa videos fuera de pantalla y conecta los controles disponibles.
+- `inicializarParalajeYAnimaciones`: activa revelados, paralaje opcional y contadores al entrar en pantalla.
+
+Para mantener el orden visual, agrega las hojas de estilo en el mismo orden en todas las páginas: primero `styles.css` y después `styles2.css`.
 
 Para servirlo localmente con Python:
 

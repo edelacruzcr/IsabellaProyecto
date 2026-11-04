@@ -1,5 +1,7 @@
 
-// ==================== LÓGICA DEL MENÚ MÓVIL ====================
+/**
+ * Controla el menú adaptable, sus submenús y el cierre con Escape o al tocar fuera.
+ */
 function inicializarMenuMovil() {
     const botonMenu = document.getElementById("alternar-menu");
     const menuNavegacion = document.getElementById("menu-principal");
@@ -75,12 +77,11 @@ function inicializarMenuMovil() {
     });
 }
 
-// ==================== NAVEGACIÓN ACTIVA ====================
+/** Marca el enlace y la sección de navegación que corresponden a la URL actual. */
 function inicializarNavegacionActiva() {
     const nombrePagina = window.location.pathname.split("/").pop() || "index.html";
     const hashActual = window.location.hash;
 
-    // Resaltar enlaces en submenús y directos
     const todosLosEnlaces = document.querySelectorAll(".navegacion__enlace");
     todosLosEnlaces.forEach(function (enlace) {
         const rutaHref = enlace.getAttribute("href") || "";
@@ -104,7 +105,6 @@ function inicializarNavegacionActiva() {
         }
     });
 
-    // Identificar qué grupo desplegable debe estar activo según la página
     const gruposDesplegables = document.querySelectorAll(".navegacion__grupo");
     gruposDesplegables.forEach(function (grupo) {
         const desplegable = grupo.querySelector(".navegacion__desplegable");
@@ -124,7 +124,7 @@ function inicializarNavegacionActiva() {
     });
 }
 
-// ==================== REPORTE COMUNITARIO DESCARGABLE ====================
+/** Valida el formulario de reporte y genera un archivo local sin enviar datos. */
 function inicializarReporteComunitario() {
     const formulario = document.getElementById("formulario-reporte");
     const resultado = document.getElementById("resultado-reporte");
@@ -184,7 +184,7 @@ function inicializarReporteComunitario() {
     });
 }
 
-// ==================== VISOR DE FOTO ====================
+/** Abre las imágenes de la galería en un diálogo y devuelve el foco al cerrarlo. */
 function inicializarVisorImagenes() {
     const galeria = document.querySelector('[aria-labelledby="titulo-galeria"]');
     const visor = document.getElementById("visor-imagen");
@@ -250,7 +250,7 @@ function inicializarVisorImagenes() {
     });
 }
 
-// ==================== CARRUSELES A PANTALLA SUMERGIDA ====================
+/** Inicializa los controles, indicadores, avance automático y gestos de los carruseles. */
 function inicializarCarruselesSumergidos() {
     const carruseles = document.querySelectorAll(".carrusel-sumergido");
 
@@ -267,7 +267,6 @@ function inicializarCarruselesSumergidos() {
         let indiceActual = 0;
         let temporizador = null;
 
-        // Crear puntos indicadores si el contenedor existe y está vacío
         if (contenedorPuntos && contenedorPuntos.children.length === 0) {
             diapositivas.forEach(function (_, indice) {
                 const punto = document.createElement("button");
@@ -336,7 +335,6 @@ function inicializarCarruselesSumergidos() {
         carrusel.addEventListener("mouseenter", detenerTemporizador);
         carrusel.addEventListener("mouseleave", iniciarTemporizador);
 
-        // Soporte gestual para móviles (swipe táctil)
         let posicionInicialX = 0;
         carrusel.addEventListener("touchstart", function (evento) {
             posicionInicialX = evento.touches[0].clientX;
@@ -359,18 +357,17 @@ function inicializarCarruselesSumergidos() {
     });
 }
 
-// ==================== VIDEOS A PANTALLA SUMERGIDA CON AUTOPLAY AL SCROLL ====================
+/** Gestiona reproducción visible, pausa fuera de pantalla y controles de video. */
 function inicializarVideosSumergidos() {
     const todosLosVideos = document.querySelectorAll(".video-destacado video, .portada__video, video");
 
     todosLosVideos.forEach(function (video) {
-        // Silenciado obligatorio para cumplir políticas de autoplay de navegadores modernos
+        // El autoplay de los navegadores requiere que el video comience silenciado.
         video.muted = true;
         video.setAttribute("playsinline", "");
         video.setAttribute("muted", "");
     });
 
-    // Reproducción automática únicamente cuando el video entra en la pantalla del usuario
     if ("IntersectionObserver" in window) {
         const observadorVideos = new IntersectionObserver(function (entradas) {
             entradas.forEach(function (entrada) {
@@ -379,7 +376,7 @@ function inicializarVideosSumergidos() {
                     const promesa = video.play();
                     if (promesa !== undefined) {
                         promesa.catch(function () {
-                            // Ignorar si el navegador bloquea la reproducción
+                            // El navegador puede rechazar la reproducción automática.
                         });
                     }
                 } else {
@@ -397,7 +394,6 @@ function inicializarVideosSumergidos() {
         });
     }
 
-    // Controles opcionales de reproducción y sonido en secciones destacadas
     const seccionesVideo = document.querySelectorAll(".video-destacado");
     seccionesVideo.forEach(function (seccion) {
         const video = seccion.querySelector("video");
@@ -439,9 +435,8 @@ function inicializarVideosSumergidos() {
     });
 }
 
-// ==================== PARALAJE, REVELADO Y ESTADÍSTICAS ====================
+/** Activa revelados, paralaje opcional y contadores cuando entran en pantalla. */
 function inicializarParalajeYAnimaciones() {
-    // 1. Revelado al hacer scroll
     const elementosAnimables = document.querySelectorAll("[data-animar], .tarjeta, .tarjeta-ecologica, .paso-horizontal, .paso-seccion-pantalla");
 
     if ("IntersectionObserver" in window) {
@@ -466,7 +461,6 @@ function inicializarParalajeYAnimaciones() {
         });
     }
 
-    // 2. Efecto de paralaje suave exclusivo para elementos configurados
     const elementosParalaje = document.querySelectorAll(".elemento-paralaje-activo");
 
     if (elementosParalaje.length > 0 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -491,7 +485,6 @@ function inicializarParalajeYAnimaciones() {
         }, { passive: true });
     }
 
-    // 3. Contadores dinámicos animados
     const contadores = document.querySelectorAll("[data-contador]");
     if (contadores.length > 0 && "IntersectionObserver" in window) {
         const observadorContadores = new IntersectionObserver(function (entradas) {
@@ -522,7 +515,7 @@ function inicializarParalajeYAnimaciones() {
     }
 }
 
-// ==================== INICIALIZACION ====================
+// Inicializa solo los componentes presentes en cada página del sitio.
 document.addEventListener("DOMContentLoaded", function () {
     inicializarMenuMovil();
     inicializarNavegacionActiva();
