@@ -377,7 +377,7 @@ select {
 .cabecera__logo {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     color: var(--color-principal);
     font-family: var(--fuente-titulos);
     font-size: 1.45rem;
@@ -386,15 +386,32 @@ select {
     white-space: nowrap;
 }
 
+.cabecera__logo span {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.cabecera__logo span::after {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    width: 42px;
+    height: 12px;
+    transform: translateX(-50%);
+    background: url("assets/raiz-campeche.svg") center / contain no-repeat;
+    content: "";
+}
+
 .cabecera__logo i {
     color: var(--color-acento);
 }
 
 .cabecera__logo img {
     display: block;
-    width: 88px;
-    height: 88px;
-    flex: 0 0 38px;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
     object-fit: contain;
 }
 
@@ -1088,6 +1105,16 @@ select {
         width: 32px;
         height: 32px;
         flex-basis: 32px;
+    }
+
+    .cabecera__logo span {
+        padding-bottom: 8px;
+    }
+
+    .cabecera__logo span::after {
+        width: 34px;
+        height: 10px;
+        bottom: 4px;
     }
 
     .seccion {
