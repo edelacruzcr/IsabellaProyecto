@@ -1,15 +1,20 @@
 /* Estilos base y componentes compartidos. */
 /* Variables, reinicio y accesibilidad */
 :root {
-    --fondo-principal: #F4F7F6;
+    --fondo-principal: #F8F5F2;
     --fondo-superficie: #FFFFFF;
-    --fondo-suave: #EAF1EC;
-    --color-principal: #2E5A44;
-    --color-acento: #3EA066;
-    --color-destacado: #61D08C;
-    --color-texto: #26342B;
-    --color-texto-secundario: #68766D;
-    --color-borde: rgba(46, 90, 68, 0.13);
+    --fondo-suave: #EEF3EE;
+    --color-principal: #537A57;
+    --color-acento: #80B381;
+    --color-destacado: #D9A13B;
+    --color-texto: #2F3A2F;
+    --color-texto-secundario: #6F7A6F;
+    --color-borde: #A8CFA8;
+    --color-tierra: #8A5A2B;
+    --color-tierra-clara: #C08A4E;
+    --color-exito: #3F7D4E;
+    --color-advertencia: #D9A13B;
+    --color-error: #B4452F;
     --verde-whatsapp: #25D366;
     --fuente-titulos: "Playfair Display", Georgia, serif;
     --fuente-texto: "Inter", system-ui, sans-serif;
@@ -188,7 +193,7 @@ select {
 .tarjeta-cristal,
 .tarjeta {
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(168, 207, 168, 0.45);
     border-radius: var(--radio-borde);
     background: rgba(255, 255, 255, 0.83);
     box-shadow: var(--sombra-suave);
@@ -241,7 +246,7 @@ select {
     margin-bottom: 17px;
     place-items: center;
     border-radius: 14px;
-    background-color: var(--color-acento);
+    background: rgba(128, 179, 129, 0.16);
     color: var(--color-principal);
     font-size: 1.2rem;
 }
@@ -284,12 +289,12 @@ select {
 }
 
 .boton--principal {
-    background: var(--color-acento);
+    background: var(--color-principal);
     color: #fff;
 }
 
 .boton--principal:hover {
-    background: var(--color-principal);
+    background: var(--color-tierra);
 }
 
 .boton--secundario {
@@ -299,7 +304,8 @@ select {
 }
 
 .boton--secundario:hover {
-    background: var(--color-principal);
+    background: var(--color-tierra-clara);
+    border-color: var(--color-tierra-clara);
     color: #fff;
 }
 
@@ -320,7 +326,7 @@ select {
 }
 
 .enlace-texto:hover {
-    color: var(--color-acento);
+    color: var(--color-tierra-clara);
 }
 
 .etiqueta {
@@ -329,9 +335,10 @@ select {
     align-items: center;
     gap: 7px;
     padding: 6px 11px;
+    border: 1px solid rgba(217, 161, 59, 0.35);
     border-radius: 999px;
-    background: var(--fondo-suave);
-    color: var(--color-principal);
+    background: rgba(217, 161, 59, 0.15);
+    color: var(--color-tierra);
     font-size: 0.78rem;
     font-weight: 700;
 }
@@ -356,7 +363,7 @@ select {
     inset: 0 0 auto;
     min-height: var(--alto-cabecera);
     border-bottom: 1px solid rgba(46, 90, 68, 0.09);
-    background: rgba(255, 255, 255, 0.86);
+    background: rgba(248, 245, 242, 0.92);
     box-shadow: 0 3px 16px rgba(28, 54, 38, 0.05);
     -webkit-backdrop-filter: blur(14px);
     backdrop-filter: blur(14px);
@@ -445,7 +452,10 @@ select {
     transition: transform 180ms ease;
 }
 
-.navegacion__enlace:hover,
+.navegacion__enlace:hover {
+    color: var(--color-tierra-clara);
+}
+
 .navegacion__enlace.activo {
     color: var(--color-principal);
 }
@@ -644,7 +654,7 @@ select {
 
 .portada__antetitulo {
     margin: 0 0 16px;
-    color: #C0F2D2;
+    color: var(--color-borde);
     font-size: 0.8rem;
     font-weight: 750;
     letter-spacing: 0.14em;
@@ -661,7 +671,7 @@ select {
 }
 
 .portada__titulo span {
-    color: #9AE6B2;
+    color: var(--color-acento);
 }
 
 .portada__subtitulo {
@@ -687,15 +697,15 @@ select {
 }
 
 .portada__nota i {
-    color: #9AE6B2;
+    color: var(--color-acento);
 }
 
 .encabezado-pagina {
     margin-top: var(--alto-cabecera);
     padding: 76px 0 66px;
     background:
-        radial-gradient(ellipse at 82% 10%, rgba(97, 208, 140, 0.2), transparent 32rem),
-        linear-gradient(135deg, #1F4732, #2E5A44);
+        radial-gradient(ellipse at 82% 10%, rgba(128, 179, 129, 0.22), transparent 32rem),
+        linear-gradient(135deg, #375239, var(--color-principal));
     color: #fff;
 }
 
@@ -716,7 +726,7 @@ select {
 }
 
 .encabezado-pagina .antetitulo {
-    color: #B9EBC9;
+    color: var(--color-borde);
     text-align: left;
 }
 
@@ -1070,7 +1080,7 @@ select {
     width: 122px;
     height: 122px;
     margin: 28px auto 0;
-    border: 3px solid var(--color-destacado);
+    border: 3px solid var(--color-acento);
     border-radius: 50%;
     object-fit: cover;
 }
@@ -1141,8 +1151,8 @@ select {
     margin-top: 13px;
     padding: 5px 9px;
     border-radius: 999px;
-    background: rgba(235, 182, 65, 0.16);
-    color: #755316;
+    background: rgba(217, 161, 59, 0.18);
+    color: var(--color-tierra);
     font-size: 0.75rem;
     font-weight: 750;
 }
@@ -1359,7 +1369,7 @@ select {
 /* Pie de página y utilidades */
 .pie {
     border-top: 1px solid var(--color-borde);
-    background: #EAF1EC;
+    background: #EFECE6;
 }
 
 .pie__contenido {
