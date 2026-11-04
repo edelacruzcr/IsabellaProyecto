@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Referencia de ubicación para la comunidad Campeche, Sector 4A, en Cumaná, estado Sucre.">
+    <title>Direcciones | EcoCampeche</title>
+    <link rel="icon" href="assets/Logo Fancy.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <a class="enlace-saltar" href="#contenido">Saltar al contenido</a>
+    <!-- ÍNDICE HTML: encabezado, referencia de ubicación, mapa y contacto. -->
+
+    <!-- ==================== SECCIÓN CABECERA ==================== -->
+    <header class="cabecera">
+        <div class="cabecera__contenedor">
+            <a href="index.html" class="cabecera__logo"><img src="assets/campeche.svg" alt="" aria-hidden="true"><span>EcoCampeche</span></a>
+            <nav class="navegacion" id="menu-principal" aria-label="Navegación principal">
+                <ul class="navegacion__lista">
+                    <li><a href="index.html" class="navegacion__enlace">Inicio</a></li>
+                    <li><a href="comunidades.html" class="navegacion__enlace activo" aria-current="page">Comunidades</a></li>
+                    <li><a href="problematica.html" class="navegacion__enlace">Problemática</a></li>
+                    <li><a href="nosotros.html" class="navegacion__enlace">Desarrolladores</a></li>
+                    <li><a href="contacto.html" class="navegacion__enlace">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="cabecera__alternar" id="alternar-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+        </div>
+    </header>
+
+    <main id="contenido">
+        <!-- ==================== SECCIÓN DIRECCIONES ==================== -->
+        <section class="encabezado-pagina" aria-labelledby="titulo-pagina">
+            <div class="contenedor">
+                <p class="antetitulo">Referencias locales</p>
+                <h1 class="encabezado-pagina__titulo" id="titulo-pagina">Direcciones y ubicación</h1>
+                <p class="encabezado-pagina__texto">Información general para ubicar la comunidad piloto. Confirma la referencia exacta con residentes antes de organizar visitas o jornadas.</p>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="contenedor">
+                <div class="rejilla rejilla--2-columnas">
+                    <article class="tarjeta tarjeta-direccion">
+                        <span class="tarjeta__icono"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i></span>
+                        <h2 class="tarjeta__titulo">Comunidad Campeche · Sector 4A</h2>
+                        <p class="tarjeta-direccion__linea"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Urbanización Campeche, Sector 4A<br>Cumaná, estado Sucre, Venezuela</span></p>
+                        <p class="tarjeta__texto">La referencia disponible identifica el sector de forma general; no se ha confirmado una dirección postal, punto de reunión ni coordenadas precisas.</p>
+                        <a class="boton boton--principal" href="https://www.google.com/maps/search/?api=1&amp;query=Urbanizaci%C3%B3n%20Campeche%20Sector%204A%20Cuman%C3%A1%20Sucre%20Venezuela" target="_blank" rel="noopener noreferrer">Buscar en Google Maps <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    </article>
+                    <div>
+                        <div class="contenedor-mapa">
+                            <iframe src="https://maps.google.com/maps?q=Urbanizaci%C3%B3n%20Campeche%20Sector%204A%20Cuman%C3%A1%20Sucre%20Venezuela&amp;output=embed" title="Mapa de búsqueda de la comunidad Campeche, Sector 4A, Cumaná" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <p class="pie-de-imagen">El mapa representa una búsqueda general y puede no señalar el Sector 4A con precisión. Verifica el punto con la comunidad antes de desplazarte.</p>
+                    </div>
+                </div>
+
+                <div class="aviso">
+                    <p><strong>Para reuniones y actividades:</strong> acuerda el punto de encuentro con representantes de la comunidad y confirma que el lugar sea público, accesible y seguro. <a class="enlace-texto" href="contacto.html">Consulta las opciones de colaboración <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== SECCIÓN FOOTER ==================== -->
+    <footer class="pie">
+        <div class="contenedor pie__contenido">
+            <a href="index.html" class="pie__marca"><i class="fa-solid fa-leaf" aria-hidden="true"></i> EcoCampeche</a>
+            <p class="pie__texto">Consulta y confirma referencias con residentes locales.</p>
+            <p class="pie__texto pie__credito">Campeche, Sector 4A · Cumaná, estado Sucre</p>
+        </div>
+    </footer>
+</body>
+</html>

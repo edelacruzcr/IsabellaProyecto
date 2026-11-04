@@ -3,60 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoCampeche | Contacto y Ubicación</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <meta name="description" content="Conoce cómo colaborar con EcoCampeche, consultar la ubicación de la comunidad y documentar una problemática ambiental.">
+    <title>Contacto y participación | EcoCampeche</title>
+    <link rel="icon" href="assets/Logo Fancy.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
+    <a class="enlace-saltar" href="#contenido">Saltar al contenido</a>
+    <!-- ÍNDICE HTML: encabezado, contacto y colaboración, direcciones y pie de página. -->
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="header__container">
-            <a href="index.html" class="header__logo"><i class="fa-solid fa-leaf"></i> EcoCampeche</a>
-            <nav class="nav" id="nav-menu">
-                <ul class="nav__list">
-                    <li><a href="index.html" class="nav__link">Inicio</a></li>
-                    <li><a href="nosotros.html" class="nav__link">Nosotros</a></li>
-                    <li><a href="contacto.html" class="nav__link active">Contacto y Ubicación</a></li>
+    <!-- ==================== SECCIÓN CABECERA ==================== -->
+    <header class="cabecera">
+        <div class="cabecera__contenedor">
+            <a href="index.html" class="cabecera__logo"><img src="assets/campeche.svg" alt="" aria-hidden="true"><span>EcoCampeche</span></a>
+            <nav class="navegacion" id="menu-principal" aria-label="Navegación principal">
+                <ul class="navegacion__lista">
+                    <li><a href="index.html" class="navegacion__enlace">Inicio</a></li>
+                    <li><a href="comunidades.html" class="navegacion__enlace">Comunidades</a></li>
+                    <li><a href="problematica.html" class="navegacion__enlace">Problemática</a></li>
+                    <li><a href="nosotros.html" class="navegacion__enlace">Desarrolladores</a></li>
+                    <li><a href="contacto.html" class="navegacion__enlace activo" aria-current="page">Contacto</a></li>
                 </ul>
             </nav>
-            <button class="header__toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+            <button class="cabecera__alternar" id="alternar-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
         </div>
     </header>
 
-    <!-- SECCIÓN DE CONTACTO Y MAPA -->
-    <section class="section container" style="margin-top: 100px;">
-        <h2 class="section__title">Contáctanos y Visítanos</h2>
-        <p class="section__subtitle">Estamos ubicados en el corazón de Campeche. ¡Únete a nuestras jornadas!</p>
-        
-        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); align-items: start;">
-            
-            <!-- Información de Contacto -->
-            <div class="card" style="padding: 2rem;">
-                <h3 class="card__title" style="margin-bottom: 1.5rem;">Vías de Comunicación</h3>
-                
-                <p style="margin-bottom: 1rem;"><i class="fa-solid fa-location-dot" style="color: var(--color-accent); width: 25px;"></i> Urbanización Campeche, Sector 4A. Cumaná, Estado Sucre.</p>
-                <p style="margin-bottom: 1rem;"><i class="fa-solid fa-phone" style="color: var(--color-accent); width: 25px;"></i> +58 412-000-0000</p>
-                <p style="margin-bottom: 2rem;"><i class="fa-solid fa-envelope" style="color: var(--color-accent); width: 25px;"></i> contacto@ecocampeche.com</p>
-
-                <a href="https://wa.me/584120000000?text=Hola,%20necesito%20más%20información%20sobre%20el%20proyecto" class="btn btn--primary" style="width: 100%; background-color: var(--whatsapp-green);">
-                    <i class="fa-brands fa-whatsapp"></i> Escríbenos por WhatsApp
-                </a>
+    <main id="contenido">
+        <!-- ==================== SECCIÓN CONTACTO ==================== -->
+        <section class="encabezado-pagina" aria-labelledby="titulo-pagina">
+            <div class="contenedor">
+                <p class="antetitulo">Participación y colaboración</p>
+                <h1 class="encabezado-pagina__titulo" id="titulo-pagina">Hagamos equipo por una comunidad más saludable</h1>
+                <p class="encabezado-pagina__texto">EcoCampeche busca conectar a residentes, organizaciones educativas y actores comunitarios para compartir información y construir propuestas locales.</p>
             </div>
+        </section>
 
-            <!-- Mapa de Google (Iframe estático apuntando a Cumaná) -->
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15664.35694833827!2d-64.198800!3d10.453500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c325f0000000001%3A0x0!2sCuman%C3%A1%2C%20Sucre!5e0!3m2!1ses!2sve!4v1700000000000!5m2!1ses!2sve" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <section class="seccion">
+            <div class="contenedor">
+                <div class="rejilla rejilla--2-columnas">
+                    <article class="tarjeta tarjeta-direccion">
+                        <span class="tarjeta__icono"><i class="fa-solid fa-comments" aria-hidden="true"></i></span>
+                        <h2 class="tarjeta__titulo">¿Cómo puedes participar?</h2>
+                        <ul class="tarjeta__lista">
+                            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Comparte observaciones verificables sobre espacios públicos y manejo de residuos.</span></li>
+                            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Propón actividades de educación ambiental o jornadas coordinadas con responsables locales.</span></li>
+                            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Ayuda a validar la historia, las referencias geográficas y las necesidades del sector.</span></li>
+                            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Invita a otras comunidades a compartir su contexto y organizar información de manera segura.</span></li>
+                        </ul>
+                        <a class="boton boton--principal" href="problematica.html#visibilizar">Preparar un reporte comunitario <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <div class="aviso">
+                            <p><strong>¿Quieres unirte como vecino u organización?</strong> El WhatsApp de la vocería comunitaria todavía está pendiente de autorización. Mientras se confirma, puedes preparar un reporte o consultar los canales institucionales publicados.</p>
+                        </div>
+                        <div class="acciones-contacto">
+                            <button class="boton boton--secundario" type="button" disabled aria-describedby="estado-whatsapp-comunidad"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp de la comunidad</button>
+                            <a class="enlace-texto" href="problematica.html#entes">Consultar organismos para reportar</a>
+                        </div>
+                        <p class="formulario__ayuda" id="estado-whatsapp-comunidad">Contacto pendiente de confirmación por la vocería; no se ha publicado un número.</p>
+                    </article>
+
+                    <article class="tarjeta tarjeta-direccion">
+                        <span class="tarjeta__icono"><i class="fa-solid fa-circle-info" aria-hidden="true"></i></span>
+                        <h2 class="tarjeta__titulo">Canales de contacto oficiales</h2>
+                        <p class="tarjeta__texto">EcoCampeche es un sitio estático y todavía no cuenta con un sistema de envío de mensajes. El WhatsApp comunitario está pendiente de autorización; no se publica ningún número de ejemplo.</p>
+                        <div class="aviso">
+                            <p>Antes de publicar un teléfono, correo o cuenta social, el equipo debe confirmar que sea oficial y tener autorización para compartirlo.</p>
+                        </div>
+                        <p class="tarjeta__texto tarjeta__texto--separado">Para comunicar una situación ambiental, consulta los canales oficiales del organismo público competente. Para contactar al equipo desarrollador, visita la sección <a href="nosotros.html#contacto-desarrolladores">Desarrolladores</a>.</p>
+                    </article>
+                </div>
             </div>
+        </section>
+
+        <section class="seccion seccion--suave">
+            <div class="contenedor">
+                <p class="antetitulo">Información útil</p>
+                <h2 class="seccion__titulo">Ubicación, documentación y equipo</h2>
+                <p class="seccion__subtitulo">Accede a las secciones para conocer la comunidad, preparar información o revisar el propósito del proyecto.</p>
+                <div class="rejilla rejilla--3-columnas">
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Direcciones</h3>
+                            <p class="tarjeta__texto">Referencia general de Campeche, Sector 4A, y mapa de búsqueda, pendiente de validación local.</p>
+                            <a class="enlace-texto" href="direcciones.html">Consultar ubicación <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-camera" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Visibilizar una necesidad</h3>
+                            <p class="tarjeta__texto">Guía para reunir evidencia, proteger la privacidad y preparar una solicitud clara.</p>
+                            <a class="enlace-texto" href="problematica.html">Ver guía de reportes <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-people-group" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Desarrolladores</h3>
+                            <p class="tarjeta__texto">Conoce al equipo y la intención socio-tecnológica de EcoCampeche.</p>
+                            <a class="enlace-texto" href="nosotros.html">Conocer al equipo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== SECCIÓN FOOTER ==================== -->
+    <footer class="pie">
+        <div class="contenedor pie__contenido">
+            <a href="index.html" class="pie__marca"><i class="fa-solid fa-leaf" aria-hidden="true"></i> EcoCampeche</a>
+            <p class="pie__texto">La participación informada fortalece las soluciones locales.</p>
+            <p class="pie__texto pie__credito">Proyecto socio-tecnológico · Campeche, Sector 4A</p>
         </div>
-    </section>
-
-    <!-- BOTÓN FLOTANTE WHATSAPP -->
-    <a href="https://wa.me/584120000000?text=Hola,%20quiero%20información%20sobre%20EcoCampeche" class="whatsapp-float" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
-    <script src="script.js"></script>
+    </footer>
 </body>
 </html>

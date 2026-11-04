@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce el perfil de la comunidad Campeche, Sector 4A, las problemáticas observadas y las vías para documentarlas.">
+    <title>Campeche, Sector 4A | EcoCampeche</title>
+    <link rel="icon" href="assets/Logo Fancy.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <a class="enlace-saltar" href="#contenido">Saltar al contenido</a>
+    <!-- ÍNDICE HTML: encabezado, perfil local, problemática, galería y rutas de acción. -->
+
+    <!-- ==================== SECCIÓN CABECERA ==================== -->
+    <header class="cabecera">
+        <div class="cabecera__contenedor">
+            <a href="index.html" class="cabecera__logo"><img src="assets/campeche.svg" alt="" aria-hidden="true"><span>EcoCampeche</span></a>
+            <nav class="navegacion" id="menu-principal" aria-label="Navegación principal">
+                <ul class="navegacion__lista">
+                    <li><a href="index.html" class="navegacion__enlace">Inicio</a></li>
+                    <li><a href="comunidades.html" class="navegacion__enlace activo" aria-current="page">Comunidades</a></li>
+                    <li><a href="problematica.html" class="navegacion__enlace">Problemática</a></li>
+                    <li><a href="nosotros.html" class="navegacion__enlace">Desarrolladores</a></li>
+                    <li><a href="contacto.html" class="navegacion__enlace">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="cabecera__alternar" id="alternar-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+        </div>
+    </header>
+
+    <main id="contenido">
+        <!-- ==================== SECCIÓN PERFIL ==================== -->
+        <section class="encabezado-pagina" aria-labelledby="titulo-pagina">
+            <div class="contenedor">
+                <p class="antetitulo">Comunidad piloto · Sector 4A</p>
+                <h1 class="encabezado-pagina__titulo" id="titulo-pagina">Campeche: nuestra comunidad, nuestro compromiso</h1>
+                <p class="encabezado-pagina__texto">Un punto de encuentro para compartir información sobre el entorno, hacer visible la problemática de los residuos y organizar propuestas que puedan presentarse a las instituciones competentes.</p>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="contenedor">
+                <div class="rejilla rejilla--2-columnas">
+                    <div>
+                        <p class="antetitulo antetitulo--izquierda">Cumaná · Estado Sucre</p>
+                        <h2 class="seccion__titulo seccion__titulo--izquierda">Un diagnóstico construido con la comunidad</h2>
+                        <p class="tarjeta__texto">La acumulación de residuos en canales, áreas comunes y terrenos puede generar contaminación, obstruir drenajes y atraer vectores. Para describir con precisión cada punto hace falta registrar su ubicación, frecuencia y condiciones, junto con los residentes.</p>
+                        <p class="tarjeta__texto tarjeta__texto--separado">Las imágenes de esta página son ilustrativas. Deben sustituirse por fotografías propias, fechadas y verificadas del Sector 4A antes de utilizarlas como evidencia ante organismos públicos.</p>
+                        <a class="boton boton--principal tarjeta__accion" href="problematica.html">Ver cómo documentar y solicitar atención <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <article class="tarjeta">
+                        <img class="tarjeta__imagen" src="assets/photo_1_2026-11-03_22-52-02.jpg" alt="Residuos acumulados entre la vegetación y el agua en Campeche" loading="lazy">
+                        <div class="tarjeta__contenido">
+                            <span class="etiqueta"><i class="fa-solid fa-image" aria-hidden="true"></i> Imagen ilustrativa</span>
+                            <h3 class="tarjeta__titulo tarjeta__titulo--separado">Visibilizar sin confundir</h3>
+                            <p class="tarjeta__texto">Una evidencia útil identifica cuándo y dónde se tomó la foto y qué situación muestra, sin exponer rostros, domicilios privados ni datos personales.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN PROBLEMÁTICA ==================== -->
+        <section class="seccion seccion--suave" aria-labelledby="titulo-problematica">
+            <div class="contenedor">
+                <p class="antetitulo">Situaciones que se deben verificar en campo</p>
+                <h2 class="seccion__titulo" id="titulo-problematica">¿Qué problemática queremos visibilizar?</h2>
+                <p class="seccion__subtitulo">Estos ejemplos son categorías de observación, no afirmaciones sobre puntos específicos del sector. Un diagnóstico participativo permite confirmar las condiciones reales.</p>
+
+                <div class="rejilla rejilla--3-columnas">
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-water" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Residuos en canales y drenajes</h3>
+                            <p class="tarjeta__texto">Registrar obstrucciones, residuos visibles y si se acumula agua después de la lluvia. No entrar al canal ni tocar desechos.</p>
+                        </div>
+                    </article>
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-trash-can" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Puntos de acumulación</h3>
+                            <p class="tarjeta__texto">Observar si un lugar se repite, qué tipos de residuos hay y si existe un servicio de recolección cercano.</p>
+                        </div>
+                    </article>
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-mosquito" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Riesgos sanitarios</h3>
+                            <p class="tarjeta__texto">Anotar condiciones observables, como agua estancada o presencia de vectores. No diagnosticar enfermedades ni atribuir casos sin evidencia sanitaria.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN GALERÍA ==================== -->
+        <section class="seccion" aria-labelledby="titulo-galeria">
+            <div class="contenedor">
+                <p class="antetitulo">Registro fotográfico de la comunidad</p>
+                <h2 class="seccion__titulo" id="titulo-galeria">Imágenes de la problemática de residuos en Campeche</h2>
+                <p class="seccion__subtitulo">Fotografías compartidas para visibilizar las condiciones observadas en la comunidad. Las imágenes no incluyen coordenadas ni fechas verificadas; confirma el punto exacto con residentes antes de presentar un reporte formal.</p>
+                <div class="rejilla rejilla--3-columnas">
+                    <figure class="tarjeta">
+                        <img class="tarjeta__imagen" src="assets/photo_1_2026-11-03_22-52-02.jpg" alt="Residuos plásticos y otros desechos acumulados entre la vegetación" loading="lazy">
+                        <figcaption class="tarjeta__contenido">
+                            <span class="tarjeta-galeria__etiqueta">Fotografía de la comunidad</span>
+                            <h3 class="tarjeta__titulo">Residuos junto a la vegetación</h3>
+                            <p class="tarjeta__texto">Se observa una acumulación de envases y otros residuos en un área con vegetación y agua estancada.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="tarjeta">
+                        <img class="tarjeta__imagen" src="assets/photo_2_2026-11-03_22-52-02.jpg" alt="Acumulación de residuos visibles dentro de un drenaje de concreto" loading="lazy">
+                        <figcaption class="tarjeta__contenido">
+                            <span class="tarjeta-galeria__etiqueta">Fotografía de la comunidad</span>
+                            <h3 class="tarjeta__titulo">Desechos en un drenaje</h3>
+                            <p class="tarjeta__texto">El cauce está cubierto por residuos de distintos tipos y vegetación.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="tarjeta">
+                        <img class="tarjeta__imagen" src="assets/photo_3_2026-11-03_22-52-02.jpg" alt="Vista amplia de residuos acumulados junto a un área verde y viviendas" loading="lazy">
+                        <figcaption class="tarjeta__contenido">
+                            <span class="tarjeta-galeria__etiqueta">Fotografía de la comunidad</span>
+                            <h3 class="tarjeta__titulo">Acumulación en espacio abierto</h3>
+                            <p class="tarjeta__texto">Una vista general ayuda a registrar la extensión del área afectada y su entorno.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="tarjeta">
+                        <img class="tarjeta__imagen" src="assets/photo_4_2026-11-03_22-52-02.jpg" alt="Detalle de residuos y agua estancada entre vegetación" loading="lazy">
+                        <figcaption class="tarjeta__contenido">
+                            <span class="tarjeta-galeria__etiqueta">Fotografía de la comunidad</span>
+                            <h3 class="tarjeta__titulo">Agua estancada y residuos</h3>
+                            <p class="tarjeta__texto">La imagen muestra desechos acumulados en un área húmeda cubierta parcialmente por plantas.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="tarjeta">
+                        <img class="tarjeta__imagen" src="assets/photo_5_2026-11-03_22-52-02.jpg" alt="Vegetación densa y residuos a lo largo de un cauce en zona habitada" loading="lazy">
+                        <figcaption class="tarjeta__contenido">
+                            <span class="tarjeta-galeria__etiqueta">Fotografía de la comunidad</span>
+                            <h3 class="tarjeta__titulo">Cauce con vegetación y desechos</h3>
+                            <p class="tarjeta__texto">En la fotografía se aprecia un cauce con maleza y residuos próximo a una vía pública.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="tarjeta">
+                        <img class="tarjeta__imagen" src="assets/photo_6_2026-11-03_22-52-02.jpg" alt="Residuos y agua acumulados dentro de un canal junto a una calle" loading="lazy">
+                        <figcaption class="tarjeta__contenido">
+                            <span class="tarjeta-galeria__etiqueta">Fotografía de la comunidad</span>
+                            <h3 class="tarjeta__titulo">Canal con residuos</h3>
+                            <p class="tarjeta__texto">Se observan desechos dentro del canal. No se debe ingresar ni manipular el material acumulado.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="tarjeta">
+                        <img class="tarjeta__imagen" src="assets/photo_7_2026-11-03_22-52-02.jpg" alt="Residuos y desechos orgánicos acumulados dentro de un canal" loading="lazy">
+                        <figcaption class="tarjeta__contenido">
+                            <span class="tarjeta-galeria__etiqueta">Fotografía de la comunidad</span>
+                            <h3 class="tarjeta__titulo">Acumulación en el canal</h3>
+                            <p class="tarjeta__texto">La imagen documenta residuos visibles y vegetación dentro de un cauce de concreto.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="tarjeta">
+                        <img class="tarjeta__imagen" src="assets/photo_8_2026-11-03_22-52-02.jpg" alt="Desechos de construcción, ramas y basura en un terreno abierto" loading="lazy">
+                        <figcaption class="tarjeta__contenido">
+                            <span class="tarjeta-galeria__etiqueta">Fotografía de la comunidad</span>
+                            <h3 class="tarjeta__titulo">Desechos y restos de poda</h3>
+                            <p class="tarjeta__texto">Se aprecian ramas, material de construcción y otros residuos depositados en un terreno.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="tarjeta">
+                        <img class="tarjeta__imagen" src="assets/photo_9_2026-11-03_22-52-02.jpg" alt="Terreno con ramas secas, residuos y un neumático usado" loading="lazy">
+                        <figcaption class="tarjeta__contenido">
+                            <span class="tarjeta-galeria__etiqueta">Fotografía de la comunidad</span>
+                            <h3 class="tarjeta__titulo">Residuos voluminosos</h3>
+                            <p class="tarjeta__texto">La fotografía muestra restos de poda y un neumático entre otros desechos en un espacio abierto.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="tarjeta">
+                        <img class="tarjeta__imagen" src="assets/photo_10_2026-11-03_22-52-02.jpg" alt="Vista panorámica de residuos de construcción y restos vegetales en terreno abierto" loading="lazy">
+                        <figcaption class="tarjeta__contenido">
+                            <span class="tarjeta-galeria__etiqueta">Fotografía de la comunidad</span>
+                            <h3 class="tarjeta__titulo">Acumulación de escombros</h3>
+                            <p class="tarjeta__texto">La vista panorámica permite apreciar residuos de construcción y restos vegetales dispersos.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="tarjeta">
+                        <img class="tarjeta__imagen" src="assets/photo_11_2026-11-03_22-52-02.jpg" alt="Desechos y ramas acumulados en un terreno con vegetación al fondo" loading="lazy">
+                        <figcaption class="tarjeta__contenido">
+                            <span class="tarjeta-galeria__etiqueta">Fotografía de la comunidad</span>
+                            <h3 class="tarjeta__titulo">Restos y residuos en terreno abierto</h3>
+                            <p class="tarjeta__texto">La escena muestra restos de poda y residuos dispersos; la ubicación exacta requiere confirmación comunitaria.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="aviso">
+                    <p><strong>Privacidad y seguridad:</strong> evita fotografiar rostros, matrículas, interiores de viviendas o a menores de edad. No te acerques a residuos peligrosos ni a zonas inundadas. Para los reportes, anota fecha y referencia del sitio y confirma cada ubicación con la comunidad.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN RUTA DE DIAGNÓSTICO ==================== -->
+        <section class="seccion" id="ruta" aria-labelledby="titulo-ruta">
+            <div class="contenedor">
+                <p class="antetitulo">Recorrido comunitario por validar</p>
+                <h2 class="seccion__titulo" id="titulo-ruta">Guía de ruta para ubicar los puntos críticos</h2>
+                <p class="seccion__subtitulo">No hay coordenadas verificadas ni un inventario confirmado de basurales en esta página. Esta ruta es una propuesta para que residentes y vocería acuerden el recorrido, comprueben cada parada y registren solo lo observado.</p>
+
+                <div class="rejilla rejilla--2-columnas">
+                    <article class="tarjeta ruta-punto">
+                        <span class="ruta-punto__numero" aria-label="Parada 1">1</span>
+                        <h3 class="tarjeta__titulo">Punto de encuentro acordado</h3>
+                        <p class="tarjeta__texto">Definan un lugar público y seguro de inicio con la comunidad. Anoten fecha, hora y quiénes participan; no publiquen domicilios particulares.</p>
+                        <span class="ruta-punto__estado">Por acordar con la comunidad</span>
+                    </article>
+                    <article class="tarjeta ruta-punto">
+                        <span class="ruta-punto__numero" aria-label="Parada 2">2</span>
+                        <h3 class="tarjeta__titulo">Calles y espacios comunes</h3>
+                        <p class="tarjeta__texto">Recorran únicamente vías y espacios públicos. Registren residuos visibles, referencias que permitan ubicar el sitio y si la situación se repite.</p>
+                        <span class="ruta-punto__estado">Puntos por identificar en campo</span>
+                    </article>
+                    <article class="tarjeta ruta-punto">
+                        <span class="ruta-punto__numero" aria-label="Parada 3">3</span>
+                        <h3 class="tarjeta__titulo">Drenajes y canales visibles</h3>
+                        <p class="tarjeta__texto">Observen desde una distancia segura si hay obstrucciones o agua estancada. No entren a canales, no toquen residuos y eviten recorridos durante lluvias.</p>
+                        <span class="ruta-punto__estado">Requiere observación segura</span>
+                    </article>
+                    <article class="tarjeta ruta-punto">
+                        <span class="ruta-punto__numero" aria-label="Parada 4">4</span>
+                        <h3 class="tarjeta__titulo">Puntos señalados por residentes</h3>
+                        <p class="tarjeta__texto">Contrasten cada referencia con más de una observación, documenten fechas y prioricen lugares con afectación recurrente para preparar solicitudes.</p>
+                        <span class="ruta-punto__estado">Validar antes de reportar</span>
+                    </article>
+                </div>
+                <div class="aviso">
+                    <p><strong>La ruta no señala basurales confirmados.</strong> Para incorporar ubicaciones exactas, primero deben verificarse en campo con la comunidad. Consulta <a href="direcciones.html">la referencia general de Campeche</a> y <a href="problematica.html#formulario-reporte">prepara un borrador de reporte</a> cuando tengas datos comprobables.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN RUTAS ==================== -->
+        <section class="seccion seccion--suave">
+            <div class="contenedor">
+                <p class="antetitulo">Del diagnóstico a la acción</p>
+                <h2 class="seccion__titulo">Explora los siguientes pasos</h2>
+                <p class="seccion__subtitulo">Información, orientación para reportar y referencias de ubicación para organizar una solicitud clara y responsable.</p>
+                <div class="rejilla rejilla--3-columnas">
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-list-check" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Documentar la problemática</h3>
+                            <p class="tarjeta__texto">Consulta una guía para registrar la situación y preparar un reporte descargable.</p>
+                            <a class="enlace-texto" href="problematica.html#visibilizar">Ir a la guía <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Ubicación y referencias</h3>
+                            <p class="tarjeta__texto">Revisa la dirección general de la comunidad y el enlace para consultar el mapa.</p>
+                            <a class="enlace-texto" href="direcciones.html">Ver direcciones <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Contacto y colaboración</h3>
+                            <p class="tarjeta__texto">Conoce cómo colaborar y qué información falta confirmar para publicar canales oficiales.</p>
+                            <a class="enlace-texto" href="contacto.html">Ir a contacto <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== SECCIÓN FOOTER ==================== -->
+    <footer class="pie">
+        <div class="contenedor pie__contenido">
+            <a href="index.html" class="pie__marca"><i class="fa-solid fa-leaf" aria-hidden="true"></i> EcoCampeche</a>
+            <p class="pie__texto">Una comunidad más informada puede impulsar mejores soluciones.</p>
+            <p class="pie__texto pie__credito">Campeche, Sector 4A · Cumaná, estado Sucre</p>
+        </div>
+    </footer>
+</body>
+</html>

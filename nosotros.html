@@ -3,90 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoCampeche | Nosotros</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <meta name="description" content="Conoce al equipo desarrollador de EcoCampeche y la historia de la comunidad piloto.">
+    <title>Desarrolladores | EcoCampeche</title>
+    <link rel="icon" href="assets/Logo Fancy.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
+    <a class="enlace-saltar" href="#contenido">Saltar al contenido</a>
+    <!-- ÍNDICE HTML: encabezado, equipo desarrollador, historia local y pie de página. -->
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="header__container">
-            <a href="index.html" class="header__logo"><i class="fa-solid fa-leaf"></i> EcoCampeche</a>
-            <nav class="nav" id="nav-menu">
-                <ul class="nav__list">
-                    <li><a href="index.html" class="nav__link">Inicio</a></li>
-                    <li><a href="nosotros.html" class="nav__link active">Nosotros</a></li>
-                    <li><a href="contacto.html" class="nav__link">Contacto y Ubicación</a></li>
+    <!-- ==================== SECCIÓN CABECERA ==================== -->
+    <header class="cabecera">
+        <div class="cabecera__contenedor">
+            <a href="index.html" class="cabecera__logo"><img src="assets/campeche.svg" alt="" aria-hidden="true"><span>EcoCampeche</span></a>
+            <nav class="navegacion" id="menu-principal" aria-label="Navegación principal">
+                <ul class="navegacion__lista">
+                    <li><a href="index.html" class="navegacion__enlace">Inicio</a></li>
+                    <li><a href="comunidades.html" class="navegacion__enlace">Comunidades</a></li>
+                    <li><a href="problematica.html" class="navegacion__enlace">Problemática</a></li>
+                    <li><a href="nosotros.html" class="navegacion__enlace activo" aria-current="page">Desarrolladores</a></li>
+                    <li><a href="contacto.html" class="navegacion__enlace">Contacto</a></li>
                 </ul>
             </nav>
-            <button class="header__toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+            <button class="cabecera__alternar" id="alternar-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
         </div>
     </header>
 
-    <!-- DESARROLLADORES -->
-    <section class="section container" style="margin-top: 100px;">
-        <h2 class="section__title">Equipo Desarrollador</h2>
-        <p class="section__subtitle">Estudiantes de la UPTOS comprometidos con el cambio socio-tecnológico.</p>
-        
-        <div class="grid grid--4col">
-            <article class="card" style="text-align: center;">
-                <img src="
-                ?img=11" alt="José" style="width: 120px; height: 120px; border-radius: 50%; margin: 1.5rem auto 0; border: 3px solid var(--color-accent);">
-                <div class="card__content">
-                    <h3 class="card__title">José Rodríguez</h3>
-                    <p style="color: var(--color-text-muted);">Desarrollador Web</p>
+    <main id="contenido">
+        <!-- ==================== SECCIÓN EQUIPO ==================== -->
+        <section class="encabezado-pagina" aria-labelledby="titulo-pagina">
+            <div class="contenedor">
+                <p class="antetitulo">Tecnología con propósito</p>
+                <h1 class="encabezado-pagina__titulo" id="titulo-pagina">Equipo desarrollador</h1>
+                <p class="encabezado-pagina__texto">Estudiantes y colaboradores comprometidos con una iniciativa socio-tecnológica para informar, conectar y acompañar a la comunidad.</p>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="contenedor">
+                <p class="antetitulo">Equipo fundador</p>
+                <h2 class="seccion__titulo">Personas detrás de EcoCampeche</h2>
+                <p class="seccion__subtitulo">Construimos esta plataforma con una visión de colaboración, educación ambiental y participación comunitaria.</p>
+
+                <div class="rejilla rejilla--4-columnas">
+                    <article class="tarjeta tarjeta-fundador">
+                        <span class="tarjeta-fundador__retrato tarjeta-fundador__iniciales" aria-hidden="true">JR</span>
+                        <div class="tarjeta__contenido">
+                            <h3 class="tarjeta__titulo">José Rodríguez</h3>
+                            <p class="tarjeta-fundador__rol">Desarrollador Web</p>
+                        </div>
+                    </article>
+                    <article class="tarjeta tarjeta-fundador">
+                        <span class="tarjeta-fundador__retrato tarjeta-fundador__iniciales" aria-hidden="true">CC</span>
+                        <div class="tarjeta__contenido">
+                            <h3 class="tarjeta__titulo">Cristhian Chacón</h3>
+                            <p class="tarjeta-fundador__rol">Desarrollador Web</p>
+                        </div>
+                    </article>
+                    <article class="tarjeta tarjeta-fundador">
+                        <span class="tarjeta-fundador__retrato tarjeta-fundador__iniciales" aria-hidden="true">IV</span>
+                        <div class="tarjeta__contenido">
+                            <h3 class="tarjeta__titulo">Isabella Velásquez</h3>
+                            <p class="tarjeta-fundador__rol">Desarrolladora Web</p>
+                        </div>
+                    </article>
+                    <article class="tarjeta tarjeta-fundador">
+                        <span class="tarjeta-fundador__retrato tarjeta-fundador__iniciales" aria-hidden="true">RR</span>
+                        <div class="tarjeta__contenido">
+                            <h3 class="tarjeta__titulo">Raúl Román</h3>
+                            <p class="tarjeta-fundador__rol">Desarrollador Web</p>
+                        </div>
+                    </article>
                 </div>
-            </article>
-            <article class="card" style="text-align: center;">
-                <img src="img=12" alt="Cristhian" style="width: 120px; height: 120px; border-radius: 50%; margin: 1.5rem auto 0; border: 3px solid var(--color-accent);">
-                <div class="card__content">
-                    <h3 class="card__title">Cristhian Chacón</h3>
-                    <p style="color: var(--color-text-muted);">Desarrollador Web</p>
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN CONTACTO DESARROLLADORES ==================== -->
+        <section class="seccion seccion--suave" id="contacto-desarrolladores" aria-labelledby="titulo-contacto-desarrolladores">
+            <div class="contenedor">
+                <p class="antetitulo">Contacto del equipo</p>
+                <h2 class="seccion__titulo" id="titulo-contacto-desarrolladores">¿Quieres visibilizar una problemática con nosotros?</h2>
+                <p class="seccion__subtitulo">Si representas a una comunidad u organización y deseas proponer una colaboración tecnológica, este espacio te orienta sobre cómo contactar al equipo.</p>
+                <div class="tarjeta tarjeta-direccion">
+                    <p class="tarjeta__texto">El número de WhatsApp del equipo desarrollador aún está pendiente de confirmación y autorización para publicación. No se reciben mensajes ni reportes desde esta página. Para documentar una situación, utiliza el borrador local; para colaboración comunitaria, consulta la página de contacto.</p>
+                    <div class="acciones-contacto">
+                        <button class="boton boton--secundario" type="button" disabled aria-describedby="estado-whatsapp-desarrolladores"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp de desarrolladores</button>
+                        <a class="boton boton--principal" href="problematica.html#formulario-reporte">Preparar un reporte descargable</a>
+                        <a class="enlace-texto" href="contacto.html">Ver opciones para colaborar</a>
+                    </div>
+                    <p class="formulario__ayuda" id="estado-whatsapp-desarrolladores">Contacto pendiente de autorización; no se ha publicado un número.</p>
                 </div>
-            </article>
-            <article class="card" style="text-align: center;">
-                <img src="img=5" alt="Isabella" style="width: 120px; height: 120px; border-radius: 50%; margin: 1.5rem auto 0; border: 3px solid var(--color-accent);">
-                <div class="card__content">
-                    <h3 class="card__title">Isabella Velásquez</h3>
-                    <p style="color: var(--color-text-muted);">Desarrolladora Web</p>
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN HISTORIA ==================== -->
+        <section class="seccion seccion--suave">
+            <div class="contenedor">
+                <p class="antetitulo">Memoria e identidad</p>
+                <h2 class="seccion__titulo">La historia de nuestra comunidad</h2>
+                <p class="seccion__subtitulo">Una primera aproximación a la identidad de Campeche. Los relatos y datos históricos deben revisarse con fuentes y testimonios locales.</p>
+
+                <div class="rejilla rejilla--3-columnas">
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-landmark" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Etimología</h3>
+                            <p class="tarjeta__texto">Una interpretación extendida relaciona el topónimo Campeche con voces mayas. La historia local y las fuentes consultadas pueden ayudar a enriquecer esta referencia.</p>
+                        </div>
+                    </article>
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-seedling" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Orígenes de la tierra</h3>
+                            <p class="tarjeta__texto">Los recuerdos sobre el uso de los terrenos y las actividades productivas forman parte de la memoria que los habitantes pueden documentar.</p>
+                        </div>
+                    </article>
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-city" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Consolidación urbana</h3>
+                            <p class="tarjeta__texto">El crecimiento de la comunidad y sus espacios de convivencia pueden reconstruirse con testimonios, fotografías y archivos locales.</p>
+                        </div>
+                    </article>
                 </div>
-            </article>
-            <article class="card" style="text-align: center;">
-                <img src="img=8" alt="Raúl" style="width: 120px; height: 120px; border-radius: 50%; margin: 1.5rem auto 0; border: 3px solid var(--color-accent);">
-                <div class="card__content">
-                    <h3 class="card__title">Raúl Román</h3>
-                    <p style="color: var(--color-text-muted);">Desarrollador Web</p>
-                </div>
-            </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== SECCIÓN FOOTER ==================== -->
+    <footer class="pie">
+        <div class="contenedor pie__contenido">
+            <a href="index.html" class="pie__marca"><i class="fa-solid fa-leaf" aria-hidden="true"></i> EcoCampeche</a>
+            <p class="pie__texto">Tecnología cercana, construida para servir a las personas.</p>
+            <p class="pie__texto pie__credito">Proyecto socio-tecnológico · Campeche, Sector 4A</p>
         </div>
-    </section>
-
-    <!-- HISTORIA DE LA COMUNIDAD -->
-    <section class="section container" style="background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm);">
-        <h2 class="section__title">Nuestra Comunidad: Sector 4A</h2>
-        <div class="grid grid--3col">
-            <div>
-                <h3 style="color: var(--color-accent); margin-bottom: 10px;"><i class="fa-solid fa-landmark"></i> Etimología</h3>
-                <p>El nombre proviene de las voces mayas "Can" (serpiente) y "Pech" (garrapata). Hoy, Campeche es símbolo de resiliencia y comunidad.</p>
-            </div>
-            <div>
-                <h3 style="color: var(--color-accent); margin-bottom: 10px;"><i class="fa-solid fa-seedling"></i> Orígenes</h3>
-                <p>Antiguamente tierras fértiles dedicadas al cultivo de frutales y hortalizas, representando la base de nuestra historia agrícola.</p>
-            </div>
-            <div>
-                <h3 style="color: var(--color-accent); margin-bottom: 10px;"><i class="fa-solid fa-house"></i> Consolidación</h3>
-                <p>Desarrollada en los años 90 gracias a proyectos del INAVI y la Fundación Regional de la Vivienda para el beneficio de las familias.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- BOTÓN FLOTANTE WHATSAPP -->
-    <a href="https://wa.me/584120000000?text=Hola,%20quiero%20información%20sobre%20EcoCampeche" class="whatsapp-float" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
-    <script src="script.js"></script>
+    </footer>
 </body>
 </html>

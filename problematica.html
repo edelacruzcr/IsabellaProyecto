@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guía para identificar, documentar y visibilizar la problemática de los residuos en Campeche ante las instituciones competentes.">
+    <title>Problemática y reportes | EcoCampeche</title>
+    <link rel="icon" href="assets/Logo Fancy.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <a class="enlace-saltar" href="#contenido">Saltar al contenido</a>
+    <!-- ÍNDICE HTML: encabezado, prevención, salud, documentación, reporte y pie de página. -->
+
+    <!-- ==================== SECCIÓN CABECERA ==================== -->
+    <header class="cabecera">
+        <div class="cabecera__contenedor">
+            <a href="index.html" class="cabecera__logo"><img src="assets/campeche.svg" alt="" aria-hidden="true"><span>EcoCampeche</span></a>
+            <nav class="navegacion" id="menu-principal" aria-label="Navegación principal">
+                <ul class="navegacion__lista">
+                    <li><a href="index.html" class="navegacion__enlace">Inicio</a></li>
+                    <li><a href="comunidades.html" class="navegacion__enlace">Comunidades</a></li>
+                    <li><a href="problematica.html" class="navegacion__enlace activo" aria-current="page">Problemática</a></li>
+                    <li><a href="nosotros.html" class="navegacion__enlace">Desarrolladores</a></li>
+                    <li><a href="contacto.html" class="navegacion__enlace">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="cabecera__alternar" id="alternar-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+        </div>
+    </header>
+
+    <main id="contenido">
+        <!-- ==================== SECCIÓN PROBLEMÁTICA ==================== -->
+        <section class="encabezado-pagina" aria-labelledby="titulo-pagina">
+            <div class="contenedor">
+                <p class="antetitulo">Información y acción ciudadana</p>
+                <h1 class="encabezado-pagina__titulo" id="titulo-pagina">Hacer visible la problemática es el primer paso para atenderla</h1>
+                <p class="encabezado-pagina__texto">Una solicitud clara permite comunicar qué ocurre, dónde, desde cuándo y qué respuesta se necesita. Esta guía ayuda a documentar la situación con seguridad y respeto.</p>
+            </div>
+        </section>
+
+        <section class="seccion" id="prevencion">
+            <div class="contenedor">
+                <p class="antetitulo">Prevención desde casa y el sector</p>
+                <h2 class="seccion__titulo">Clasifica y maneja los residuos correctamente</h2>
+                <p class="seccion__subtitulo">La recolección y las normas locales varían. Confirma los horarios y puntos autorizados con el servicio municipal antes de disponer tus residuos.</p>
+                <div class="rejilla rejilla--3-columnas">
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-leaf" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Orgánicos</h3>
+                            <p class="tarjeta__texto">Restos de frutas y verduras pueden separarse para compostaje cuando existan condiciones adecuadas. Manténlos cubiertos para no atraer animales.</p>
+                        </div>
+                    </article>
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-box" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Reciclables y no reciclables</h3>
+                            <p class="tarjeta__texto">Separa papel, cartón, vidrio, metales y plásticos limpios cuando haya un sistema local que pueda recibirlos. Reduce los desechables cuando sea posible.</p>
+                        </div>
+                    </article>
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Residuos peligrosos</h3>
+                            <p class="tarjeta__texto">Pilas, medicamentos, aceites y productos químicos no deben mezclarse con residuos comunes ni verterse en drenajes. Busca orientación local para su manejo.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion seccion--suave" id="salud">
+            <div class="contenedor">
+                <p class="antetitulo">Salud pública</p>
+                <h2 class="seccion__titulo">Prevenir riesgos también es cuidar el entorno</h2>
+                <p class="seccion__subtitulo">La información de esta sección es preventiva y no reemplaza la orientación de profesionales o autoridades de salud.</p>
+                <div class="rejilla rejilla--2-columnas">
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-mosquito" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Mosquitos y dengue</h3>
+                            <p class="tarjeta__texto">Recipientes expuestos que acumulan agua pueden servir de criadero a mosquitos. Tapa, voltea o elimina recipientes y consulta a los servicios de salud ante síntomas o dudas.</p>
+                        </div>
+                    </article>
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-hand-holding-droplet" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Agua contaminada y leptospirosis</h3>
+                            <p class="tarjeta__texto">Evita el contacto directo con aguas posiblemente contaminadas, especialmente si hay heridas. Usa protección apropiada al limpiar y sigue las recomendaciones sanitarias locales.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN VISIBILIZAR ==================== -->
+        <section class="seccion" id="visibilizar">
+            <div class="contenedor">
+                <p class="antetitulo">Para comunicar a entes competentes</p>
+                <h2 class="seccion__titulo">Cómo documentar una situación y solicitar atención</h2>
+                <p class="seccion__subtitulo">Reúne información concreta, evita exponerte a riesgos y presenta la solicitud ante la institución que tenga competencia en el servicio o espacio afectado.</p>
+
+                <div class="rejilla rejilla--4-columnas">
+                    <article class="tarjeta-cristal tarjeta-paso">
+                        <span class="tarjeta-paso__numero">1</span>
+                        <h3 class="tarjeta__titulo">Ubica el punto</h3>
+                        <p class="tarjeta__texto">Anota una referencia clara, sector, calle o punto público cercano. Comparte ubicación precisa solo con el organismo que atenderá el caso.</p>
+                    </article>
+                    <article class="tarjeta-cristal tarjeta-paso">
+                        <span class="tarjeta-paso__numero">2</span>
+                        <h3 class="tarjeta__titulo">Registra la evidencia</h3>
+                        <p class="tarjeta__texto">Toma fotos panorámicas y de detalle con fecha. No ingreses a zonas peligrosas ni incluyas rostros, matrículas o datos privados.</p>
+                    </article>
+                    <article class="tarjeta-cristal tarjeta-paso">
+                        <span class="tarjeta-paso__numero">3</span>
+                        <h3 class="tarjeta__titulo">Describe el impacto</h3>
+                        <p class="tarjeta__texto">Explica desde cuándo ocurre, si se repite y qué afecta. Distingue lo que observaste de lo que aún debe confirmarse.</p>
+                    </article>
+                    <article class="tarjeta-cristal tarjeta-paso">
+                        <span class="tarjeta-paso__numero">4</span>
+                        <h3 class="tarjeta__titulo">Solicita y da seguimiento</h3>
+                        <p class="tarjeta__texto">Presenta el reporte por un canal oficial, conserva copia y número de trámite, y registra fechas de respuesta o seguimiento.</p>
+                    </article>
+                </div>
+
+                <h3 class="seccion__titulo seccion__titulo--izquierda titulo-subseccion">¿Qué acciones de rehabilitación se pueden solicitar?</h3>
+                <p class="seccion__introduccion seccion__introduccion--izquierda">La solicitud debe dirigirse a la institución competente según el espacio y el servicio afectados. Describe el problema y pide una respuesta concreta que pueda verificarse.</p>
+                <div class="rejilla rejilla--2-columnas">
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Inspección y diagnóstico</h3>
+                            <p class="tarjeta__texto">Solicita una visita técnica para evaluar el punto, identificar causas y determinar qué institución tiene competencia.</p>
+                        </div>
+                    </article>
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-broom" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Limpieza y retiro seguro</h3>
+                            <p class="tarjeta__texto">Pide la recolección o limpieza adecuada del espacio, con medidas de seguridad y disposición final según las normas locales.</p>
+                        </div>
+                    </article>
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Rehabilitación del espacio</h3>
+                            <p class="tarjeta__texto">Si el sitio es público y lo requiere, solicita evaluación para reparar drenajes o recuperar el área afectada.</p>
+                        </div>
+                    </article>
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Mantenimiento y prevención</h3>
+                            <p class="tarjeta__texto">Solicita información sobre frecuencia de atención, horarios de recolección o medidas preventivas para evitar que el problema se repita.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="aviso">
+                    <p><strong>Importante:</strong> EcoCampeche es una plataforma informativa comunitaria; no es un canal oficial de denuncias ni garantiza la intervención de organismos públicos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN CONTACTOS OFICIALES ==================== -->
+        <section class="seccion" id="entes" aria-labelledby="titulo-entes">
+            <div class="contenedor">
+                <p class="antetitulo">Canales institucionales verificados</p>
+                <h2 class="seccion__titulo" id="titulo-entes">¿Dónde presentar el reporte?</h2>
+                <p class="seccion__subtitulo">Elige el organismo según el problema. Los datos del MINEC se tomaron de su página oficial de contacto; confirma que el canal siga activo antes de enviar información.</p>
+
+                <div class="rejilla rejilla--2-columnas">
+                    <article class="tarjeta tarjeta-direccion">
+                        <span class="tarjeta__icono"><i class="fa-solid fa-tree-city" aria-hidden="true"></i></span>
+                        <h3 class="tarjeta__titulo">Ministerio del Poder Popular para el Ecosocialismo (MINEC)</h3>
+                        <p class="tarjeta__texto">Para denuncias y orientación sobre afectaciones ambientales. Su sede principal está en Caracas; al llamar, solicita el contacto de la Dirección Estadal Ambiental de Sucre.</p>
+                        <ul class="tarjeta__lista">
+                            <li><i class="fa-solid fa-phone" aria-hidden="true"></i><span>Central telefónica: <a href="tel:+582124081111">+58 0212-408-1111</a></span></li>
+                            <li><i class="fa-solid fa-phone-volume" aria-hidden="true"></i><span>Línea ambiental publicada: <a href="tel:08002624368">0800-AMBIENT (0800-262-4368)</a></span></li>
+                            <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Centro Simón Bolívar, Torres del Silencio, Plaza Caracas, Distrito Capital, Venezuela.</span></li>
+                        </ul>
+                        <div class="acciones-contacto">
+                            <a class="boton boton--principal" href="https://0800ambiente.com/#denuncias" target="_blank" rel="noopener noreferrer">Abrir portal de denuncias <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <a class="boton boton--secundario" href="https://www.minec.gob.ve/contacto/" target="_blank" rel="noopener noreferrer">Ver contacto oficial del MINEC</a>
+                        </div>
+                        <p class="fuente-oficial">Fuente: <a href="https://www.minec.gob.ve/contacto/" target="_blank" rel="noopener noreferrer">MINEC · Contacto</a>. La dirección indicada es la sede nacional, no una oficina en Cumaná. Durante la verificación, el portal de denuncias no respondió; si continúa sin funcionar, usa los teléfonos publicados o solicita el canal regional.</p>
+                    </article>
+
+                    <article class="tarjeta tarjeta-direccion">
+                        <span class="tarjeta__icono"><i class="fa-solid fa-city" aria-hidden="true"></i></span>
+                        <h3 class="tarjeta__titulo">Alcaldía del Municipio Sucre · Cumaná</h3>
+                        <p class="tarjeta__texto">Para solicitudes de aseo urbano, recolección de residuos, drenajes y recuperación de espacios públicos, pregunta por la dependencia municipal responsable de Servicios Públicos o ambiente.</p>
+                        <p class="tarjeta__texto tarjeta__texto--separado">No se publica aquí teléfono ni dirección municipal porque no se encontró un canal oficial vigente que se pudiera confirmar. Verifica que cualquier oficina o cuenta corresponda al Municipio Sucre del estado Sucre, no al municipio homónimo del estado Miranda.</p>
+                        <div class="acciones-contacto">
+                            <a class="boton boton--secundario" href="https://www.google.com/maps/search/?api=1&amp;query=Alcald%C3%ADa+Municipio+Sucre+Cuman%C3%A1+Estado+Sucre+Venezuela" target="_blank" rel="noopener noreferrer">Buscar sede en Cumaná <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <a class="enlace-texto" href="direcciones.html">Ver ubicación general de la comunidad</a>
+                        </div>
+                        <p class="fuente-oficial">La búsqueda en mapas no es un canal oficial ni confirma por sí sola la dirección. Confirma la sede y solicita número de recepción del trámite.</p>
+                    </article>
+                </div>
+
+                <div class="aviso">
+                    <p><strong>Para hacer seguimiento:</strong> entrega el informe y las fotografías por separado, pide sello de recibido o número de caso y conserva una copia. Si el portal no responde, intenta la línea telefónica del MINEC y pide el canal regional de Sucre.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN FORMULARIO ==================== -->
+        <section class="seccion seccion--suave">
+            <div class="contenedor">
+                <p class="antetitulo">Herramienta comunitaria</p>
+                <h2 class="seccion__titulo">Prepara un borrador de reporte</h2>
+                <p class="seccion__subtitulo">Completa los datos observados y descarga un texto de apoyo. Esta herramienta funciona en tu dispositivo: no transmite ni almacena el reporte.</p>
+
+                <form class="tarjeta formulario tarjeta-direccion" id="formulario-reporte">
+                    <div class="formulario__campo">
+                        <label class="formulario__etiqueta" for="organismo-reporte">Organismo al que dirigirás el informe</label>
+                        <select class="formulario__control" id="organismo-reporte" name="organismo" required>
+                            <option value="">Selecciona el organismo</option>
+                            <option>Ministerio del Poder Popular para el Ecosocialismo (MINEC)</option>
+                            <option>Alcaldía del Municipio Sucre, Cumaná — Servicios Públicos/Aseo Urbano</option>
+                            <option>Otro organismo competente</option>
+                        </select>
+                        <p class="formulario__ayuda">Confirma la competencia y el canal oficial antes de entregar el reporte.</p>
+                    </div>
+                    <div class="formulario__campo">
+                        <label class="formulario__etiqueta" for="ubicacion-reporte">Ubicación o referencia pública</label>
+                        <input class="formulario__control" id="ubicacion-reporte" name="ubicacion" type="text" maxlength="160" placeholder="Ej.: esquina o punto público del Sector 4A" required>
+                    </div>
+                    <div class="rejilla rejilla--2-columnas">
+                        <div class="formulario__campo">
+                            <label class="formulario__etiqueta" for="fecha-reporte">Fecha de observación</label>
+                            <input class="formulario__control" id="fecha-reporte" name="fecha-observacion" type="date" required>
+                        </div>
+                        <div class="formulario__campo">
+                            <label class="formulario__etiqueta" for="situacion-reporte">Tipo de situación observada</label>
+                            <select class="formulario__control" id="situacion-reporte" name="situacion" required>
+                                <option value="">Selecciona una opción</option>
+                                <option>Acumulación de residuos</option>
+                                <option>Obstrucción visible de drenaje</option>
+                                <option>Agua estancada</option>
+                                <option>Otro aspecto ambiental</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="formulario__campo">
+                        <label class="formulario__etiqueta" for="atencion-reporte">¿Qué atención deseas solicitar?</label>
+                        <select class="formulario__control" id="atencion-reporte" name="atencion-solicitada" required>
+                            <option value="">Selecciona una opción</option>
+                            <option>Inspección y diagnóstico técnico</option>
+                            <option>Limpieza o retiro seguro de residuos</option>
+                            <option>Evaluación para rehabilitar el espacio</option>
+                            <option>Información sobre mantenimiento o prevención</option>
+                        </select>
+                    </div>
+                    <div class="formulario__campo">
+                        <label class="formulario__etiqueta" for="descripcion-reporte">Descripción objetiva</label>
+                        <textarea class="formulario__control" id="descripcion-reporte" name="descripcion" rows="5" maxlength="1200" placeholder="Describe qué observaste, desde cuándo y qué espacio está afectado. No incluyas nombres ni información privada." required></textarea>
+                    </div>
+                    <p class="formulario__ayuda">No incluyas datos personales, acusaciones sin verificar ni fotografías de personas. Adjunta las evidencias por separado al presentar el reporte.</p>
+                    <div class="portada__acciones">
+                        <button class="boton boton--principal" type="submit">Preparar reporte <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i></button>
+                        <button class="boton boton--secundario" id="descargar-reporte" type="button" hidden>Descargar archivo de texto</button>
+                    </div>
+                    <div class="formulario__resultado" id="resultado-reporte" aria-live="polite"></div>
+                </form>
+
+                <p class="seccion__introduccion">Verifica el organismo competente y sus canales oficiales antes de enviar la solicitud. Consulta <a href="direcciones.html">las referencias de ubicación</a> y <a href="contacto.html">las opciones de contacto del proyecto</a>.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== SECCIÓN FOOTER ==================== -->
+    <footer class="pie">
+        <div class="contenedor pie__contenido">
+            <a href="index.html" class="pie__marca"><i class="fa-solid fa-leaf" aria-hidden="true"></i> EcoCampeche</a>
+            <p class="pie__texto">Documentar con responsabilidad ayuda a dialogar con evidencia.</p>
+            <p class="pie__texto pie__credito">Proyecto socio-tecnológico · Campeche, Sector 4A</p>
+        </div>
+    </footer>
+</body>
+</html>
