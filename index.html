@@ -15,18 +15,85 @@
     <script src="scripts.js" defer></script>
 </head>
 <body>
+
+    
     <a class="enlace-saltar" href="#contenido">Saltar al contenido</a>
     <!-- ==================== SECCIÓN CABECERA ==================== -->
     <header class="cabecera">
+
         <div class="cabecera__contenedor">
+
             <a href="index.html" class="cabecera__logo"><img src="assets/campeche.svg" alt="" aria-hidden="true"><span>EcoCampeche</span></a>
+
             <nav class="navegacion" id="menu-principal" aria-label="Navegación principal">
                 <ul class="navegacion__lista">
-                    <li><a href="index.html" class="navegacion__enlace activo" aria-current="page">Inicio</a></li>
-                    <li><a href="comunidades.html" class="navegacion__enlace">Comunidades</a></li>
-                    <li><a href="problematica.html" class="navegacion__enlace">Problemática</a></li>
-                    <li><a href="nosotros.html" class="navegacion__enlace">Desarrolladores</a></li>
-                    <li><a href="contacto.html" class="navegacion__enlace">Contacto</a></li>
+                    <!-- Menú Desplegable: Inicio -->
+                    <li class="navegacion__grupo">
+                        <details class="navegacion__desplegable activo">
+                            <summary>
+                                <span>Inicio</span>
+                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                            </summary>
+                            <ul class="navegacion__submenu">
+                                <li><a class="navegacion__enlace activo" href="index.html" aria-current="page"><i class="fa-solid fa-house" aria-hidden="true"></i> Portada y visión</a></li>
+                                <li><a class="navegacion__enlace" href="index.html#proposito"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Propósito comunitario</a></li>
+                                <li><a class="navegacion__enlace" href="index.html#iniciativas"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> Iniciativas vecinales</a></li>
+                                <li><a class="navegacion__enlace" href="index.html#carrusel-ecologia"><i class="fa-solid fa-images" aria-hidden="true"></i> Galería inmersiva</a></li>
+                                <li><a class="navegacion__enlace" href="index.html#manual-recoleccion"><i class="fa-solid fa-list-check" aria-hidden="true"></i> Manual de recolección</a></li>
+                                <li><a class="navegacion__enlace" href="index.html#video-comunitario"><i class="fa-solid fa-circle-play" aria-hidden="true"></i> Video de acción en comunidad</a></li>
+                                <li><a class="navegacion__enlace" href="index.html#participa"><i class="fa-solid fa-users" aria-hidden="true"></i> Participa en el cambio</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <!-- Menú Desplegable: Comunidades -->
+                    <li class="navegacion__grupo">
+                        <details class="navegacion__desplegable">
+                            <summary>
+                                <span>Comunidades</span>
+                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                            </summary>
+                            <ul class="navegacion__submenu">
+                                <li><a class="navegacion__enlace" href="comunidades.html"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i> Red de comunidades</a></li>
+                                <li><a class="navegacion__enlace" href="campeche.html"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Campeche (Sector 4A)</a></li>
+                                <li><a class="navegacion__enlace" href="campeche.html#ruta"><i class="fa-solid fa-route" aria-hidden="true"></i> Ruta comunitaria</a></li>
+                                <li><a class="navegacion__enlace" href="campeche.html#titulo-galeria"><i class="fa-solid fa-camera-retro" aria-hidden="true"></i> Registro de evidencias</a></li>
+                                <li><a class="navegacion__enlace" href="direcciones.html"><i class="fa-solid fa-compass" aria-hidden="true"></i> Ubicación y mapa</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <!-- Menú Desplegable: Problemática -->
+                    <li class="navegacion__grupo">
+                        <details class="navegacion__desplegable">
+                            <summary>
+                                <span>Problemática</span>
+                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                            </summary>
+                            <ul class="navegacion__submenu">
+                                <li><a class="navegacion__enlace" href="problematica.html"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Diagnóstico general</a></li>
+                                <li><a class="navegacion__enlace" href="problematica.html#prevencion"><i class="fa-solid fa-recycle" aria-hidden="true"></i> Clasificación de residuos</a></li>
+                                <li><a class="navegacion__enlace" href="problematica.html#salud"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i> Salud y prevención</a></li>
+                                <li><a class="navegacion__enlace" href="problematica.html#visibilizar"><i class="fa-solid fa-file-signature" aria-hidden="true"></i> Preparar un reporte</a></li>
+                                <li><a class="navegacion__enlace" href="problematica.html#entes"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> Entes competentes</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <!-- Menú Desplegable: Desarrolladores / Nosotros -->
+                    <li class="navegacion__grupo">
+                        <details class="navegacion__desplegable">
+                            <summary>
+                                <span>Nosotros</span>
+                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                            </summary>
+                            <ul class="navegacion__submenu">
+                                <li><a class="navegacion__enlace" href="nosotros.html"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i> Desarrolladores</a></li>
+                                <li><a class="navegacion__enlace" href="nosotros.html#metas"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Propósito del proyecto</a></li>
+                                <li><a class="navegacion__enlace" href="contacto.html"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contacto y colaboración</a></li>
+                            </ul>
+                        </details>
+                    </li>
                 </ul>
             </nav>
             <button class="cabecera__alternar" id="alternar-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
@@ -36,12 +103,20 @@
     </header>
 
     <main id="contenido">
+
+
         <!-- ==================== SECCIÓN INICIO ==================== -->
+
+
+
         <section class="portada" aria-labelledby="titulo-portada">
+
             <video class="portada__video" autoplay muted loop playsinline aria-hidden="true">
                 <source src="videos/Video Hero.mp4" type="video/mp4">
             </video>
+
             <div class="portada__capa" aria-hidden="true"></div>
+
             <div class="contenedor">
                 <div class="portada__contenido">
                     <p class="portada__antetitulo">Educación ambiental · Salud · Comunidad</p>
@@ -53,6 +128,7 @@
                     </div>
                     <p class="portada__nota"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Iniciativa comunitaria · Campeche, Sector 4A</p>
                 </div>
+
             </div>
         </section>
 
@@ -67,35 +143,52 @@
         </section>
 
         <!-- ==================== SECCIÓN INFORMACIÓN ==================== -->
-        <section class="seccion" aria-labelledby="titulo-proposito">
+        <section class="seccion" id="proposito" aria-labelledby="titulo-proposito" data-animar="deslizar-arriba">
             <div class="contenedor">
                 <p class="antetitulo">Informarse es el primer paso</p>
                 <h2 class="seccion__titulo" id="titulo-proposito">Una comunidad informada puede transformar su entorno</h2>
                 <p class="seccion__subtitulo">Los residuos mal dispuestos no solo afectan el paisaje: pueden obstruir drenajes, contaminar espacios comunes y favorecer condiciones que ponen en riesgo la salud.</p>
 
                 <div class="rejilla rejilla--3-columnas">
-                    <article class="tarjeta tarjeta-destacada">
-                        <div class="tarjeta__contenido">
-                            <span class="tarjeta__icono"><i class="fa-solid fa-recycle" aria-hidden="true"></i></span>
-                            <h3 class="tarjeta__titulo">Reducir y separar</h3>
-                            <p class="tarjeta__texto">Separar los residuos desde casa ayuda a recuperar materiales y evitar que terminen en calles, canales y terrenos.</p>
-                            <a class="enlace-texto" href="problematica.html#prevencion">Aprende prácticas útiles <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    <!-- Tarjeta Ecológica 1: Separación y Recolección en Casa -->
+                    <article class="tarjeta-ecologica" data-animar="deslizar-arriba">
+                        <div class="tarjeta-ecologica__multimedia">
+                            <img class="tarjeta-ecologica__foto" src="assets/ecologia/photo_1_2026-11-04_13-33-26.jpg" alt="Persona clasificando botellas, latas y residuos en recipientes limpios" loading="lazy">
+                            <div class="tarjeta-ecologica__degradado" aria-hidden="true"></div>
+                            <span class="tarjeta-ecologica__etiqueta"><i class="fa-solid fa-recycle" aria-hidden="true"></i> Recolección en casa</span>
+                        </div>
+                        <div class="tarjeta-ecologica__contenido">
+                            <h3 class="tarjeta-ecologica__titulo">Reducir y separar en origen</h3>
+                            <p class="tarjeta-ecologica__texto">Separar envases, cartón limpio y restos orgánicos desde casa evita que la basura sature los drenajes y facilita la labor de las rutas de recolección.</p>
+                            <a class="tarjeta-ecologica__enlace" href="problematica.html#prevencion"><span>Aprende prácticas útiles</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
                     </article>
-                    <article class="tarjeta tarjeta-destacada">
-                        <div class="tarjeta__contenido">
-                            <span class="tarjeta__icono"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i></span>
-                            <h3 class="tarjeta__titulo">Proteger la salud</h3>
-                            <p class="tarjeta__texto">Eliminar recipientes con agua estancada y evitar el contacto con desechos reduce riesgos para familias y vecinos.</p>
-                            <a class="enlace-texto" href="problematica.html#salud">Conoce los riesgos <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+
+                    <!-- Tarjeta Ecológica 2: Salud y Puntos Limpios -->
+                    <article class="tarjeta-ecologica" data-animar="deslizar-arriba">
+                        <div class="tarjeta-ecologica__multimedia">
+                            <img class="tarjeta-ecologica__foto" src="assets/ecologia/photo_5_2026-11-04_13-33-26.jpg" alt="Contenedores ecológicos identificados por colores para recolección organizada" loading="lazy">
+                            <div class="tarjeta-ecologica__degradado" aria-hidden="true"></div>
+                            <span class="tarjeta-ecologica__etiqueta"><i class="fa-solid fa-shield-heart" aria-hidden="true"></i> Salud y prevención</span>
+                        </div>
+                        <div class="tarjeta-ecologica__contenido">
+                            <h3 class="tarjeta-ecologica__titulo">Proteger la salud del vecindario</h3>
+                            <p class="tarjeta-ecologica__texto">Depositar residuos en contenedores cerrados y eliminar cúmulos de agua estancada previene la proliferación del zancudo del dengue en el Sector 4A.</p>
+                            <a class="tarjeta-ecologica__enlace" href="problematica.html#salud"><span>Conoce los riesgos</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
                     </article>
-                    <article class="tarjeta tarjeta-destacada">
-                        <div class="tarjeta__contenido">
-                            <span class="tarjeta__icono"><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i></span>
-                            <h3 class="tarjeta__titulo">Documentar para mejorar</h3>
-                            <p class="tarjeta__texto">Un reporte claro, con ubicación y evidencias fechadas, puede ayudar a comunicar una necesidad ante las autoridades.</p>
-                            <a class="enlace-texto" href="problematica.html#visibilizar">Prepara un reporte <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+
+                    <!-- Tarjeta Ecológica 3: Recolección y Acción Comunitaria -->
+                    <article class="tarjeta-ecologica" data-animar="deslizar-arriba">
+                        <div class="tarjeta-ecologica__multimedia">
+                            <img class="tarjeta-ecologica__foto" src="assets/ecologia/photo_4_2026-11-04_13-33-26.jpg" alt="Voluntarios con bolsas resistentes en jornada comunitaria de recolección de basura" loading="lazy">
+                            <div class="tarjeta-ecologica__degradado" aria-hidden="true"></div>
+                            <span class="tarjeta-ecologica__etiqueta"><i class="fa-solid fa-people-carry-box" aria-hidden="true"></i> Recolección activa</span>
+                        </div>
+                        <div class="tarjeta-ecologica__contenido">
+                            <h3 class="tarjeta-ecologica__titulo">Documentar y sanear el entorno</h3>
+                            <p class="tarjeta-ecologica__texto">Un reporte fotográfico fechado y jornadas vecinales con equipo de protección permiten sanear focos críticos e impulsar respuestas oficiales.</p>
+                            <a class="tarjeta-ecologica__enlace" href="problematica.html#visibilizar"><span>Prepara un reporte</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
                     </article>
                 </div>
@@ -103,35 +196,52 @@
         </section>
 
         <!-- ==================== SECCIÓN INICIATIVAS ==================== -->
-        <section class="seccion seccion--suave" aria-labelledby="titulo-iniciativas">
+        <section class="seccion seccion--suave" id="iniciativas" aria-labelledby="titulo-iniciativas" data-animar="deslizar-arriba">
             <div class="contenedor">
                 <p class="antetitulo">De la observación a la acción</p>
                 <h2 class="seccion__titulo" id="titulo-iniciativas">Iniciativas para hacer visible la problemática</h2>
                 <p class="seccion__subtitulo">Con organización y evidencia clara, las necesidades del sector pueden comunicarse y convertirse en propuestas de mejora.</p>
 
                 <div class="rejilla rejilla--3-columnas">
-                    <article class="tarjeta tarjeta-destacada">
-                        <div class="tarjeta__contenido">
-                            <span class="tarjeta__icono"><i class="fa-solid fa-camera" aria-hidden="true"></i></span>
-                            <h3 class="tarjeta__titulo">Crear un registro fotográfico</h3>
-                            <p class="tarjeta__texto">Fotografiar los puntos afectados desde un lugar seguro y anotar fecha, referencia y tipo de residuo. Evitar rostros, matrículas y datos privados.</p>
-                            <a class="enlace-texto" href="campeche.html#titulo-galeria">Ver ejemplos para documentar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    <!-- Iniciativa 1: Diagnóstico Visual -->
+                    <article class="tarjeta-ecologica" data-animar="deslizar-arriba">
+                        <div class="tarjeta-ecologica__multimedia">
+                            <img class="tarjeta-ecologica__foto" src="assets/photo_3_2026-11-03_22-52-02.jpg" alt="Acumulación de residuos en terreno abierto para diagnóstico comunitario en Campeche" loading="lazy">
+                            <div class="tarjeta-ecologica__degradado" aria-hidden="true"></div>
+                            <span class="tarjeta-ecologica__etiqueta"><i class="fa-solid fa-camera" aria-hidden="true"></i> Diagnóstico visual</span>
+                        </div>
+                        <div class="tarjeta-ecologica__contenido">
+                            <h3 class="tarjeta-ecologica__titulo">Crear un registro fotográfico</h3>
+                            <p class="tarjeta-ecologica__texto">Fotografiar los puntos críticos con fecha y hora desde un lugar seguro para respaldar solicitudes formales de recolección ante entes municipales.</p>
+                            <a class="tarjeta-ecologica__enlace" href="campeche.html#titulo-galeria"><span>Ver ejemplos para documentar</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
                     </article>
-                    <article class="tarjeta tarjeta-destacada">
-                        <div class="tarjeta__contenido">
-                            <span class="tarjeta__icono"><i class="fa-solid fa-file-circle-check" aria-hidden="true"></i></span>
-                            <h3 class="tarjeta__titulo">Presentar un reporte formal</h3>
-                            <p class="tarjeta__texto">Describir qué ocurre, desde cuándo y dónde; solicitar una acción concreta y entregar la información al organismo competente. Guardar copia y número de trámite.</p>
-                            <a class="enlace-texto" href="problematica.html#visibilizar">Preparar un reporte descargable <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+
+                    <!-- Iniciativa 2: Gestión y Reporte -->
+                    <article class="tarjeta-ecologica" data-animar="deslizar-arriba">
+                        <div class="tarjeta-ecologica__multimedia">
+                            <img class="tarjeta-ecologica__foto" src="assets/ecologia/photo_6_2026-11-04_13-33-26.jpg" alt="Equipo vecinal coordinando el retiro seguro de residuos acumulados" loading="lazy">
+                            <div class="tarjeta-ecologica__degradado" aria-hidden="true"></div>
+                            <span class="tarjeta-ecologica__etiqueta"><i class="fa-solid fa-file-circle-check" aria-hidden="true"></i> Gestión formal</span>
+                        </div>
+                        <div class="tarjeta-ecologica__contenido">
+                            <h3 class="tarjeta-ecologica__titulo">Presentar un reporte formal</h3>
+                            <p class="tarjeta-ecologica__texto">Describir con exactitud el volumen de desechos, su ubicación precisa y solicitar rutas oficiales de recolección mediante oficio con seguimiento.</p>
+                            <a class="tarjeta-ecologica__enlace" href="problematica.html#visibilizar"><span>Preparar reporte descargable</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
                     </article>
-                    <article class="tarjeta tarjeta-destacada">
-                        <div class="tarjeta__contenido">
-                            <span class="tarjeta__icono"><i class="fa-solid fa-people-group" aria-hidden="true"></i></span>
-                            <h3 class="tarjeta__titulo">Organizar una iniciativa vecinal</h3>
-                            <p class="tarjeta__texto">Coordinar con residentes una jornada de sensibilización, solicitar una inspección o proponer limpieza y rehabilitación de espacios comunes.</p>
-                            <a class="enlace-texto" href="contacto.html">Conocer formas de colaborar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+
+                    <!-- Iniciativa 3: Reforestación y Espacios Verdes -->
+                    <article class="tarjeta-ecologica" data-animar="deslizar-arriba">
+                        <div class="tarjeta-ecologica__multimedia">
+                            <img class="tarjeta-ecologica__foto" src="assets/ecologia/photo_2_2026-11-04_13-33-26.jpg" alt="Persona plantando un árbol joven en una zona comunitaria recuperada" loading="lazy">
+                            <div class="tarjeta-ecologica__degradado" aria-hidden="true"></div>
+                            <span class="tarjeta-ecologica__etiqueta"><i class="fa-solid fa-seedling" aria-hidden="true"></i> Reforestación</span>
+                        </div>
+                        <div class="tarjeta-ecologica__contenido">
+                            <h3 class="tarjeta-ecologica__titulo">Recuperar espacios verdes</h3>
+                            <p class="tarjeta-ecologica__texto">Sembrar plantas autóctonas y árboles jóvenes en zonas saneadas para crear sombra, afianzar taludes y evitar que vuelvan a acumularse residuos.</p>
+                            <a class="tarjeta-ecologica__enlace" href="contacto.html"><span>Conocer formas de colaborar</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
                     </article>
                 </div>
@@ -142,56 +252,385 @@
             </div>
         </section>
 
+        <!-- ==================== CARRUSEL A PANTALLA SUMERGIDA: ECOLOGÍA (COMPLETO, SIN VIDRIO) ==================== -->
+        <section class="carrusel-sumergido" id="carrusel-ecologia" aria-label="Galería inmersiva de acción ambiental">
+            <div class="carrusel-sumergido__pista">
+                <!-- Diapositiva 1 -->
+                <div class="carrusel-sumergido__diapositiva activa">
+                    <img class="carrusel-sumergido__fondo" src="assets/ecologia/photo_1_2026-11-04_13-33-26.jpg" alt="Separación ordenada de envases y reciclables" loading="lazy">
+                    <div class="carrusel-sumergido__capa" aria-hidden="true"></div>
+                    <div class="contenedor carrusel-sumergido__contenido">
+                        <div class="carrusel-sumergido__bloque">
+                            <span class="carrusel-sumergido__pildora"><i class="fa-solid fa-leaf" aria-hidden="true"></i> Conciencia en el hogar</span>
+                            <h2 class="carrusel-sumergido__titulo">Transformar residuos en recursos</h2>
+                            <p class="carrusel-sumergido__descripcion">La separación inicial en origen reduce hasta un 60% la sobrecarga en colectores y preserva la salubridad de los espacios públicos en Campeche.</p>
+                            <div class="carrusel-sumergido__acciones">
+                                <a class="boton boton--principal" href="#manual-recoleccion">Ver manual paso a paso <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                                <a class="boton boton--claro" href="problematica.html#prevencion">Guía de clasificación</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diapositiva 2 -->
+                <div class="carrusel-sumergido__diapositiva">
+                    <img class="carrusel-sumergido__fondo" src="assets/ecologia/photo_5_2026-11-04_13-33-26.jpg" alt="Puntos limpios identificados por colores" loading="lazy">
+                    <div class="carrusel-sumergido__capa" aria-hidden="true"></div>
+                    <div class="contenedor carrusel-sumergido__contenido">
+                        <div class="carrusel-sumergido__bloque">
+                            <span class="carrusel-sumergido__pildora"><i class="fa-solid fa-box-archive" aria-hidden="true"></i> Puntos de entrega seguros</span>
+                            <h2 class="carrusel-sumergido__titulo">Puntos limpios y recolección digna</h2>
+                            <p class="carrusel-sumergido__descripcion">Identificar contenedores por color facilita el reciclaje y resguarda a los trabajadores de residuos frente a materiales punzocortantes.</p>
+                            <div class="carrusel-sumergido__acciones">
+                                <a class="boton boton--principal" href="#manual-recoleccion">Conoce los pasos <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                                <a class="boton boton--claro" href="campeche.html#ruta">Ruta de recolección</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diapositiva 3 -->
+                <div class="carrusel-sumergido__diapositiva">
+                    <img class="carrusel-sumergido__fondo" src="assets/ecologia/photo_4_2026-11-04_13-33-26.jpg" alt="Jornadas de limpieza comunitaria en equipo" loading="lazy">
+                    <div class="carrusel-sumergido__capa" aria-hidden="true"></div>
+                    <div class="contenedor carrusel-sumergido__contenido">
+                        <div class="carrusel-sumergido__bloque">
+                            <span class="carrusel-sumergido__pildora"><i class="fa-solid fa-people-carry-box" aria-hidden="true"></i> Acción colectiva</span>
+                            <h2 class="carrusel-sumergido__titulo">Jornadas vecinales coordinadas</h2>
+                            <p class="carrusel-sumergido__descripcion">Equipados con guantes y calzado seguro, los residentes del Sector 4A demuestran que la organización comunitaria recupera calles y plazas.</p>
+                            <div class="carrusel-sumergido__acciones">
+                                <a class="boton boton--principal" href="contacto.html">Unirme a una jornada <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                                <a class="boton boton--claro" href="#video-comunitario">Ver video en acción</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diapositiva 4 -->
+                <div class="carrusel-sumergido__diapositiva">
+                    <img class="carrusel-sumergido__fondo" src="assets/ecologia/photo_2_2026-11-04_13-33-26.jpg" alt="Reforestación y siembra comunitaria" loading="lazy">
+                    <div class="carrusel-sumergido__capa" aria-hidden="true"></div>
+                    <div class="contenedor carrusel-sumergido__contenido">
+                        <div class="carrusel-sumergido__bloque">
+                            <span class="carrusel-sumergido__pildora"><i class="fa-solid fa-seedling" aria-hidden="true"></i> Reforestación barrial</span>
+                            <h2 class="carrusel-sumergido__titulo">Sembrando futuro en áreas rescatadas</h2>
+                            <p class="carrusel-sumergido__descripcion">Sustituir antiguos botaderos con plantas autóctonas consolida el cambio, protege el suelo y crea pulmones verdes para la comunidad.</p>
+                            <div class="carrusel-sumergido__acciones">
+                                <a class="boton boton--principal" href="comunidades.html">Explorar comunidades <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diapositiva 5 -->
+                <div class="carrusel-sumergido__diapositiva">
+                    <img class="carrusel-sumergido__fondo" src="assets/ecologia/photo_3_2026-11-04_13-33-26.jpg" alt="Protección de cuencas de agua y playas" loading="lazy">
+                    <div class="carrusel-sumergido__capa" aria-hidden="true"></div>
+                    <div class="contenedor carrusel-sumergido__contenido">
+                        <div class="carrusel-sumergido__bloque">
+                            <span class="carrusel-sumergido__pildora"><i class="fa-solid fa-water" aria-hidden="true"></i> Protección hídrica</span>
+                            <h2 class="carrusel-sumergido__titulo">Protegiendo nuestros drenajes y costas</h2>
+                            <p class="carrusel-sumergido__descripcion">Evitar que los plásticos alcancen los canales fluviales previene anegamientos en época de lluvias y protege los ecosistemas marinos del golfo de Cariaco.</p>
+                            <div class="carrusel-sumergido__acciones">
+                                <a class="boton boton--principal" href="problematica.html#salud">Salud y prevención <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diapositiva 6 -->
+                <div class="carrusel-sumergido__diapositiva">
+                    <img class="carrusel-sumergido__fondo" src="assets/ecologia/photo_6_2026-11-04_13-33-26.jpg" alt="Equipo vecinal sosteniendo el cambio" loading="lazy">
+                    <div class="carrusel-sumergido__capa" aria-hidden="true"></div>
+                    <div class="contenedor carrusel-sumergido__contenido">
+                        <div class="carrusel-sumergido__bloque">
+                            <span class="carrusel-sumergido__pildora"><i class="fa-solid fa-handshake-angle" aria-hidden="true"></i> Sostenibilidad</span>
+                            <h2 class="carrusel-sumergido__titulo">Constancia que genera bienestar duradero</h2>
+                            <p class="carrusel-sumergido__descripcion">La participación continua de jóvenes, familias y líderes vecinales es la clave para un Campeche limpio, saludable y resiliente.</p>
+                            <div class="carrusel-sumergido__acciones">
+                                <a class="boton boton--principal" href="contacto.html">Participa en la red <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles de navegación -->
+            <button class="carrusel-sumergido__control carrusel-sumergido__control--anterior" type="button" aria-label="Diapositiva anterior">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <button class="carrusel-sumergido__control carrusel-sumergido__control--siguiente" type="button" aria-label="Diapositiva siguiente">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </button>
+
+            <!-- Indicadores inferiores -->
+            <div class="carrusel-sumergido__indicadores" aria-label="Selector de diapositivas"></div>
+        </section>
+
+        <!-- ==================== SECCIÓN MANUAL DE RECOLECCIÓN HORIZONTAL ==================== -->
+        <section class="seccion seccion--suave" id="manual-recoleccion" aria-labelledby="titulo-manual" style="padding-left: 0; padding-right: 0;">
+            <div class="contenedor seccion-manual__encabezado">
+                <p class="antetitulo">Manual paso a paso de recolección y cuidado</p>
+                <h2 class="seccion__titulo" id="titulo-manual">Pequeños pasos para manejar mejor los residuos</h2>
+                <p class="seccion__subtitulo">Guía visual estructurada a pantalla completa para facilitar la separación en el hogar, la preparación segura y la recuperación de espacios públicos en el Sector 4A.</p>
+            </div>
+
+            <div class="pasos-secciones-pantalla">
+                <!-- Paso 1 (Contenido izquierda 70%, Foto derecha 30%) -->
+                <article class="paso-seccion-pantalla" data-animar="deslizar-arriba">
+                    <div class="paso-seccion-pantalla__contenido">
+                        <div class="paso-seccion-pantalla__interior">
+                            <span class="etiqueta"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Paso 1 · Separar</span>
+                            <h3 class="paso-seccion-pantalla__titulo">Clasifica desde tu hogar</h3>
+                            <p class="paso-seccion-pantalla__texto">Mantén recipientes separados para los restos orgánicos de alimentos, los materiales reciclables limpios y secos (plásticos, latas, vidrio, cartón) y los residuos que requieren manejo especial. Separar en el hogar evita que más del 60% de los desechos contamine espacios comunes y drenajes.</p>
+                            <div class="paso-seccion-pantalla__detalle">
+                                <span class="paso-seccion-pantalla__consejo"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Práctica clave: Utiliza bolsas o cubetas identificadas para facilitar la colaboración de toda la familia.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paso-seccion-pantalla__multimedia">
+                        <img class="paso-seccion-pantalla__foto" src="assets/ecologia/photo_1_2026-11-04_13-33-26.jpg" alt="Persona separando envases, latas, papel y otros materiales en recipientes distintos" loading="lazy">
+                    </div>
+                </article>
+
+                <!-- Paso 2 (Foto izquierda 30%, Contenido derecha 70% por flex-direction invertido) -->
+                <article class="paso-seccion-pantalla" data-animar="deslizar-arriba">
+                    <div class="paso-seccion-pantalla__contenido">
+                        <div class="paso-seccion-pantalla__interior">
+                            <span class="etiqueta"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Paso 2 · Preparar</span>
+                            <h3 class="paso-seccion-pantalla__titulo">Entrega limpio, seco y seguro</h3>
+                            <p class="paso-seccion-pantalla__texto">Escurre y enjuaga los envases para evitar malos olores y no atraer roedores o mosquitos. Pliega las cajas de cartón para reducir el volumen y resguarda vidrios o latas con bordes filosos dentro de cajas protectoras para proteger a los recolectores de cortes e infecciones.</p>
+                            <div class="paso-seccion-pantalla__detalle">
+                                <span class="paso-seccion-pantalla__consejo"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Práctica clave: Deposita los residuos únicamente en los puntos autorizados y en los horarios asignados.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paso-seccion-pantalla__multimedia">
+                        <img class="paso-seccion-pantalla__foto" src="assets/ecologia/photo_5_2026-11-04_13-33-26.jpg" alt="Estación con recipientes de distintos colores para separar residuos" loading="lazy">
+                    </div>
+                </article>
+
+                <!-- Paso 3 (Contenido izquierda 70%, Foto derecha 30%) -->
+                <article class="paso-seccion-pantalla" data-animar="deslizar-arriba">
+                    <div class="paso-seccion-pantalla__contenido">
+                        <div class="paso-seccion-pantalla__interior">
+                            <span class="etiqueta"><i class="fa-solid fa-people-roof" aria-hidden="true"></i> Paso 3 · Cuidar</span>
+                            <h3 class="paso-seccion-pantalla__titulo">Organiza jornadas vecinales seguras</h3>
+                            <p class="paso-seccion-pantalla__texto">Coordina con el consejo comunal y vecinos del sector, define un perímetro claro y usa guantes resistentes y calzado cerrado. No toques residuos hospitalarios, químicos o cables caídos, y jamás desciendas al interior de canales profundos sin asistencia autorizada.</p>
+                            <div class="paso-seccion-pantalla__detalle">
+                                <span class="paso-seccion-pantalla__consejo"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Práctica clave: Establece un punto de hidratación y acopio seguro de las bolsas recolectadas.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paso-seccion-pantalla__multimedia">
+                        <img class="paso-seccion-pantalla__foto" src="assets/ecologia/photo_4_2026-11-04_13-33-26.jpg" alt="Grupo de personas recogiendo residuos con bolsas en un espacio verde" loading="lazy">
+                    </div>
+                </article>
+
+                <!-- Paso 4 (Foto izquierda 30%, Contenido derecha 70%) -->
+                <article class="paso-seccion-pantalla" data-animar="deslizar-arriba">
+                    <div class="paso-seccion-pantalla__contenido">
+                        <div class="paso-seccion-pantalla__interior">
+                            <span class="etiqueta"><i class="fa-solid fa-seedling" aria-hidden="true"></i> Acción comunitaria · Recuperación</span>
+                            <h3 class="paso-seccion-pantalla__titulo">Recupera y reforesta los espacios verdes</h3>
+                            <p class="paso-seccion-pantalla__texto">La siembra de plantas autóctonas y árboles jóvenes en zonas saneadas transforma antiguos focos de basura en áreas recreativas y sombreadas. La vegetación ayuda a fijar el terreno de los taludes, reduce la erosión y estimula el sentido de pertenencia en el vecindario.</p>
+                            <div class="paso-seccion-pantalla__detalle">
+                                <span class="paso-seccion-pantalla__consejo"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Práctica clave: Elige especies que requieran poco riego inicial y coordina turnos para su cuidado.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paso-seccion-pantalla__multimedia">
+                        <img class="paso-seccion-pantalla__foto" src="assets/ecologia/photo_2_2026-11-04_13-33-26.jpg" alt="Persona plantando un árbol joven en tierra preparada" loading="lazy">
+                    </div>
+                </article>
+
+                <!-- Paso 5 (Contenido izquierda 70%, Foto derecha 30%) -->
+                <article class="paso-seccion-pantalla" data-animar="deslizar-arriba">
+                    <div class="paso-seccion-pantalla__contenido">
+                        <div class="paso-seccion-pantalla__interior">
+                            <span class="etiqueta"><i class="fa-solid fa-water" aria-hidden="true"></i> Acción comunitaria · Cuencas</span>
+                            <h3 class="paso-seccion-pantalla__titulo">Evita que los desechos lleguen al agua</h3>
+                            <p class="paso-seccion-pantalla__texto">Los drenajes y canales fluviales son vitales durante las tormentas tropicales. Evitar que bolsas plásticas, envases y ramas obstruyan los aliviaderos previene anegamientos en las viviendas cercanas y protege la costa marina frente a la contaminación por microplásticos.</p>
+                            <div class="paso-seccion-pantalla__detalle">
+                                <span class="paso-seccion-pantalla__consejo"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Práctica clave: Informa a las autoridades si detectas acumulación de sedimentos antes de la época de lluvias.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paso-seccion-pantalla__multimedia">
+                        <img class="paso-seccion-pantalla__foto" src="assets/ecologia/photo_3_2026-11-04_13-33-26.jpg" alt="Voluntariado recogiendo residuos en una playa" loading="lazy">
+                    </div>
+                </article>
+
+                <!-- Paso 6 (Foto izquierda 30%, Contenido derecha 70%) -->
+                <article class="paso-seccion-pantalla" data-animar="deslizar-arriba">
+                    <div class="paso-seccion-pantalla__contenido">
+                        <div class="paso-seccion-pantalla__interior">
+                            <span class="etiqueta"><i class="fa-solid fa-handshake-angle" aria-hidden="true"></i> Acción comunitaria · Sostenibilidad</span>
+                            <h3 class="paso-seccion-pantalla__titulo">Sostén el cambio en equipo constante</h3>
+                            <p class="paso-seccion-pantalla__texto">Establezcan acuerdos claros de seguimiento vecinal para garantizar que el área saneada se mantenga limpia en el tiempo. La educación ambiental compartida y el reconocimiento mutuo fortalecen la convivencia y demuestran el poder de la acción comunitaria organizada.</p>
+                            <div class="paso-seccion-pantalla__detalle">
+                                <span class="paso-seccion-pantalla__consejo"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Práctica clave: Comparte los resultados en asambleas para motivar a nuevas familias a sumarse.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paso-seccion-pantalla__multimedia">
+                        <img class="paso-seccion-pantalla__foto" src="assets/ecologia/photo_6_2026-11-04_13-33-26.jpg" alt="Equipo de voluntariado limpiando un área verde" loading="lazy">
+                    </div>
+                </article>
+            </div>
+
+            <div class="contenedor" style="margin-top: 48px;">
+                <div class="aviso" data-animar="deslizar-arriba">
+                    <p><strong>Recolección responsable:</strong> respeta los días y horarios confirmados localmente. No abras bolsas ni mezcles pilas, medicamentos, aceites o químicos con los residuos comunes. <a class="enlace-texto" href="problematica.html#prevencion">Consulta la guía de clasificación <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== VIDEO COMUNITARIO A PANTALLA SUMERGIDA ==================== -->
+        <section class="video-destacado" id="video-comunitario" aria-labelledby="titulo-video-jornada">
+            <video class="video-destacado__medio" autoplay muted loop playsinline preload="metadata" poster="assets/ecologia/photo_3_2026-11-04_13-33-26.jpg" aria-label="Video sobre acciones de cuidado ambiental">
+                <source src="videos/IMG_4390.MP4" type="video/mp4">
+                Tu navegador no puede reproducir este video.
+            </video>
+            <div class="video-destacado__capa" aria-hidden="true"></div>
+            <div class="contenedor video-destacado__contenido">
+                <p class="portada__antetitulo"><i class="fa-solid fa-film" aria-hidden="true"></i> Conciencia que se convierte en acción</p>
+                <h2 class="video-destacado__titulo" id="titulo-video-jornada">Un entorno limpio se construye en comunidad</h2>
+                <p class="video-destacado__texto">Infórmate, separa tus residuos y suma tu voz a iniciativas seguras, organizadas y verificadas en nuestro territorio.</p>
+                <div class="video-destacado__acciones">
+                    <a class="boton boton--claro" href="comunidades.html">Conoce las comunidades <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    <button class="boton boton--cristal boton-audio" type="button" aria-label="Activar o silenciar sonido"><i class="fa-solid fa-volume-xmark" aria-hidden="true"></i> Activar sonido</button>
+                    <button class="boton boton--cristal boton-reproducir" type="button" aria-label="Reproducir o pausar video"><i class="fa-solid fa-pause" aria-hidden="true"></i> Pausar video</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== BARRA DE IMPACTO COMUNITARIO ==================== -->
+        <section class="barra-impacto" aria-label="Métricas de impacto comunitario">
+            <div class="contenedor">
+                <div class="rejilla-impacto">
+                    <div class="impacto-item" data-animar="zoom">
+                        <div class="impacto-item__numero" data-contador="6">6</div>
+                        <p class="impacto-item__etiqueta">Pasos del manual ecológico</p>
+                    </div>
+                    <div class="impacto-item" data-animar="zoom">
+                        <div class="impacto-item__numero" data-contador="100" data-sufijo="%">100%</div>
+                        <p class="impacto-item__etiqueta">Iniciativa ciudadana y local</p>
+                    </div>
+                    <div class="impacto-item" data-animar="zoom">
+                        <div class="impacto-item__numero" data-contador="1" data-prefijo="#">#1</div>
+                        <p class="impacto-item__etiqueta">Sector 4A, Comunidad piloto</p>
+                    </div>
+                    <div class="impacto-item" data-animar="zoom">
+                        <div class="impacto-item__numero" data-contador="4" data-sufijo=" Vías">4 Vías</div>
+                        <p class="impacto-item__etiqueta">Canales de documentación y reporte</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ==================== SECCIÓN COMUNIDADES ==================== -->
-        <section class="seccion" id="comunidades" aria-labelledby="titulo-comunidades">
+        <section class="seccion" id="comunidades" aria-labelledby="titulo-galeria">
             <div class="contenedor">
                 <p class="antetitulo">De lo local a lo colectivo</p>
                 <h2 class="seccion__titulo" id="titulo-comunidades">Las comunidades son el centro del cambio</h2>
                 <p class="seccion__subtitulo">Cada sector tiene una historia y necesidades propias. Conocerlas permite proponer acciones pertinentes y construir soluciones junto a sus habitantes.</p>
 
-                <div class="rejilla rejilla--2-columnas">
-                    <article class="tarjeta">
-                        <img class="tarjeta__imagen" src="assets/photo_3_2026-11-03_22-52-02.jpg" alt="Residuos acumulados en un espacio abierto de la comunidad Campeche" loading="lazy">
-                        <div class="tarjeta__contenido">
-                            <span class="tarjeta-galeria__etiqueta"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Comunidad piloto</span>
-                            <h3 class="tarjeta__titulo">Campeche · Sector 4A</h3>
-                            <p class="tarjeta__texto">Conoce el contexto de la comunidad, las situaciones relacionadas con residuos y cómo documentarlas para promover atención y rehabilitación.</p>
+                <div class="comunidades-rejilla">
+                    <!-- Tarjeta Comunidad Piloto: foto inmersiva -->
+                    <article class="comunidad-tarjeta-foto">
+                        <div class="comunidad-tarjeta-foto__imagen-wrap">
+                            <img src="assets/photo_3_2026-11-03_22-52-02.jpg" alt="Residuos acumulados en espacio abierto de la comunidad Campeche, Sector 4A" loading="lazy" class="comunidad-tarjeta-foto__img">
+                            <div class="comunidad-tarjeta-foto__degradado"></div>
+                            <span class="comunidad-tarjeta-foto__badge"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="comunidad-tarjeta-foto__cuerpo">
+                            <h3 class="comunidad-tarjeta-foto__titulo">Campeche · Sector 4A</h3>
+                            <p class="comunidad-tarjeta-foto__texto">Conoce el contexto de la comunidad, las situaciones relacionadas con residuos y cómo documentarlas para promover atención y rehabilitación.</p>
                             <a class="boton boton--principal" href="campeche.html">Explorar Campeche <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
                     </article>
-                    <article class="tarjeta">
-                        <div class="tarjeta__contenido">
-                            <span class="tarjeta__icono"><i class="fa-solid fa-people-roof" aria-hidden="true"></i></span>
-                            <h3 class="tarjeta__titulo">¿Tu comunidad quiere sumarse?</h3>
-                            <p class="tarjeta__texto">La plataforma está pensada para crecer: cada comunidad podrá compartir su contexto, evidencias, prioridades y propuestas.</p>
-                            <a class="enlace-texto" href="contacto.html">Conoce cómo participar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+
+                    <!-- Columna derecha: tarjetas de acción -->
+                    <div class="comunidades-lateral">
+                        <!-- Tarjeta ¿Tu comunidad quiere sumarse? -->
+                        <article class="comunidad-cta">
+                          
+                            <div class="comunidad-cta__contenido">
+                                <h3 class="comunidad-cta__titulo">¿Tu comunidad quiere sumarse?</h3>
+                                <p class="comunidad-cta__texto">La plataforma está pensada para crecer: cada comunidad podrá compartir su contexto, evidencias, prioridades y propuestas.</p>
+                                <a class="enlace-texto" href="contacto.html">Conoce cómo participar</a>
+                            </div>
+                        </article>
+
+                        <!-- Mini tarjetas de características -->
+                        <div class="comunidades-mini-rejilla">
+                            <div class="comunidad-mini-tarjeta">
+                                <i class="fa-solid fa-map-location-dot comunidad-mini-tarjeta__icono" aria-hidden="true"></i>
+                                <span class="comunidad-mini-tarjeta__label">Contexto local</span>
+                                <span class="comunidad-mini-tarjeta__sub">Historia y espacios del sector</span>
+                            </div>
+                            <div class="comunidad-mini-tarjeta">
+                                <i class="fa-solid fa-camera comunidad-mini-tarjeta__icono" aria-hidden="true"></i>
+                                <span class="comunidad-mini-tarjeta__label">Evidencia</span>
+                                <span class="comunidad-mini-tarjeta__sub">Registro fotográfico seguro</span>
+                            </div>
+                            <div class="comunidad-mini-tarjeta">
+                                <i class="fa-solid fa-handshake-angle comunidad-mini-tarjeta__icono" aria-hidden="true"></i>
+                                <span class="comunidad-mini-tarjeta__label">Acción conjunta</span>
+                                <span class="comunidad-mini-tarjeta__sub">Jornadas y propuestas</span>
+                            </div>
                         </div>
-                    </article>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- ==================== SECCIÓN PARTICIPA ==================== -->
-        <section class="seccion seccion--suave" id="participa" aria-labelledby="titulo-participacion">
+        <section class="seccion seccion--oscura" id="participa" aria-labelledby="titulo-participacion">
             <div class="contenedor">
-                <div class="rejilla rejilla--2-columnas">
-                    <div>
-                        <p class="antetitulo antetitulo--izquierda">Una invitación abierta</p>
-                        <h2 class="seccion__titulo seccion__titulo--izquierda" id="titulo-participacion">Una acción pequeña también cuenta</h2>
-                        <p class="tarjeta__texto">Comparte información confiable, separa tus residuos y ayuda a registrar las necesidades del entorno. Las propuestas comunitarias pueden servir para organizar jornadas y presentar solicitudes formales de atención.</p>
-                    </div>
-                    <div class="rejilla">
-                        <a class="tarjeta tarjeta-cristal tarjeta--enlazada" href="problematica.html#visibilizar">
-                            <span class="tarjeta__icono"><i class="fa-solid fa-camera" aria-hidden="true"></i></span>
-                            <span class="tarjeta__titulo">Documentar una problemática</span>
-                            <span class="tarjeta__texto">Consulta qué datos y evidencias conviene reunir antes de solicitar apoyo.</span>
-                        </a>
-                        <a class="tarjeta tarjeta-cristal tarjeta--enlazada" href="nosotros.html">
-                            <span class="tarjeta__icono"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
-                            <span class="tarjeta__titulo">Conocer al equipo desarrollador</span>
-                            <span class="tarjeta__texto">Descubre quiénes impulsan esta plataforma socio-tecnológica.</span>
-                        </a>
-                    </div>
+                <div class="participa-encabezado">
+                    <p class="antetitulo antetitulo--claro">Una invitación abierta</p>
+                    <h2 class="participa-titulo" id="titulo-participacion">Una acción pequeña<br>también cuenta</h2>
+                    <p class="participa-subtitulo">Comparte información confiable, separa tus residuos y ayuda a registrar las necesidades del entorno. Las propuestas comunitarias pueden servir para organizar jornadas y presentar solicitudes formales de atención.</p>
+                </div>
+
+                <div class="participa-acciones">
+                    <!-- Acción 1: Documentar -->
+                    <a class="participa-accion" href="problematica.html#visibilizar">
+                        <div class="participa-accion__icono-wrap">
+                            <i class="fa-solid fa-camera" aria-hidden="true"></i>
+                        </div>
+                        <div class="participa-accion__texto">
+                            <span class="participa-accion__titulo">Documentar una problemática</span>
+                            <span class="participa-accion__desc">Consulta qué datos y evidencias conviene reunir antes de solicitar apoyo.</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-right participa-accion__flecha" aria-hidden="true"></i>
+                    </a>
+
+                    <!-- Acción 2: Equipo -->
+                    <a class="participa-accion" href="nosotros.html">
+                        <div class="participa-accion__icono-wrap">
+                            <i class="fa-solid fa-code" aria-hidden="true"></i>
+                        </div>
+                        <div class="participa-accion__texto">
+                            <span class="participa-accion__titulo">Conocer al equipo desarrollador</span>
+                            <span class="participa-accion__desc">Descubre quiénes impulsan esta plataforma socio-tecnológica.</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-right participa-accion__flecha" aria-hidden="true"></i>
+                    </a>
+
+                    <!-- Acción 3: Jornadas -->
+                    <a class="participa-accion" href="contacto.html">
+                        <div class="participa-accion__icono-wrap">
+                            <i class="fa-solid fa-people-carry-box" aria-hidden="true"></i>
+                        </div>
+                        <div class="participa-accion__texto">
+                            <span class="participa-accion__titulo">Unirse a una jornada vecinal</span>
+                            <span class="participa-accion__desc">Coordina con residentes y organizaciones del Sector 4A para actuar juntos.</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-right participa-accion__flecha" aria-hidden="true"></i>
+                    </a>
                 </div>
             </div>
         </section>

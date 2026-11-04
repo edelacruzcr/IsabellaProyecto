@@ -20,13 +20,76 @@
     <header class="cabecera">
         <div class="cabecera__contenedor">
             <a href="index.html" class="cabecera__logo"><img src="assets/campeche.svg" alt="" aria-hidden="true"><span>EcoCampeche</span></a>
+
             <nav class="navegacion" id="menu-principal" aria-label="Navegación principal">
                 <ul class="navegacion__lista">
-                    <li><a href="index.html" class="navegacion__enlace">Inicio</a></li>
-                    <li><a href="comunidades.html" class="navegacion__enlace">Comunidades</a></li>
-                    <li><a href="problematica.html" class="navegacion__enlace">Problemática</a></li>
-                    <li><a href="nosotros.html" class="navegacion__enlace activo" aria-current="page">Desarrolladores</a></li>
-                    <li><a href="contacto.html" class="navegacion__enlace">Contacto</a></li>
+                    <!-- Menú Desplegable: Inicio -->
+                    <li class="navegacion__grupo">
+                        <details class="navegacion__desplegable">
+                            <summary>
+                                <span>Inicio</span>
+                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                            </summary>
+                            <ul class="navegacion__submenu">
+                                <li><a class="navegacion__enlace" href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Portada y visión</a></li>
+                                <li><a class="navegacion__enlace" href="index.html#proposito"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Propósito comunitario</a></li>
+                                <li><a class="navegacion__enlace" href="index.html#iniciativas"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> Iniciativas vecinales</a></li>
+                                <li><a class="navegacion__enlace" href="index.html#carrusel-ecologia"><i class="fa-solid fa-images" aria-hidden="true"></i> Galería inmersiva</a></li>
+                                <li><a class="navegacion__enlace" href="index.html#manual-recoleccion"><i class="fa-solid fa-list-check" aria-hidden="true"></i> Manual de recolección</a></li>
+                                <li><a class="navegacion__enlace" href="index.html#video-comunitario"><i class="fa-solid fa-circle-play" aria-hidden="true"></i> Video de acción en comunidad</a></li>
+                                <li><a class="navegacion__enlace" href="index.html#participa"><i class="fa-solid fa-users" aria-hidden="true"></i> Participa en el cambio</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <!-- Menú Desplegable: Comunidades -->
+                    <li class="navegacion__grupo">
+                        <details class="navegacion__desplegable">
+                            <summary>
+                                <span>Comunidades</span>
+                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                            </summary>
+                            <ul class="navegacion__submenu">
+                                <li><a class="navegacion__enlace" href="comunidades.html"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i> Red de comunidades</a></li>
+                                <li><a class="navegacion__enlace" href="campeche.html"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Campeche (Sector 4A)</a></li>
+                                <li><a class="navegacion__enlace" href="campeche.html#ruta"><i class="fa-solid fa-route" aria-hidden="true"></i> Ruta comunitaria</a></li>
+                                <li><a class="navegacion__enlace" href="campeche.html#titulo-galeria"><i class="fa-solid fa-camera-retro" aria-hidden="true"></i> Registro de evidencias</a></li>
+                                <li><a class="navegacion__enlace" href="direcciones.html"><i class="fa-solid fa-compass" aria-hidden="true"></i> Ubicación y mapa</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <!-- Menú Desplegable: Problemática -->
+                    <li class="navegacion__grupo">
+                        <details class="navegacion__desplegable">
+                            <summary>
+                                <span>Problemática</span>
+                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                            </summary>
+                            <ul class="navegacion__submenu">
+                                <li><a class="navegacion__enlace" href="problematica.html"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Diagnóstico general</a></li>
+                                <li><a class="navegacion__enlace" href="problematica.html#prevencion"><i class="fa-solid fa-recycle" aria-hidden="true"></i> Clasificación de residuos</a></li>
+                                <li><a class="navegacion__enlace" href="problematica.html#salud"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i> Salud y prevención</a></li>
+                                <li><a class="navegacion__enlace" href="problematica.html#visibilizar"><i class="fa-solid fa-file-signature" aria-hidden="true"></i> Preparar un reporte</a></li>
+                                <li><a class="navegacion__enlace" href="problematica.html#entes"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> Entes competentes</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <!-- Menú Desplegable: Desarrolladores / Nosotros -->
+                    <li class="navegacion__grupo">
+                        <details class="navegacion__desplegable activo">
+                            <summary>
+                                <span>Nosotros</span>
+                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                            </summary>
+                            <ul class="navegacion__submenu">
+                                <li><a class="navegacion__enlace activo" href="nosotros.html" aria-current="page"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i> Desarrolladores</a></li>
+                                <li><a class="navegacion__enlace" href="nosotros.html#metas"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Propósito del proyecto</a></li>
+                                <li><a class="navegacion__enlace" href="contacto.html"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contacto y colaboración</a></li>
+                            </ul>
+                        </details>
+                    </li>
                 </ul>
             </nav>
             <button class="cabecera__alternar" id="alternar-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
@@ -100,8 +163,8 @@
             </div>
         </section>
 
-        <!-- ==================== SECCIÓN HISTORIA ==================== -->
-        <section class="seccion seccion--suave">
+        <!-- ==================== SECCIÓN HISTORIA Y METAS ==================== -->
+        <section class="seccion seccion--suave" id="metas" data-animar="deslizar-arriba">
             <div class="contenedor">
                 <p class="antetitulo">Memoria e identidad</p>
                 <h2 class="seccion__titulo">La historia de nuestra comunidad</h2>

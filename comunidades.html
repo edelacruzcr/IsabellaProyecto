@@ -20,13 +20,76 @@
     <header class="cabecera">
         <div class="cabecera__contenedor">
             <a href="index.html" class="cabecera__logo"><img src="assets/campeche.svg" alt="" aria-hidden="true"><span>EcoCampeche</span></a>
+
             <nav class="navegacion" id="menu-principal" aria-label="Navegación principal">
                 <ul class="navegacion__lista">
-                    <li><a href="index.html" class="navegacion__enlace">Inicio</a></li>
-                    <li><a href="comunidades.html" class="navegacion__enlace activo" aria-current="page">Comunidades</a></li>
-                    <li><a href="problematica.html" class="navegacion__enlace">Problemática</a></li>
-                    <li><a href="nosotros.html" class="navegacion__enlace">Desarrolladores</a></li>
-                    <li><a href="contacto.html" class="navegacion__enlace">Contacto</a></li>
+                    <!-- Menú Desplegable: Inicio -->
+                    <li class="navegacion__grupo">
+                        <details class="navegacion__desplegable">
+                            <summary>
+                                <span>Inicio</span>
+                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                            </summary>
+                            <ul class="navegacion__submenu">
+                                <li><a class="navegacion__enlace" href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Portada y visión</a></li>
+                                <li><a class="navegacion__enlace" href="index.html#proposito"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Propósito comunitario</a></li>
+                                <li><a class="navegacion__enlace" href="index.html#iniciativas"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> Iniciativas vecinales</a></li>
+                                <li><a class="navegacion__enlace" href="index.html#carrusel-ecologia"><i class="fa-solid fa-images" aria-hidden="true"></i> Galería inmersiva</a></li>
+                                <li><a class="navegacion__enlace" href="index.html#manual-recoleccion"><i class="fa-solid fa-list-check" aria-hidden="true"></i> Manual de recolección</a></li>
+                                <li><a class="navegacion__enlace" href="index.html#video-comunitario"><i class="fa-solid fa-circle-play" aria-hidden="true"></i> Video de acción en comunidad</a></li>
+                                <li><a class="navegacion__enlace" href="index.html#participa"><i class="fa-solid fa-users" aria-hidden="true"></i> Participa en el cambio</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <!-- Menú Desplegable: Comunidades -->
+                    <li class="navegacion__grupo">
+                        <details class="navegacion__desplegable activo">
+                            <summary>
+                                <span>Comunidades</span>
+                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                            </summary>
+                            <ul class="navegacion__submenu">
+                                <li><a class="navegacion__enlace activo" href="comunidades.html" aria-current="page"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i> Red de comunidades</a></li>
+                                <li><a class="navegacion__enlace" href="campeche.html"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Campeche (Sector 4A)</a></li>
+                                <li><a class="navegacion__enlace" href="campeche.html#ruta"><i class="fa-solid fa-route" aria-hidden="true"></i> Ruta comunitaria</a></li>
+                                <li><a class="navegacion__enlace" href="campeche.html#titulo-galeria"><i class="fa-solid fa-camera-retro" aria-hidden="true"></i> Registro de evidencias</a></li>
+                                <li><a class="navegacion__enlace" href="direcciones.html"><i class="fa-solid fa-compass" aria-hidden="true"></i> Ubicación y mapa</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <!-- Menú Desplegable: Problemática -->
+                    <li class="navegacion__grupo">
+                        <details class="navegacion__desplegable">
+                            <summary>
+                                <span>Problemática</span>
+                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                            </summary>
+                            <ul class="navegacion__submenu">
+                                <li><a class="navegacion__enlace" href="problematica.html"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Diagnóstico general</a></li>
+                                <li><a class="navegacion__enlace" href="problematica.html#prevencion"><i class="fa-solid fa-recycle" aria-hidden="true"></i> Clasificación de residuos</a></li>
+                                <li><a class="navegacion__enlace" href="problematica.html#salud"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i> Salud y prevención</a></li>
+                                <li><a class="navegacion__enlace" href="problematica.html#visibilizar"><i class="fa-solid fa-file-signature" aria-hidden="true"></i> Preparar un reporte</a></li>
+                                <li><a class="navegacion__enlace" href="problematica.html#entes"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> Entes competentes</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <!-- Menú Desplegable: Desarrolladores / Nosotros -->
+                    <li class="navegacion__grupo">
+                        <details class="navegacion__desplegable">
+                            <summary>
+                                <span>Nosotros</span>
+                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                            </summary>
+                            <ul class="navegacion__submenu">
+                                <li><a class="navegacion__enlace" href="nosotros.html"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i> Desarrolladores</a></li>
+                                <li><a class="navegacion__enlace" href="nosotros.html#metas"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Propósito del proyecto</a></li>
+                                <li><a class="navegacion__enlace" href="contacto.html"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contacto y colaboración</a></li>
+                            </ul>
+                        </details>
+                    </li>
                 </ul>
             </nav>
             <button class="cabecera__alternar" id="alternar-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
@@ -43,13 +106,13 @@
             </div>
         </section>
 
-        <section class="seccion">
+        <section class="seccion" data-animar="deslizar-arriba">
             <div class="contenedor">
                 <p class="antetitulo">Comunidad piloto</p>
                 <h2 class="seccion__titulo">Campeche, Sector 4A</h2>
                 <p class="seccion__subtitulo">Un espacio para conocer el contexto local, visibilizar situaciones relacionadas con los residuos y organizar información útil para impulsar mejoras.</p>
 
-                <article class="tarjeta">
+                <article class="tarjeta" data-animar="zoom">
                     <img class="tarjeta__imagen" src="assets/photo_3_2026-11-03_22-52-02.jpg" alt="Residuos acumulados en un espacio abierto de la comunidad Campeche" loading="lazy">
                     <div class="tarjeta__contenido">
                         <span class="etiqueta"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Cumaná, estado Sucre</span>
@@ -61,7 +124,94 @@
             </div>
         </section>
 
-        <section class="seccion seccion--suave">
+        <!-- ==================== CARRUSEL A PANTALLA SUMERGIDA: COMUNIDADES ==================== -->
+        <section class="carrusel-sumergido" id="carrusel-comunidades" aria-label="Galería inmersiva del territorio comunitario">
+            <div class="carrusel-sumergido__pista">
+                <!-- Diapositiva 1 -->
+                <div class="carrusel-sumergido__diapositiva activa">
+                    <img class="carrusel-sumergido__fondo" src="assets/photo_1_2026-11-03_22-52-02.jpg" alt="Panorama territorial de Campeche" loading="lazy">
+                    <div class="carrusel-sumergido__capa" aria-hidden="true"></div>
+                    <div class="contenedor carrusel-sumergido__contenido">
+                        <div class="carrusel-sumergido__tarjeta">
+                            <span class="carrusel-sumergido__pildora"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Territorio y Hábitat</span>
+                            <h2 class="carrusel-sumergido__titulo">Vivir en Campeche, Sector 4A</h2>
+                            <p class="carrusel-sumergido__descripcion">Un sector con identidad y sentido de pertenencia, donde cada calle cuenta una historia de superación y trabajo vecinal solidario.</p>
+                            <div class="carrusel-sumergido__acciones">
+                                <a class="boton boton--principal" href="campeche.html">Perfil comunitario <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                                <a class="boton boton--cristal" href="direcciones.html">Ver mapa satelital</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diapositiva 2 -->
+                <div class="carrusel-sumergido__diapositiva">
+                    <img class="carrusel-sumergido__fondo" src="assets/photo_4_2026-11-03_22-52-02.jpg" alt="Calles y puntos de recolección en Campeche" loading="lazy">
+                    <div class="carrusel-sumergido__capa" aria-hidden="true"></div>
+                    <div class="contenedor carrusel-sumergido__contenido">
+                        <div class="carrusel-sumergido__tarjeta">
+                            <span class="carrusel-sumergido__pildora"><i class="fa-solid fa-route" aria-hidden="true"></i> Rutas comunitarias</span>
+                            <h2 class="carrusel-sumergido__titulo">Mapeo participativo de necesidades</h2>
+                            <p class="carrusel-sumergido__descripcion">Identificar los puntos críticos de acumulación junto a los residentes permite enfocar las solicitudes y jornadas de atención pública.</p>
+                            <div class="carrusel-sumergido__acciones">
+                                <a class="boton boton--principal" href="campeche.html#ruta">Explorar la ruta <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diapositiva 3 -->
+                <div class="carrusel-sumergido__diapositiva">
+                    <img class="carrusel-sumergido__fondo" src="assets/photo_7_2026-11-03_22-52-02.jpg" alt="Espacios comunes y áreas comunitarias" loading="lazy">
+                    <div class="carrusel-sumergido__capa" aria-hidden="true"></div>
+                    <div class="contenedor carrusel-sumergido__contenido">
+                        <div class="carrusel-sumergido__tarjeta">
+                            <span class="carrusel-sumergido__pildora"><i class="fa-solid fa-handshake" aria-hidden="true"></i> Participación</span>
+                            <h2 class="carrusel-sumergido__titulo">Red de comunidades activas</h2>
+                            <p class="carrusel-sumergido__descripcion">Esta plataforma sociotecnológica está diseñada para crecer e incorporar nuevos sectores del estado Sucre y de toda Venezuela.</p>
+                            <div class="carrusel-sumergido__acciones">
+                                <a class="boton boton--principal" href="contacto.html">Sumar mi comunidad <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles -->
+            <button class="carrusel-sumergido__control carrusel-sumergido__control--anterior" type="button" aria-label="Diapositiva anterior">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <button class="carrusel-sumergido__control carrusel-sumergido__control--siguiente" type="button" aria-label="Diapositiva siguiente">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </button>
+            <div class="carrusel-sumergido__indicadores" aria-label="Selector de diapositivas"></div>
+        </section>
+
+        <!-- ==================== BARRA DE IMPACTO COMUNITARIO ==================== -->
+        <section class="barra-impacto" aria-label="Métricas de comunidad">
+            <div class="contenedor">
+                <div class="rejilla-impacto">
+                    <div class="impacto-item" data-animar="zoom">
+                        <div class="impacto-item__numero" data-contador="1" data-sufijo=" Piloto">1 Piloto</div>
+                        <p class="impacto-item__etiqueta">Sector 4A, Campeche activo</p>
+                    </div>
+                    <div class="impacto-item" data-animar="zoom">
+                        <div class="impacto-item__numero" data-contador="4" data-sufijo=" Pasos">4 Pasos</div>
+                        <p class="impacto-item__etiqueta">Ruta de recolección documentada</p>
+                    </div>
+                    <div class="impacto-item" data-animar="zoom">
+                        <div class="impacto-item__numero" data-contador="11" data-prefijo="+">+11</div>
+                        <p class="impacto-item__etiqueta">Evidencias fotográficas locales</p>
+                    </div>
+                    <div class="impacto-item" data-animar="zoom">
+                        <div class="impacto-item__numero" data-contador="100" data-sufijo="%">100%</div>
+                        <p class="impacto-item__etiqueta">Colaboración abierta y vecinal</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion seccion--suave" data-animar="deslizar-arriba">
             <div class="contenedor">
                 <p class="antetitulo">Cómo puede crecer la plataforma</p>
                 <h2 class="seccion__titulo">Cada comunidad, su propia voz</h2>
