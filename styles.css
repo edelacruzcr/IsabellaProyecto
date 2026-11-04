@@ -244,7 +244,7 @@ select {
     margin-bottom: 17px;
     place-items: center;
     border-radius: 14px;
-    background: rgba(62, 160, 102, 0.12);
+    background-color: var(--color-acento);
     color: var(--color-principal);
     font-size: 1.2rem;
 }
@@ -263,7 +263,7 @@ select {
     font-weight: 700;
     text-align: center;
     text-decoration: none;
-    transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+
 }
 
 .boton[hidden] {
@@ -864,19 +864,13 @@ select {
     width: 60px;
     height: 60px;
     border-radius: 16px;
-    background: linear-gradient(135deg, #2E5A44 0%, #3EA066 100%);
+    background-color: var(--color-acento);
     color: #FFFFFF;
     font-size: 1.45rem;
     display: grid;
     place-items: center;
-    box-shadow: 0 10px 22px rgba(62, 160, 102, 0.32);
     margin-bottom: 22px;
-    transition: transform 300ms ease, box-shadow 300ms ease;
-}
 
-.tarjeta-destacada:hover .tarjeta__icono {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 14px 28px rgba(62, 160, 102, 0.45);
 }
 
 .tarjeta-destacada .tarjeta__titulo {
@@ -2120,6 +2114,27 @@ select {
     background: var(--color-destacado);
 }
 
+@media (max-width: 760px) {
+    .carrusel-sumergido {
+        min-height: max(620px, 82svh);
+    }
+
+    .carrusel-sumergido__contenido {
+        padding-block: 92px 84px;
+    }
+
+    .carrusel-sumergido__control {
+        top: 18px;
+        width: 44px;
+        height: 44px;
+        transform: none;
+    }
+
+    .carrusel-sumergido__control:hover {
+        transform: scale(1.05);
+    }
+}
+
 /* Botón de reproducción de video en secciones sumergidas */
 .boton--cristal {
     border: 1px solid rgba(255, 255, 255, 0.35);
@@ -2523,13 +2538,12 @@ select {
     width: 52px;
     height: 52px;
     border-radius: 14px;
-    background: linear-gradient(135deg, rgba(46, 90, 68, 0.9), rgba(62, 160, 102, 0.8));
+    background-color: var(--color-acento);
     color: #ffffff;
     font-size: 1.25rem;
     display: grid;
     place-items: center;
-    box-shadow: 0 6px 18px rgba(62, 160, 102, 0.3);
-    transition: transform 240ms ease, box-shadow 240ms ease;
+
 }
 
 .participa-accion:hover .participa-accion__icono-wrap {
@@ -2571,8 +2585,31 @@ select {
 }
 
 @media (max-width: 600px) {
+    .participa-encabezado {
+        margin-bottom: 32px;
+        padding: 0 8px;
+    }
+
+    .participa-titulo {
+        font-size: clamp(2.5rem, 12vw, 3.2rem);
+    }
+
+    .participa-subtitulo {
+        font-size: 0.98rem;
+        line-height: 1.55;
+    }
+
+    .participa-acciones {
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+    }
+
     .participa-accion {
-        padding: 18px 18px;
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 0;
+        padding: 16px;
         gap: 14px;
     }
 
