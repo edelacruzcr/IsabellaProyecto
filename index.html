@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCampeche | Inicio</title>
+    <link rel="shortcut icon" href="Logo Eco Campeche.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo"> EcoCampeche</a>
+            <nav class="nav" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link active">Inicio</a></li>
+                    <li><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+                    <li><a href="contacto.html" class="nav__link">Contacto y Ubicación</a></li>
+                </ul>
+            </nav>
+            <button class="header__toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- HERO CON VIDEO -->
+    <section class="hero">
+        <!-- Usa un video de naturaleza de fondo -->
+        <video autoplay muted loop playsinline class="hero__video">
+            <source src="videos/IMG_4390.MP4" type="video/mp4">
+        </video>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <h1 class="hero__title">Cuidemos Nuestro Planeta</h1>
+            <p class="hero__subtitle">Preservando la biodiversidad y transformando la gestión de residuos en la comunidad de Campeche, Sector 4A.</p>
+            <a href="contacto.html" class="btn btn--primary">Únete a la causa <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN REFLEXIVA -->
+    <section class="reflection">
+        <div class="container">
+            <p class="reflection__quote">"La tierra no es una herencia de nuestros padres, sino un préstamo de nuestros hijos. Cuidar Campeche es asegurar el futuro de nuestras próximas generaciones."</p>
+        </div>
+    </section>
+
+    <!-- GALERÍA CON CONTEXTO -->
+    <section class="section container">
+        <h2 class="section__title">Estado Actual de Nuestra Comunidad</h2>
+        <p class="section__subtitle">Conocer nuestro entorno es el primer paso para transformarlo.</p>
+        
+        <div class="grid grid--3col">
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1605600659908-0ef719419d41?auto=format&fit=crop&w=600&q=80" alt="Canal" class="card__img">
+                <div class="card__content">
+                    <h3 class="card__title">Acumulación en Canales</h3>
+                    <p class="card__text">La falta de recolección ha provocado que los canales naturales se conviertan en focos de contaminación, afectando el ecosistema local.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?auto=format&fit=crop&w=600&q=80" alt="Áreas verdes" class="card__img">
+                <div class="card__content">
+                    <h3 class="card__title">Áreas Verdes Afectadas</h3>
+                    <p class="card__text">Los espacios destinados para la recreación familiar sufren de arrojo indiscriminado de desechos sólidos por parte de transeúntes.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=600&q=80" alt="Microbasurales" class="card__img">
+                <div class="card__content">
+                    <h3 class="card__title">Microbasurales Urbanos</h3>
+                    <p class="card__text">Esquinas y terrenos baldíos se han convertido en vertederos improvisados, aumentando el riesgo de enfermedades y plagas.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a href="https://wa.me/584120000000?text=Hola,%20quiero%20información%20sobre%20EcoCampeche" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
