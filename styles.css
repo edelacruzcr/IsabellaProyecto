@@ -90,6 +90,11 @@ select {
     width: min(var(--ancho-contenido), calc(100% - 48px));
     margin-inline: auto;
 }
+.contenedor1 {
+    width: min(var(--ancho-contenido), calc(100% - 48px));
+    margin-inline: auto;
+
+}
 
 .seccion {
     padding-block: 84px;
@@ -703,12 +708,45 @@ select {
 }
 
 .encabezado-pagina {
+    position: relative;
     margin-top: var(--alto-cabecera);
     padding: 76px 0 66px;
     background:
         radial-gradient(ellipse at 82% 10%, rgba(128, 179, 129, 0.22), transparent 32rem),
         linear-gradient(135deg, #375239, var(--color-principal));
     color: #fff;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.encabezado-pagina--con-imagen {
+    background: #243d2b;
+}
+
+.encabezado-pagina__imagen {
+    position: absolute;
+    z-index: -2;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.encabezado-pagina--con-imagen::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(14, 33, 22, 0.86) 0%, rgba(20, 54, 34, 0.58) 58%, rgba(14, 33, 22, 0.32) 100%),
+        linear-gradient(180deg, rgba(14, 33, 22, 0.16), rgba(14, 33, 22, 0.42));
+    content: "";
+    pointer-events: none;
+}
+
+.encabezado-pagina--con-imagen .contenedor {
+    position: relative;
+    z-index: 1;
 }
 
 .encabezado-pagina__titulo {
@@ -875,6 +913,8 @@ select {
     margin-bottom: 22px;
 
 }
+
+
 
 .tarjeta-destacada .tarjeta__titulo {
     margin: 0 0 12px;
