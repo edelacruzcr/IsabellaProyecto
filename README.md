@@ -31,8 +31,9 @@ El proyecto utiliza HTML, CSS y JavaScript sin bibliotecas adicionales.
 - `inicializarReporteComunitario`: valida los datos y descarga un reporte local; no transmite información.
 - `inicializarVisorImagenes`: muestra las imágenes de la galería en un diálogo accesible.
 - `inicializarCarruselesSumergidos`: conecta controles, indicadores, avance automático y gestos táctiles.
-- `inicializarVideosSumergidos`: silencia el autoplay, pausa videos fuera de pantalla y conecta los controles disponibles.
 - `inicializarParalajeYAnimaciones`: activa revelados, paralaje opcional y contadores al entrar en pantalla.
+
+Los fondos en movimiento usan WebP animado para conservar mejor el detalle: `videos/portada-animada.webp` y `videos/comunidad-animada.webp`. Sube esos dos WebP y conserva sus GIF de respaldo; si WebP no carga, el sitio cambia automáticamente al GIF. Las imágenes estáticas se usan cuando el visitante prefiere reducir el movimiento. No subas los MP4 originales a Neocities Free.
 
 ## Navegación y flujos del sitio
 

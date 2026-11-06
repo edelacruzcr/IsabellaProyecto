@@ -138,10 +138,10 @@
         </section>
 
         <section class="video-destacado" aria-labelledby="titulo-video-prevencion">
-            <video class="video-destacado__medio" autoplay muted loop playsinline preload="metadata" poster="assets/ecologia/photo_4_2026-11-04_13-33-26.jpg" aria-label="Video para reflexionar sobre el cuidado del entorno">
-                <source src="videos/Video Hero.mp4" type="video/mp4">
-                Tu navegador no puede reproducir este video.
-            </video>
+            <picture>
+                <source srcset="assets/ecologia/photo_4_2026-11-04_13-33-26.jpg" media="(prefers-reduced-motion: reduce)">
+                <img class="video-destacado__medio" src="videos/portada-animada.webp" data-fallback-src="videos/portada-animada.gif" alt="" aria-hidden="true" width="960" height="540" loading="lazy" decoding="async">
+            </picture>
             <div class="video-destacado__capa" aria-hidden="true"></div>
             <div class="contenedor video-destacado__contenido">
                 <p class="portada__antetitulo"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i> Nuestro entorno, nuestra responsabilidad</p>
@@ -149,8 +149,6 @@
                 <p class="video-destacado__texto">Una recolección ordenada ayuda a mantener calles, drenajes y espacios comunes en mejores condiciones higiénicas para todas las familias.</p>
                 <div class="video-destacado__acciones">
                     <a class="boton boton--claro" href="#salud">Conoce cómo prevenir riesgos <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
-                    <button class="boton boton--cristal boton-audio" type="button" aria-label="Activar o silenciar sonido"><i class="fa-solid fa-volume-xmark" aria-hidden="true"></i> Activar sonido</button>
-                    <button class="boton boton--cristal boton-reproducir" type="button" aria-label="Reproducir o pausar video"><i class="fa-solid fa-pause" aria-hidden="true"></i> Pausar video</button>
                 </div>
             </div>
         </section>

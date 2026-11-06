@@ -357,84 +357,6 @@ function inicializarCarruselesSumergidos() {
     });
 }
 
-/** Gestiona reproducción visible, pausa fuera de pantalla y controles de video. */
-function inicializarVideosSumergidos() {
-    const todosLosVideos = document.querySelectorAll(".video-destacado video, .portada__video, video");
-
-    todosLosVideos.forEach(function (video) {
-        // El autoplay de los navegadores requiere que el video comience silenciado.
-        video.muted = true;
-        video.setAttribute("playsinline", "");
-        video.setAttribute("muted", "");
-    });
-
-    if ("IntersectionObserver" in window) {
-        const observadorVideos = new IntersectionObserver(function (entradas) {
-            entradas.forEach(function (entrada) {
-                const video = entrada.target;
-                if (entrada.isIntersecting && entrada.intersectionRatio >= 0.25) {
-                    const promesa = video.play();
-                    if (promesa !== undefined) {
-                        promesa.catch(function () {
-                            // El navegador puede rechazar la reproducción automática.
-                        });
-                    }
-                } else {
-                    if (!video.paused) {
-                        video.pause();
-                    }
-                }
-            });
-        }, {
-            threshold: [0, 0.25, 0.5]
-        });
-
-        todosLosVideos.forEach(function (video) {
-            observadorVideos.observe(video);
-        });
-    }
-
-    const seccionesVideo = document.querySelectorAll(".video-destacado");
-    seccionesVideo.forEach(function (seccion) {
-        const video = seccion.querySelector("video");
-        const botonReproducir = seccion.querySelector(".boton-reproducir");
-        const botonAudio = seccion.querySelector(".boton-audio");
-
-        if (!video) return;
-
-        if (botonReproducir) {
-            botonReproducir.addEventListener("click", function () {
-                if (video.paused) {
-                    video.play();
-                    botonReproducir.innerHTML = '<i class="fa-solid fa-pause" aria-hidden="true"></i> Pausar video';
-                } else {
-                    video.pause();
-                    botonReproducir.innerHTML = '<i class="fa-solid fa-play" aria-hidden="true"></i> Reproducir video';
-                }
-            });
-
-            video.addEventListener("play", function () {
-                botonReproducir.innerHTML = '<i class="fa-solid fa-pause" aria-hidden="true"></i> Pausar video';
-            });
-
-            video.addEventListener("pause", function () {
-                botonReproducir.innerHTML = '<i class="fa-solid fa-play" aria-hidden="true"></i> Reproducir video';
-            });
-        }
-
-        if (botonAudio) {
-            botonAudio.addEventListener("click", function () {
-                video.muted = !video.muted;
-                if (video.muted) {
-                    botonAudio.innerHTML = '<i class="fa-solid fa-volume-xmark" aria-hidden="true"></i> Activar sonido';
-                } else {
-                    botonAudio.innerHTML = '<i class="fa-solid fa-volume-high" aria-hidden="true"></i> Silenciar sonido';
-                }
-            });
-        }
-    });
-}
-
 /** Activa revelados, paralaje opcional y contadores cuando entran en pantalla. */
 function inicializarParalajeYAnimaciones() {
     const elementosAnimables = document.querySelectorAll("[data-animar], .tarjeta, .tarjeta-ecologica, .paso-horizontal, .paso-seccion-pantalla");
@@ -515,6 +437,17 @@ function inicializarParalajeYAnimaciones() {
     }
 }
 
+document.addEventListener("error", function (evento) {
+    const imagen = evento.target;
+    if (!(imagen instanceof HTMLImageElement) || !imagen.dataset.fallbackSrc) {
+        return;
+    }
+
+    const rutaRespaldo = imagen.dataset.fallbackSrc;
+    imagen.removeAttribute("data-fallback-src");
+    imagen.src = rutaRespaldo;
+}, true);
+
 // Inicializa solo los componentes presentes en cada página del sitio.
 document.addEventListener("DOMContentLoaded", function () {
     inicializarMenuMovil();
@@ -522,6 +455,5 @@ document.addEventListener("DOMContentLoaded", function () {
     inicializarReporteComunitario();
     inicializarVisorImagenes();
     inicializarCarruselesSumergidos();
-    inicializarVideosSumergidos();
     inicializarParalajeYAnimaciones();
 });

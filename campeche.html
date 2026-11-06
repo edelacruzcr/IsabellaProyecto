@@ -282,12 +282,12 @@
             </figure>
         </dialog>
 
-        <!-- Video a pantalla sumergida: campeche -->
+        <!-- Fondo animado: campeche -->
         <section class="video-destacado" id="video-campeche" aria-labelledby="titulo-video-campeche">
-            <video class="video-destacado__medio" autoplay muted loop playsinline preload="metadata" poster="assets/photo_4_2026-11-03_22-52-02.jpg" aria-label="Video del entorno en Campeche, Sector 4A">
-                <source src="videos/IMG_4390.MP4" type="video/mp4">
-                Tu navegador no puede reproducir este video.
-            </video>
+            <picture>
+                <source srcset="assets/photo_4_2026-11-03_22-52-02.jpg" media="(prefers-reduced-motion: reduce)">
+                <img class="video-destacado__medio" src="videos/comunidad-animada.webp" data-fallback-src="videos/comunidad-animada.gif" alt="" aria-hidden="true" width="640" height="352" loading="lazy" decoding="async">
+            </picture>
             <div class="video-destacado__capa" aria-hidden="true"></div>
             <div class="contenedor video-destacado__contenido">
                 <p class="portada__antetitulo"><i class="fa-solid fa-video" aria-hidden="true"></i> Registro visual comunitario</p>
@@ -295,8 +295,6 @@
                 <p class="video-destacado__texto">Cada punto identificado en Campeche forma parte de una ruta que busca la transformación ambiental y la salud colectiva de nuestro sector.</p>
                 <div class="video-destacado__acciones">
                     <a class="boton boton--claro" href="#ruta">Ver ruta comunitaria <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
-                    <button class="boton boton--cristal boton-audio" type="button" aria-label="Activar o silenciar sonido"><i class="fa-solid fa-volume-xmark" aria-hidden="true"></i> Activar sonido</button>
-                    <button class="boton boton--cristal boton-reproducir" type="button" aria-label="Reproducir o pausar video"><i class="fa-solid fa-pause" aria-hidden="true"></i> Pausar video</button>
                 </div>
             </div>
         </section>
