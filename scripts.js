@@ -1,7 +1,6 @@
 
-/**
- * Controla el menú adaptable, sus submenús y el cierre con Escape o al tocar fuera.
- */
+// Navegación
+/** Controla el menú adaptable, sus submenús y el cierre con Escape o al tocar fuera. */
 function inicializarMenuMovil() {
     const botonMenu = document.getElementById("alternar-menu");
     const menuNavegacion = document.getElementById("menu-principal");
@@ -124,7 +123,8 @@ function inicializarNavegacionActiva() {
     });
 }
 
-/** Valida el formulario de reporte y genera un archivo local sin enviar datos. */
+// Reportes locales
+/** Valida el formulario y genera un archivo local sin enviar datos. */
 function inicializarReporteComunitario() {
     const formulario = document.getElementById("formulario-reporte");
     const resultado = document.getElementById("resultado-reporte");
@@ -184,6 +184,7 @@ function inicializarReporteComunitario() {
     });
 }
 
+// Galería y carruseles
 /** Abre las imágenes de la galería en un diálogo y devuelve el foco al cerrarlo. */
 function inicializarVisorImagenes() {
     const galeria = document.querySelector('[aria-labelledby="titulo-galeria"]');
@@ -357,9 +358,10 @@ function inicializarCarruselesSumergidos() {
     });
 }
 
-/** Activa revelados, paralaje opcional y contadores cuando entran en pantalla. */
-function inicializarParalajeYAnimaciones() {
-    const elementosAnimables = document.querySelectorAll("[data-animar], .tarjeta, .tarjeta-ecologica, .paso-horizontal, .paso-seccion-pantalla");
+// Animaciones al desplazarse
+/** Revela contenido y anima contadores cuando aparecen en pantalla. */
+function inicializarAnimacionesYContadores() {
+    const elementosAnimables = document.querySelectorAll("[data-animar], .tarjeta, .tarjeta-ecologica, .paso-seccion-pantalla");
 
     if ("IntersectionObserver" in window) {
         const observador = new IntersectionObserver(function (entradas) {
@@ -381,30 +383,6 @@ function inicializarParalajeYAnimaciones() {
         elementosAnimables.forEach(function (elemento) {
             elemento.classList.add("revelado");
         });
-    }
-
-    const elementosParalaje = document.querySelectorAll(".elemento-paralaje-activo");
-
-    if (elementosParalaje.length > 0 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        let ejecutando = false;
-
-        window.addEventListener("scroll", function () {
-            if (!ejecutando) {
-                window.requestAnimationFrame(function () {
-                    elementosParalaje.forEach(function (elemento) {
-                        const contenedor = elemento.parentElement;
-                        if (!contenedor) return;
-                        const rectangulo = contenedor.getBoundingClientRect();
-                        if (rectangulo.top < window.innerHeight && rectangulo.bottom > 0) {
-                            const desplazamiento = (rectangulo.top * 0.08).toFixed(1);
-                            elemento.style.transform = "translate3d(0, " + desplazamiento + "px, 0)";
-                        }
-                    });
-                    ejecutando = false;
-                });
-                ejecutando = true;
-            }
-        }, { passive: true });
     }
 
     const contadores = document.querySelectorAll("[data-contador]");
@@ -437,6 +415,7 @@ function inicializarParalajeYAnimaciones() {
     }
 }
 
+// Respaldo: sustituye WebP por GIF si falla la carga de una imagen.
 document.addEventListener("error", function (evento) {
     const imagen = evento.target;
     if (!(imagen instanceof HTMLImageElement) || !imagen.dataset.fallbackSrc) {
@@ -448,12 +427,12 @@ document.addEventListener("error", function (evento) {
     imagen.src = rutaRespaldo;
 }, true);
 
-// Inicializa solo los componentes presentes en cada página del sitio.
+// Arranque: cada inicializador actúa solo si encuentra su componente.
 document.addEventListener("DOMContentLoaded", function () {
     inicializarMenuMovil();
     inicializarNavegacionActiva();
     inicializarReporteComunitario();
     inicializarVisorImagenes();
     inicializarCarruselesSumergidos();
-    inicializarParalajeYAnimaciones();
+    inicializarAnimacionesYContadores();
 });
