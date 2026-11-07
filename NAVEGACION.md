@@ -40,8 +40,8 @@ flowchart TD
     Organismos --> CanalOficial["Presentar por canal oficial"]
 
     Nosotros --> Metas["Historia y metas"]
-    Nosotros --> ContactoDesarrolladores["Contacto de desarrolladores"]
-    Contacto --> ContactoDesarrolladores
+    Nosotros --> ContactoEquipo["Contacto de desarrolladores"]
+    Contacto --> ContactoEquipo
     Contacto --> Informe
     Participa --> Contacto
 ```
@@ -77,7 +77,7 @@ flowchart LR
     Problematica --> Entes["Entes competentes"]
 
     Menu --> Nosotros["Nosotros"]
-    Nosotros --> Equipo["Desarrolladores"]
+    Nosotros --> Equipo["Equipo"]
     Nosotros --> Metas["Propósito del proyecto"]
     Nosotros --> Contacto["Contacto y colaboración"]
 ```
