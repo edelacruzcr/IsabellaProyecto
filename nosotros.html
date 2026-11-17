@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conoce al equipo desarrollador de EcoCampeche y la historia de la comunidad piloto.">
-    <title>Equipo | EcoCampeche</title>
+    <meta name="description" content="Conoce el compromiso de EcoCampeche con la UPTOS Clodosbaldo Russián, el liderazgo comunitario de Campeche y el equipo desarrollador.">
+    <title>Compromiso y Equipo | EcoCampeche</title>
     <link rel="icon" href="assets/Logo Fancy.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,7 +85,8 @@
                                 <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                             </summary>
                             <ul class="navegacion__submenu">
-                                <li><a class="navegacion__enlace activo" href="nosotros.html" aria-current="page"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i> Equipo</a></li>
+                                <li><a class="navegacion__enlace activo" href="nosotros.html" aria-current="page"><i class="fa-solid fa-handshake-angle" aria-hidden="true"></i> Compromiso y comunidad</a></li>
+                                <li><a class="navegacion__enlace" href="nosotros.html#desarrolladores"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i> Desarrolladores</a></li>
                                 <li><a class="navegacion__enlace" href="nosotros.html#metas"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Propósito del proyecto</a></li>
                                 <li><a class="navegacion__enlace" href="contacto.html"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contacto y colaboración</a></li>
                             </ul>
@@ -98,21 +99,115 @@
     </header>
 
     <main id="contenido">
-        <!-- Equipo -->
+        <!-- Encabezado Nosotros: Compromiso comunitario, institucional y equipo -->
         <section class="encabezado-pagina encabezado-pagina--con-imagen" aria-labelledby="titulo-pagina">
             <img class="encabezado-pagina__imagen" src="assets/equipo.jpg" alt="" aria-hidden="true" width="936" height="936" fetchpriority="high">
             <div class="contenedor">
-                <p class="antetitulo">Tecnología con propósito</p>
-                <h1 class="encabezado-pagina__titulo" id="titulo-pagina">Equipo </h1>
-                <p class="encabezado-pagina__texto">Estudiantes y colaboradores comprometidos con una iniciativa socio-tecnológica para informar, conectar y acompañar a la comunidad.</p>
+                <p class="antetitulo">Alianza comunitaria y académica</p>
+                <h1 class="encabezado-pagina__titulo" id="titulo-pagina">Compromiso y Equipo</h1>
+                <p class="encabezado-pagina__texto">EcoCampeche une la orientación universitaria de la UPTOS "Clodosbaldo Russián", el liderazgo activo de los voceros de Campeche y el trabajo técnico de estudiantes al servicio de su comunidad.</p>
             </div>
         </section>
 
-        <section class="seccion">
+        <!-- PRIMER LUGAR: Compromiso con la UPTOS y líderes de la comunidad de Campeche -->
+        <section class="seccion" id="compromiso" aria-labelledby="titulo-compromiso" data-animar="deslizar-arriba">
             <div class="contenedor">
-                <p class="antetitulo">Equipo fundador</p>
-                <h2 class="seccion__titulo">Personas detrás de EcoCampeche</h2>
-                <p class="seccion__subtitulo">Construimos esta plataforma con una visión de colaboración, educación ambiental y participación comunitaria.</p>
+                <!-- Identidad institucional: Logos EcoCampeche y UPTOS -->
+                <div class="colaboracion-uptos__logos">
+                    <img class="colaboracion-uptos__logo-eco-img" src="assets/campeche.svg" alt="Logo de EcoCampeche" loading="lazy">
+                    <div class="colaboracion-uptos__separador" aria-hidden="true">
+                        <span class="colaboracion-uptos__x">+</span>
+                    </div>
+                    <img class="colaboracion-uptos__logo-img" src="assets/logouptos.png" alt="Logo de la UPTOS Clodosbaldo Russián" loading="lazy">
+                </div>
+
+                <div class="texto-centrado" style="max-width: 820px; margin: 28px auto 44px; text-align: center;">
+                    <p class="antetitulo">Alianza territorial y formativa</p>
+                    <h2 class="seccion__titulo" id="titulo-compromiso">Compromiso con la UPTOS y los líderes de Campeche</h2>
+                    <p class="seccion__subtitulo">El motor de EcoCampeche es la articulación constante entre la formación universitaria y la experiencia viva de los líderes vecinales del Sector 4A, uniendo el rigor académico con las prioridades del territorio.</p>
+                    
+                    <div class="colaboracion-uptos__etiquetas" style="margin-top: 18px;">
+                        <span class="colaboracion-uptos__etiqueta"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> UPTOS Clodosbaldo Russián</span>
+                        <span class="colaboracion-uptos__etiqueta"><i class="fa-solid fa-people-roof" aria-hidden="true"></i> Vocerías de Campeche (Sector 4A)</span>
+                        <span class="colaboracion-uptos__etiqueta"><i class="fa-solid fa-handshake-angle" aria-hidden="true"></i> Proyecto socio-integrador</span>
+                    </div>
+                </div>
+
+                <!-- Pilares del compromiso -->
+                <div class="rejilla rejilla--3-columnas">
+                    <article class="tarjeta tarjeta-destacada">
+                        <span class="tarjeta-destacada__numero" aria-hidden="true">01</span>
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Vínculo institucional UPTOS</h3>
+                            <p class="tarjeta__texto">En el marco de la Universidad Politécnica Territorial del Oeste de Sucre "Clodosbaldo Russián", este proyecto socio-integrador materializa una educación universitaria orientada al servicio social, vinculando la ciencia y el software con las problemáticas locales reales.</p>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta tarjeta-destacada">
+                        <span class="tarjeta-destacada__numero" aria-hidden="true">02</span>
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-people-group" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Protagonismo de los líderes de Campeche</h3>
+                            <p class="tarjeta__texto">Los líderes de la comunidad y voceros del Sector 4A guían la labor: aportan el diagnóstico en el terreno, identifican las calles y zonas vulnerables, y movilizan a las familias para convertir la conciencia ambiental en jornadas y acciones colectivas concretas.</p>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta tarjeta-destacada">
+                        <span class="tarjeta-destacada__numero" aria-hidden="true">03</span>
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">Corresponsabilidad y cercanía</h3>
+                            <p class="tarjeta__texto">La tecnología cobra verdadero sentido cuando nace del consenso comunitario. La consulta periódica con los vecinos asegura que cada mapa, reporte e instructivo responda estrictamente a la realidad y a la dignidad de los hogares de Campeche.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="aviso" style="margin-top: 36px;">
+                    <p><strong>Pilar fundamental:</strong> La plataforma se nutre del diálogo abierto y permanente con las vocerías comunales de Campeche y el acompañamiento docente de la UPTOS, consolidando una alianza académica y comunitaria sólida.</p>
+                </div>
+
+                <!-- Tarjetas para los líderes de la comunidad -->
+                <div class="bloque-lideres" style="margin-top: 52px;">
+                    <div class="texto-centrado" style="text-align: center; margin-bottom: 28px;">
+                        <p class="antetitulo">Vocerías en el territorio</p>
+                        <h3 class="seccion__titulo" style="font-size: clamp(1.4rem, 2.6vw, 1.85rem);">Líderes de la comunidad de Campeche</h3>
+                        <p class="seccion__subtitulo" style="max-width: 680px; margin: 0 auto;">Puntos de articulación vecinal del Sector 4A que coordinan los diagnósticos en el terreno y las acciones comunitarias.</p>
+                    </div>
+
+                    <div class="rejilla rejilla--2-columnas" style="max-width: 780px; margin: 0 auto;">
+                        <article class="tarjeta tarjeta-fundador">
+                            <div class="tarjeta-fundador__retrato tarjeta-fundador__iniciales" aria-hidden="true">
+                                <i class="fa-solid fa-people-roof" style="color: var(--color-acento); font-size: 2.2rem;"></i>
+                            </div>
+                            <div class="tarjeta__contenido">
+                                <h3 class="tarjeta__titulo">Vocería de Ambiente y Servicios</h3>
+                                <p class="tarjeta-fundador__rol">Liderazgo Comunitario · Sector 4A</p>
+                                <p class="tarjeta__texto" style="margin-top: 10px; font-size: 0.92rem; color: var(--color-texto-secundario);">Coordina la verificación en calle, el mapeo de puntos críticos de desechos y la organización de jornadas de recuperación ambiental junto a los vecinos.</p>
+                            </div>
+                        </article>
+
+                        <article class="tarjeta tarjeta-fundador">
+                            <div class="tarjeta-fundador__retrato tarjeta-fundador__iniciales" aria-hidden="true">
+                                <i class="fa-solid fa-hand-holding-heart" style="color: var(--color-acento); font-size: 2.2rem;"></i>
+                            </div>
+                            <div class="tarjeta__contenido">
+                                <h3 class="tarjeta__titulo">Vocería de Salud y Hábitat</h3>
+                                <p class="tarjeta-fundador__rol">Liderazgo Comunitario · Sector 4A</p>
+                                <p class="tarjeta__texto" style="margin-top: 10px; font-size: 0.92rem; color: var(--color-texto-secundario);">Promueve la prevención de riesgos sanitarios derivados de residuos acumulados, campañas familiares contra el dengue y la articulación con centros asistenciales.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEGUNDO LUGAR: Equipo de Desarrolladores -->
+        <section class="seccion seccion--suave" id="desarrolladores" aria-labelledby="titulo-desarrolladores">
+            <div class="contenedor">
+                <p class="antetitulo">Equipo de desarrollo estudiantil</p>
+                <h2 class="seccion__titulo" id="titulo-desarrolladores">Desarrolladores al servicio de la comunidad</h2>
+                <p class="seccion__subtitulo">Como estudiantes de informática de la UPTOS, asumimos con orgullo la responsabilidad técnica de programar, estructurar y mantener viva esta iniciativa para toda la comunidad.</p>
 
                 <div class="rejilla rejilla--4-columnas">
                     <article class="tarjeta tarjeta-fundador">
