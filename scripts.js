@@ -150,71 +150,206 @@ function inicializarNavegacionActiva() {
 }
 
 // Reportes locales
-/** Valida el formulario y genera un archivo local sin enviar datos. */
+/** Valida el formulario, genera el oficio formal y habilita el envío directo a Serviamsa e INASERVIP. */
 function inicializarReporteComunitario() {
-    // Se obtienen las tres partes necesarias: formulario, mensaje y descarga.
     const formulario = document.getElementById("formulario-reporte");
     const resultado = document.getElementById("resultado-reporte");
-    const botonDescarga = document.getElementById("descargar-reporte");
 
-    if (!formulario || !resultado || !botonDescarga) {
+    if (!formulario || !resultado) {
         return;
     }
 
     let textoReporte = "";
 
+    function escaparHTML(cadena) {
+        return String(cadena || "")
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
     formulario.addEventListener("submit", function (evento) {
-        // El reporte se prepara en el navegador; nunca se envía al servidor.
         evento.preventDefault();
 
         if (!formulario.reportValidity()) {
             return;
         }
 
-        // FormData lee los campos por su atributo name sin recorrerlos uno a uno.
         const datosFormulario = new FormData(formulario);
-        // La fecha de elaboración se genera al momento de enviar el formulario.
-        const fecha = new Date().toLocaleDateString("es-VE");
-        // Los campos se organizan en líneas para crear un archivo de texto legible.
-        textoReporte = [
-            "REPORTE COMUNITARIO DE RESIDUOS",
-            "Fecha de elaboración: " + fecha,
-            "",
-            "Organismo destinatario sugerido: " + datosFormulario.get("organismo"),
-            "Ubicación o referencia: " + datosFormulario.get("ubicacion").trim(),
-            "Fecha de observación: " + datosFormulario.get("fecha-observacion"),
-            "Tipo de problema: " + datosFormulario.get("situacion"),
-            "Solicitud de atención: " + datosFormulario.get("atencion-solicitada"),
-            "Descripción: " + datosFormulario.get("descripcion").trim(),
-            "",
-            "Este reporte fue preparado por EcoCampeche como apoyo para documentar una situación comunitaria. Verifique la información y adjunte fotografías fechadas antes de entregarlo a las autoridades competentes."
-        ].join("\n");
+        const valorOrganismo = datosFormulario.get("organismo") || "";
+        const nombreRemitente = (datosFormulario.get("nombre") || "").trim();
+        const telefonoContacto = (datosFormulario.get("telefono") || "").trim();
+        const ubicacion = (datosFormulario.get("ubicacion") || "").trim();
+        const fechaObservacion = datosFormulario.get("fecha-observacion") || "";
+        const situacion = datosFormulario.get("situacion") || "";
+        const atencion = datosFormulario.get("atencion-solicitada") || "";
+        const descripcion = (datosFormulario.get("descripcion") || "").trim();
 
-        // Informa el resultado y habilita la descarga, sin transmitir los datos.
-        resultado.textContent = "Reporte listo. Descárgalo y adjunta fotografías del lugar desde un sitio seguro. No se envió información a ningún servidor.";
-        resultado.classList.add("visible");
-        botonDescarga.hidden = false;
-        botonDescarga.focus();
-    });
+        // Configuración específica según el organismo seleccionado
+        let nombreDestinatarioFormal = "";
+        let nombreCorto = "";
+        let correosDestino = "";
+        let tieneWhatsApp = false;
+        const telefonoWhatsAppServiamsa = "584120660045";
 
-    botonDescarga.addEventListener("click", function () {
-        if (!textoReporte) {
-            return;
+        if (valorOrganismo === "serviamsa") {
+            nombreDestinatarioFormal = "SERVICIO AUTÓNOMO MUNICIPAL DE SANEAMIENTO AMBIENTAL (SERVIAMSA)\nALCALDÍA DEL MUNICIPIO SUCRE · CUMANÁ, ESTADO SUCRE";
+            nombreCorto = "Serviamsa";
+            correosDestino = "serviamsaweb@gmail.com";
+            tieneWhatsApp = true;
+        } else if (valorOrganismo === "inaservip") {
+            nombreDestinatarioFormal = "INSTITUTO AUTÓNOMO DE SERVICIOS PÚBLICOS DEL ESTADO SUCRE (INASERVIP)\nGOBERNACIÓN DEL ESTADO SUCRE · CUMANÁ";
+            nombreCorto = "INASERVIP";
+            correosDestino = "gestionhumanainaservip2023@gmail.com";
+            tieneWhatsApp = false;
+        } else {
+            // Ambos organismos
+            nombreDestinatarioFormal = "SERVIAMSA (ALCALDÍA DEL MUNICIPIO SUCRE) /\nINASERVIP (GOBERNACIÓN DEL ESTADO SUCRE)\nCUMANÁ, ESTADO SUCRE";
+            nombreCorto = "Serviamsa e INASERVIP";
+            correosDestino = "serviamsaweb@gmail.com,gestionhumanainaservip2023@gmail.com";
+            tieneWhatsApp = true;
         }
 
-        // Crea una URL temporal para descargar el texto como archivo.
-        const archivo = new Blob([textoReporte], { type: "text/plain;charset=utf-8" });
-        const direccionArchivo = URL.createObjectURL(archivo);
-        const enlaceDescarga = document.createElement("a");
-        enlaceDescarga.href = direccionArchivo;
-        enlaceDescarga.download = "reporte-comunitario-ecocampeche.txt";
-        document.body.appendChild(enlaceDescarga);
-        enlaceDescarga.click();
-        enlaceDescarga.remove();
-        // Libera la URL temporal después de iniciar la descarga.
-        window.setTimeout(function () {
-            URL.revokeObjectURL(direccionArchivo);
-        }, 1000);
+        const fechaElaboracion = new Date().toLocaleDateString("es-VE", {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        });
+
+        // Construcción del documento formal
+        textoReporte = [
+            "==================================================================",
+            "   REPORTE COMUNITARIO Y SOLICITUD DE ATENCIÓN DE RESIDUOS",
+            "         SECTOR 4A CAMPECHE · CUMANÁ, ESTADO SUCRE",
+            "==================================================================",
+            "",
+            "LUGAR Y FECHA DE EMISIÓN: Cumaná, " + fechaElaboracion,
+            "",
+            "DIRIGIDO A:",
+            nombreDestinatarioFormal,
+            "",
+            "ASUNTO: Solicitud formal de atención ambiental y recolección de residuos en el Sector 4A de Campeche",
+            "",
+            "Estimadas autoridades y personal técnico:",
+            "",
+            "Por medio del presente oficio, vecinos y vocería organizada de la comunidad Campeche (Sector 4A), parroquia Santa Inés, Cumaná, estado Sucre, nos dirigimos a ustedes de manera respetuosa para notificar formalmente la siguiente situación observada en nuestro entorno y solicitar su intervención institucional:",
+            "",
+            "1. DATOS DE LA SITUACIÓN OBSERVADA:",
+            "   • Ubicación exacta / Referencia: " + ubicacion,
+            "   • Fecha en que se observó: " + fechaObservacion,
+            "   • Tipo de afectación: " + situacion,
+            "   • Acción o atención solicitada: " + atencion,
+            "",
+            "2. DESCRIPCIÓN DETALLADA DE LOS HECHOS:",
+            "   " + descripcion,
+            "",
+            "3. DATOS DE CONTACTO COMUNITARIO:",
+            "   • Remitente / Vocería: " + (nombreRemitente || "Comunidad organizada del Sector 4A de Campeche"),
+            "   • Teléfono de contacto: " + (telefonoContacto || "Verificable en asamblea comunitaria"),
+            "",
+            "NOTA: Se adjuntan como respaldo gráfico las fotografías fechadas tomadas en el sitio como evidencia del estado actual del área afectada.",
+            "",
+            "Agradecemos de antemano su pronta inspección en el sector, incorporación en las rutas de atención correspondientes y acuse formal de recibo.",
+            "",
+            "Atentamente,",
+            "Comunidad de Campeche · Sector 4A",
+            "Plataforma Informativa y de Diagnóstico EcoCampeche"
+        ].join("\n");
+
+        // Enlace para correo (mailto con asunto y cuerpo prellenados)
+        const asuntoCorreo = encodeURIComponent("Reporte Comunitario de Residuos - Sector 4A Campeche");
+        const cuerpoCorreo = encodeURIComponent(textoReporte);
+        const enlaceCorreo = "mailto:" + correosDestino + "?subject=" + asuntoCorreo + "&body=" + cuerpoCorreo;
+
+        // Enlace para WhatsApp (resumen conciso y claro)
+        const textoWhatsApp = encodeURIComponent(
+            "📋 *REPORTE COMUNITARIO - SECTOR 4A CAMPECHE*\n" +
+            "Para: " + nombreCorto + "\n\n" +
+            "📍 *Ubicación:* " + ubicacion + "\n" +
+            "📅 *Fecha:* " + fechaObservacion + "\n" +
+            "⚠️ *Situación:* " + situacion + "\n" +
+            "🛠️ *Solicitud:* " + atencion + "\n\n" +
+            "📝 *Detalle:* " + descripcion + "\n\n" +
+            (nombreRemitente ? "👤 *Remitente:* " + nombreRemitente + "\n" : "") +
+            (telefonoContacto ? "📞 *Teléfono:* " + telefonoContacto + "\n" : "") +
+            "📸 Se adjuntan fotografías fechadas del lugar como evidencia.\n" +
+            "Agradecemos su pronta atención y confirmación de recepción."
+        );
+        const enlaceWhatsApp = "https://wa.me/" + telefonoWhatsAppServiamsa + "?text=" + textoWhatsApp;
+
+        // Inserción en el contenedor de resultados
+        resultado.innerHTML = [
+            '<div class="aviso-exito">',
+            '    <i class="fa-solid fa-circle-check" aria-hidden="true"></i>',
+            '    <div>',
+            '        <strong>¡Oficio formal preparado con éxito!</strong>',
+            '        <p style="margin: 4px 0 0; font-size: 0.88rem;">Tu reporte está formateado y listo para ser enviado directamente a <strong>' + escaparHTML(nombreCorto) + '</strong>.</p>',
+            '    </div>',
+            '</div>',
+            '<p style="margin: 0 0 8px; font-weight: 700; color: var(--color-principal);"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Vista previa del oficio a remitir:</p>',
+            '<pre class="reporte-previa" id="texto-previa-reporte">' + escaparHTML(textoReporte) + '</pre>',
+            '<div class="reporte-acciones-envio">',
+            '    <a class="boton boton--principal" href="' + enlaceCorreo + '">',
+            '        <i class="fa-solid fa-envelope" aria-hidden="true"></i> Enviar por correo a ' + escaparHTML(nombreCorto),
+            '    </a>',
+            tieneWhatsApp ? '    <a class="boton boton--whatsapp" href="' + enlaceWhatsApp + '" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Enviar por WhatsApp a Serviamsa</a>' : '',
+            '    <button class="boton boton--secundario" type="button" id="boton-copiar-reporte">',
+            '        <i class="fa-solid fa-copy" aria-hidden="true"></i> <span>Copiar oficio</span>',
+            '    </button>',
+            '    <button class="boton boton--secundario" type="button" id="boton-descargar-reporte">',
+            '        <i class="fa-solid fa-download" aria-hidden="true"></i> Descargar (.txt)',
+            '    </button>',
+            '</div>'
+        ].join("\n");
+
+        resultado.classList.add("visible");
+        resultado.scrollIntoView({ behavior: "smooth", block: "start" });
+
+        // Evento Copiar al portapapeles
+        const botonCopiar = document.getElementById("boton-copiar-reporte");
+        if (botonCopiar) {
+            botonCopiar.addEventListener("click", function () {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(textoReporte).then(function () {
+                        const span = botonCopiar.querySelector("span");
+                        const icono = botonCopiar.querySelector("i");
+                        if (span) span.textContent = "¡Copiado! ✓";
+                        if (icono) icono.className = "fa-solid fa-check";
+                        window.setTimeout(function () {
+                            if (span) span.textContent = "Copiar oficio";
+                            if (icono) icono.className = "fa-solid fa-copy";
+                        }, 2500);
+                    }).catch(function () {
+                        descargarArchivoTexto();
+                    });
+                } else {
+                    descargarArchivoTexto();
+                }
+            });
+        }
+
+        // Evento Descargar archivo de texto
+        function descargarArchivoTexto() {
+            if (!textoReporte) return;
+            const archivo = new Blob([textoReporte], { type: "text/plain;charset=utf-8" });
+            const direccionArchivo = URL.createObjectURL(archivo);
+            const enlaceDescarga = document.createElement("a");
+            enlaceDescarga.href = direccionArchivo;
+            enlaceDescarga.download = "reporte-comunitario-" + valorOrganismo + "-campeche.txt";
+            document.body.appendChild(enlaceDescarga);
+            enlaceDescarga.click();
+            enlaceDescarga.remove();
+            window.setTimeout(function () {
+                URL.revokeObjectURL(direccionArchivo);
+            }, 1000);
+        }
+
+        const botonDescargar = document.getElementById("boton-descargar-reporte");
+        if (botonDescargar) {
+            botonDescargar.addEventListener("click", descargarArchivoTexto);
+        }
     });
 }
 

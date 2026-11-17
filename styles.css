@@ -321,6 +321,19 @@ select {
     color: var(--color-principal);
 }
 
+.boton--whatsapp {
+    background: var(--verde-whatsapp);
+    color: #fff;
+    border-color: var(--verde-whatsapp);
+}
+
+.boton--whatsapp:hover {
+    background: #1EBE5D;
+    border-color: #1EBE5D;
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+}
+
 .enlace-texto {
     display: inline-flex;
     align-items: center;
@@ -1279,10 +1292,13 @@ select {
 
 .formulario__resultado {
     display: none;
-    padding: 16px;
-    border-radius: 12px;
-    background: var(--fondo-suave);
-    color: var(--color-principal);
+    margin-top: 24px;
+    padding: 24px;
+    border-radius: 16px;
+    background: #FFFFFF;
+    border: 1px solid rgba(46, 90, 68, 0.2);
+    box-shadow: var(--sombra-suave);
+    color: var(--color-texto);
     overflow-wrap: anywhere;
 }
 
@@ -1290,8 +1306,46 @@ select {
     display: block;
 }
 
-.formulario__resultado p {
-    margin: 0 0 12px;
+.aviso-exito {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    background: rgba(62, 160, 102, 0.12);
+    border: 1px solid rgba(62, 160, 102, 0.3);
+    color: var(--color-principal);
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+}
+
+.aviso-exito i {
+    font-size: 1.3rem;
+    color: var(--color-acento);
+}
+
+.reporte-previa {
+    margin: 0 0 18px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #F8FAF9;
+    border: 1px solid rgba(46, 90, 68, 0.16);
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #1a3325;
+    white-space: pre-wrap;
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+.reporte-acciones-envio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    padding-top: 14px;
+    border-top: 1px solid rgba(46, 90, 68, 0.12);
 }
 
 .contenedor-mapa {
@@ -1461,4 +1515,151 @@ select {
 
 .whatsapp-flotante:hover {
     transform: scale(1.06);
+}
+
+
+.colaboracion-uptos {
+    padding: 72px 0;
+    background: linear-gradient(160deg, #F4F7F6 0%, #EBF2ED 50%, #F4F7F6 100%);
+    border-top: 1px solid rgba(46, 90, 68, 0.1);
+    border-bottom: 1px solid rgba(46, 90, 68, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+
+.colaboracion-uptos__contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+}
+
+/* --- Logos de ambas organizaciones --- */
+.colaboracion-uptos__logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+/* Logo EcoCampeche (SVG imagen) */
+.colaboracion-uptos__logo-eco-img {
+    max-height: 95px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 4px 12px rgba(28, 54, 38, 0.1));
+}
+
+/* Separador + entre logos */
+.colaboracion-uptos__separador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.colaboracion-uptos__x {
+    font-size: 2.4rem;
+    color: var(--color-acento);
+    font-weight: 300;
+    line-height: 1;
+}
+
+/* Logo imagen de la UPTOS */
+.colaboracion-uptos__logo-img {
+    max-height: 100px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 4px 12px rgba(28, 54, 38, 0.1));
+}
+
+/* --- Bloque de texto central --- */
+.colaboracion-uptos__texto {
+    max-width: 760px;
+}
+
+.colaboracion-uptos__antetitulo {
+    margin: 0 0 10px;
+    color: var(--color-acento);
+    font-size: 0.78rem;
+    font-weight: 750;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.colaboracion-uptos__titulo {
+    margin: 0 0 18px;
+    color: var(--color-principal);
+    font-family: var(--fuente-titulos);
+    font-size: clamp(1.9rem, 3.8vw, 2.8rem);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.colaboracion-uptos__titulo em {
+    color: var(--color-acento);
+    font-style: normal;
+}
+
+.colaboracion-uptos__descripcion {
+    margin: 0 0 28px;
+    color: var(--color-texto-secundario);
+    font-size: 1.03rem;
+    line-height: 1.72;
+}
+
+.colaboracion-uptos__descripcion strong {
+    color: var(--color-principal);
+    font-weight: 700;
+}
+
+/* Pastillas de categorías */
+.colaboracion-uptos__etiquetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.colaboracion-uptos__etiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 16px;
+    border-radius: 999px;
+    background: rgba(46, 90, 68, 0.08);
+    border: 1px solid rgba(46, 90, 68, 0.15);
+    color: var(--color-principal);
+    font-size: 0.84rem;
+    font-weight: 600;
+}
+
+.colaboracion-uptos__etiqueta i {
+    color: var(--color-acento);
+    font-size: 0.82rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .colaboracion-uptos {
+        padding: 54px 0;
+    }
+
+    .colaboracion-uptos__logos {
+        gap: 20px;
+    }
+
+    .colaboracion-uptos__logo-eco-img,
+    .colaboracion-uptos__logo-img {
+        max-height: 68px;
+    }
+
+    .colaboracion-uptos__etiquetas {
+        flex-direction: column;
+        align-items: center;
+    }
 }
