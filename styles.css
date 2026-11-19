@@ -1663,3 +1663,477 @@ select {
         align-items: center;
     }
 }
+
+/* ==========================================================================
+   FORMATOS VISUALES DIVERSIFICADOS DE EVIDENCIAS FOTOGRÁFICAS (CAMPECHE)
+   ========================================================================== */
+
+/* 1. Tarjeta Panorámica Dividida (Split Feature) */
+.tarjeta-panoramica {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    background: var(--fondo-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-suave);
+    overflow: hidden;
+    margin-bottom: 28px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-panoramica:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-media);
+}
+
+.tarjeta-panoramica__multimedia {
+    position: relative;
+    min-height: 340px;
+    background: #111;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.tarjeta-panoramica__foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.tarjeta-panoramica:hover .tarjeta-panoramica__foto {
+    transform: scale(1.03);
+}
+
+.tarjeta-panoramica__insignia {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(180, 69, 47, 0.92);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+
+.tarjeta-panoramica__insignia--verde {
+    background: rgba(46, 90, 68, 0.92);
+}
+
+.tarjeta-panoramica__insignia--ambar {
+    background: rgba(217, 161, 59, 0.95);
+}
+
+.tarjeta-panoramica__lupa {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    opacity: 0.85;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.tarjeta-panoramica:hover .tarjeta-panoramica__lupa {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.tarjeta-panoramica__cuerpo {
+    padding: 30px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tarjeta-panoramica__antetitulo {
+    color: var(--color-acento);
+    font-size: 0.8rem;
+    font-weight: 750;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.tarjeta-panoramica__titulo {
+    font-family: var(--fuente-titulos);
+    font-size: 1.45rem;
+    color: var(--color-principal);
+    margin: 0 0 12px;
+    line-height: 1.28;
+}
+
+.tarjeta-panoramica__descripcion {
+    color: var(--color-texto);
+    font-size: 0.93rem;
+    line-height: 1.62;
+    margin: 0 0 18px;
+}
+
+.tarjeta-panoramica__detalles {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tarjeta-panoramica__detalle-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.87rem;
+    color: var(--color-texto-secundario);
+    line-height: 1.45;
+}
+
+.tarjeta-panoramica__detalle-item i {
+    color: var(--color-destacado);
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+/* 2. Tarjeta Inmersiva con Fondo Completo y Overlay */
+.tarjeta-overlay {
+    position: relative;
+    border-radius: var(--radio-borde);
+    overflow: hidden;
+    min-height: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: var(--sombra-suave);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-overlay:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+}
+
+.tarjeta-overlay__foto {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    z-index: 1;
+}
+
+.tarjeta-overlay:hover .tarjeta-overlay__foto {
+    transform: scale(1.06);
+}
+
+.tarjeta-overlay__degradado {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.42) 40%, rgba(18, 32, 24, 0.95) 100%);
+    z-index: 2;
+    transition: background 0.3s ease;
+}
+
+.tarjeta-overlay:hover .tarjeta-overlay__degradado {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0.32) 35%, rgba(18, 32, 24, 0.98) 100%);
+}
+
+.tarjeta-overlay__insignia {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.94);
+    color: var(--color-principal);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.tarjeta-overlay__lupa {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 3;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    opacity: 0.8;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+}
+
+.tarjeta-overlay:hover .tarjeta-overlay__lupa {
+    opacity: 1;
+    transform: scale(1.12);
+}
+
+.tarjeta-overlay__contenido {
+    position: relative;
+    z-index: 3;
+    padding: 22px 18px;
+    color: #fff;
+}
+
+.tarjeta-overlay__titulo {
+    font-family: var(--fuente-titulos);
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 0 6px;
+    line-height: 1.3;
+}
+
+.tarjeta-overlay__texto {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.48;
+    margin: 0;
+}
+
+/* 3. Mosaico Bento Asimétrico */
+.mosaico-bento {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 22px;
+    margin-bottom: 28px;
+}
+
+.mosaico-bento__principal {
+    display: flex;
+}
+
+.mosaico-bento__secundarios {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* 4. Tarjeta de Alerta Sanitaria */
+.tarjeta-alerta-sanitaria {
+    background: var(--fondo-superficie);
+    border-radius: var(--radio-borde);
+    border: 1px solid var(--color-borde);
+    box-shadow: var(--sombra-suave);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-alerta-sanitaria:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-media);
+}
+
+.tarjeta-alerta-sanitaria__multimedia {
+    height: 195px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: #111;
+}
+
+.tarjeta-alerta-sanitaria__foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.tarjeta-alerta-sanitaria:hover .tarjeta-alerta-sanitaria__foto {
+    transform: scale(1.05);
+}
+
+.tarjeta-alerta-sanitaria__lupa {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.82rem;
+    pointer-events: none;
+}
+
+.tarjeta-alerta-sanitaria__cuerpo {
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.tarjeta-alerta-sanitaria__nivel {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.74rem;
+    font-weight: 750;
+    color: var(--color-error);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+}
+
+.tarjeta-alerta-sanitaria__titulo {
+    font-size: 1.1rem;
+    color: var(--color-texto);
+    margin: 0 0 8px;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.tarjeta-alerta-sanitaria__texto {
+    font-size: 0.86rem;
+    color: var(--color-texto-secundario);
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* 5. Banner Comunitario con Acento Vecinal */
+.banner-comunitario {
+    background: linear-gradient(135deg, rgba(83, 122, 87, 0.08) 0%, rgba(217, 161, 59, 0.12) 100%);
+    border: 2px dashed var(--color-destacado);
+    border-radius: var(--radio-borde);
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 28px;
+    align-items: center;
+    margin-bottom: 32px;
+    box-shadow: var(--sombra-suave);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner-comunitario:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-media);
+}
+
+.banner-comunitario__multimedia {
+    position: relative;
+    border-radius: calc(var(--radio-borde) - 4px);
+    overflow: hidden;
+    height: 270px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    background: #111;
+}
+
+.banner-comunitario__foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.banner-comunitario:hover .banner-comunitario__foto {
+    transform: scale(1.04);
+}
+
+.banner-comunitario__lupa {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    pointer-events: none;
+}
+
+.banner-comunitario__antetitulo {
+    color: var(--color-destacado);
+    font-size: 0.8rem;
+    font-weight: 750;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.banner-comunitario__titulo {
+    font-family: var(--fuente-titulos);
+    font-size: 1.5rem;
+    color: var(--color-principal);
+    margin: 0 0 12px;
+    line-height: 1.25;
+}
+
+.banner-comunitario__texto {
+    color: var(--color-texto);
+    font-size: 0.94rem;
+    line-height: 1.62;
+    margin: 0 0 16px;
+}
+
+.banner-comunitario__pie {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+@media (max-width: 860px) {
+    .tarjeta-panoramica {
+        grid-template-columns: 1fr;
+    }
+    .tarjeta-panoramica__multimedia {
+        min-height: 250px;
+    }
+    .mosaico-bento {
+        grid-template-columns: 1fr;
+    }
+    .banner-comunitario {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+    .banner-comunitario__multimedia {
+        height: 220px;
+    }
+}

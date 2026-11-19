@@ -54,8 +54,10 @@
                             <ul class="navegacion__submenu">
                                 <li><a class="navegacion__enlace" href="comunidades.html"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i> Red de comunidades</a></li>
                                 <li><a class="navegacion__enlace activo" href="campeche.html" aria-current="page"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Campeche (Sector 4A)</a></li>
+                                <li><a class="navegacion__enlace" href="campeche.html#historia-comunidad"><i class="fa-solid fa-landmark" aria-hidden="true"></i> Reseña histórica</a></li>
+                                <li><a class="navegacion__enlace" href="campeche.html#carrusel-campeche"><i class="fa-solid fa-images" aria-hidden="true"></i> Galería inmersiva</a></li>
+                                <li><a class="navegacion__enlace" href="campeche.html#registro-documental"><i class="fa-solid fa-camera-retro" aria-hidden="true"></i> Evidencias en terreno</a></li>
                                 <li><a class="navegacion__enlace" href="campeche.html#ruta"><i class="fa-solid fa-route" aria-hidden="true"></i> Ruta comunitaria</a></li>
-                                <li><a class="navegacion__enlace" href="campeche.html#titulo-galeria"><i class="fa-solid fa-camera-retro" aria-hidden="true"></i> Registro de evidencias</a></li>
                                 <li><a class="navegacion__enlace" href="direcciones.html"><i class="fa-solid fa-compass" aria-hidden="true"></i> Ubicación y mapa</a></li>
                             </ul>
                         </details>
@@ -70,10 +72,11 @@
                             </summary>
                             <ul class="navegacion__submenu">
                                 <li><a class="navegacion__enlace" href="problematica.html"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Diagnóstico general</a></li>
-                                <li><a class="navegacion__enlace" href="problematica.html#prevencion"><i class="fa-solid fa-recycle" aria-hidden="true"></i> Clasificación de residuos</a></li>
+                                <li><a class="navegacion__enlace" href="problematica.html#clasificacion"><i class="fa-solid fa-recycle" aria-hidden="true"></i> Clasificación de residuos</a></li>
+                                <li><a class="navegacion__enlace" href="problematica.html#punzocortantes"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Resguardo de punzocortantes</a></li>
                                 <li><a class="navegacion__enlace" href="problematica.html#salud"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i> Salud y prevención</a></li>
-                                <li><a class="navegacion__enlace" href="problematica.html#visibilizar"><i class="fa-solid fa-file-signature" aria-hidden="true"></i> Preparar un reporte</a></li>
-                                <li><a class="navegacion__enlace" href="problematica.html#entes"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> Entes competentes</a></li>
+                                <li><a class="navegacion__enlace" href="problematica.html#visibilizar"><i class="fa-solid fa-file-signature" aria-hidden="true"></i> Cómo documentar</a></li>
+                                <li><a class="navegacion__enlace" href="problematica.html#entes"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> Entes y reporte formal</a></li>
                             </ul>
                         </details>
                     </li>
@@ -101,7 +104,7 @@
     <main id="contenido">
         <!-- Perfil -->
         <section class="encabezado-pagina encabezado-pagina--con-imagen" aria-labelledby="titulo-pagina">
-            <img class="encabezado-pagina__imagen" src="assets/photo_3_2026-11-03_22-52-02.jpg" alt="" aria-hidden="true" width="1280" height="960" fetchpriority="high">
+            <img class="encabezado-pagina__imagen" src="assets/campeche images/photo_9_2026-11-18_19-22-50.jpg" alt="Vista panorámica comunitaria de Campeche, Sector 4A, en Cumaná" aria-hidden="true" width="1280" height="964" fetchpriority="high">
             <div class="contenedor">
                 <p class="antetitulo">Comunidad piloto · Sector 4A</p>
                 <h1 class="encabezado-pagina__titulo" id="titulo-pagina">Campeche: nuestra comunidad, nuestro compromiso</h1>
@@ -132,174 +135,557 @@
             </div>
         </section>
 
-        <section class="seccion">
+        <!-- CARRUSEL INMERSIVO DE LA COMUNIDAD DE CAMPECHE -->
+        <section class="carrusel-sumergido" id="carrusel-campeche" aria-label="Galería inmersiva del Sector 4A de Campeche">
+            <div class="carrusel-sumergido__pista">
+                <!-- Diapositiva 1: Vista panorámica territorial -->
+                <div class="carrusel-sumergido__diapositiva activa">
+                    <img class="carrusel-sumergido__fondo" src="assets/campeche images/photo_9_2026-11-18_19-22-50.jpg" alt="Vista panorámica de la comunidad Campeche y serranías de Cumaná" loading="lazy">
+                    <div class="carrusel-sumergido__capa" aria-hidden="true"></div>
+                    <div class="contenedor carrusel-sumergido__contenido">
+                        <div class="carrusel-sumergido__bloque">
+                            <span class="carrusel-sumergido__pildora"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i> Territorio barrial</span>
+                            <h2 class="carrusel-sumergido__titulo">Campeche, Sector 4A: Mirada al territorio</h2>
+                            <p class="carrusel-sumergido__descripcion">Comunidad consolidada en la parroquia Santa Inés, al pie de las colinas de Cumaná, donde la organización vecinal busca recuperar la armonía ambiental y la calidad de vida.</p>
+                            <div class="carrusel-sumergido__acciones">
+                                <a class="boton boton--principal" href="#registro-documental">Ver evidencias fotográficas <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                                <a class="boton boton--claro" href="direcciones.html">Ubicación y mapa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diapositiva 2: Drenajes pluviales -->
+                <div class="carrusel-sumergido__diapositiva">
+                    <img class="carrusel-sumergido__fondo" src="assets/campeche images/photo_14_2026-11-18_19-22-50.jpg" alt="Canal de drenaje de aguas de lluvia colmado de residuos plásticos" loading="lazy">
+                    <div class="carrusel-sumergido__capa" aria-hidden="true"></div>
+                    <div class="contenedor carrusel-sumergido__contenido">
+                        <div class="carrusel-sumergido__bloque">
+                            <span class="carrusel-sumergido__pildora"><i class="fa-solid fa-water" aria-hidden="true"></i> Canales y drenajes</span>
+                            <h2 class="carrusel-sumergido__titulo">Urgencia de dragado y saneamiento</h2>
+                            <p class="carrusel-sumergido__descripcion">La acumulación de botellas y bolsas en los canales de concreto frena el cauce natural de las lluvias y genera anegamientos directos en las viviendas del sector.</p>
+                            <div class="carrusel-sumergido__acciones">
+                                <a class="boton boton--principal" href="#drenajes">Explorar canales críticos <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                                <a class="boton boton--claro" href="problematica.html#entes">Organismos de atención</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diapositiva 3: Letrero y llamado vecinal -->
+                <div class="carrusel-sumergido__diapositiva">
+                    <img class="carrusel-sumergido__fondo" src="assets/campeche images/photo_24_2026-11-18_19-22-50.jpg" alt="Poste con cartel vecinal No botar basura aquí y desechos al pie" loading="lazy">
+                    <div class="carrusel-sumergido__capa" aria-hidden="true"></div>
+                    <div class="contenedor carrusel-sumergido__contenido">
+                        <div class="carrusel-sumergido__bloque">
+                            <span class="carrusel-sumergido__pildora"><i class="fa-solid fa-ban" aria-hidden="true"></i> Llamado comunitario</span>
+                            <h2 class="carrusel-sumergido__titulo">Iniciativa vecinal contra vertederos</h2>
+                            <p class="carrusel-sumergido__descripcion">Letreros elaborados por los propios vecinos evidencian la voluntad de mantener las calles limpias, requiriendo el respaldo de rutas oficiales de recolección.</p>
+                            <div class="carrusel-sumergido__acciones">
+                                <a class="boton boton--principal" href="#vias-publicas">Ver puntos en vías <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diapositiva 4: Laderas del cerro -->
+                <div class="carrusel-sumergido__diapositiva">
+                    <img class="carrusel-sumergido__fondo" src="assets/campeche images/photo_29_2026-11-18_19-22-50.jpg" alt="Laderas del cerro de Campeche con plásticos dispersos" loading="lazy">
+                    <div class="carrusel-sumergido__capa" aria-hidden="true"></div>
+                    <div class="contenedor carrusel-sumergido__contenido">
+                        <div class="carrusel-sumergido__bloque">
+                            <span class="carrusel-sumergido__pildora"><i class="fa-solid fa-mountain" aria-hidden="true"></i> Relieve natural</span>
+                            <h2 class="carrusel-sumergido__titulo">Protección de las laderas y taludes</h2>
+                            <p class="carrusel-sumergido__descripcion">Evitar que los desperdicios se acumulen en las pendientes naturales previene que los vientos y las corrientes arrastren basura hacia las casas del Sector 4A.</p>
+                            <div class="carrusel-sumergido__acciones">
+                                <a class="boton boton--principal" href="#laderas">Ver laderas y cerros <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diapositiva 5: Brigada comunitaria -->
+                <div class="carrusel-sumergido__diapositiva">
+                    <img class="carrusel-sumergido__fondo" src="assets/campeche images/photo_11_2026-11-18_19-22-50.jpg" alt="Mural comunitario de la brigada de acción comunitaria en Campeche" loading="lazy">
+                    <div class="carrusel-sumergido__capa" aria-hidden="true"></div>
+                    <div class="contenedor carrusel-sumergido__contenido">
+                        <div class="carrusel-sumergido__bloque">
+                            <span class="carrusel-sumergido__pildora"><i class="fa-solid fa-people-group" aria-hidden="true"></i> Organización barrial</span>
+                            <h2 class="carrusel-sumergido__titulo">Brigadas comunitarias y vocerías</h2>
+                            <p class="carrusel-sumergido__descripcion">La articulación activa entre el consejo comunal, las brigadas vecinales y la UPTOS Clodosbaldo Russián es la clave para la autogestión y el saneamiento.</p>
+                            <div class="carrusel-sumergido__acciones">
+                                <a class="boton boton--principal" href="nosotros.html#compromiso">Conocer la alianza <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles del carrusel -->
+            <button class="carrusel-sumergido__control carrusel-sumergido__control--anterior" type="button" aria-label="Foto anterior">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <button class="carrusel-sumergido__control carrusel-sumergido__control--siguiente" type="button" aria-label="Foto siguiente">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </button>
+
+            <!-- Indicadores automáticos -->
+            <div class="carrusel-sumergido__indicadores" aria-label="Selector de fotos de Campeche"></div>
+        </section>
+
+        <!-- INTRODUCCIÓN AL DIAGNÓSTICO -->
+        <section class="seccion" id="diagnostico-comunitario">
             <div class="contenedor">
                 <div class="rejilla rejilla--2-columnas">
                     <div>
                         <p class="antetitulo antetitulo--izquierda">Cumaná · Estado Sucre</p>
-                        <h2 class="seccion__titulo seccion__titulo--izquierda">Un diagnóstico construido con la comunidad</h2>
-                        <p class="tarjeta__texto">La acumulación de residuos en canales, áreas comunes y terrenos puede generar contaminación, obstruir drenajes y atraer vectores. Para describir con precisión cada punto hace falta registrar su ubicación, frecuencia y condiciones, junto con los residentes.</p>
-                        <p class="tarjeta__texto tarjeta__texto--separado">Las imágenes de esta página son ilustrativas. Deben sustituirse por fotografías propias, fechadas y verificadas del Sector 4A antes de utilizarlas como evidencia ante organismos públicos.</p>
-                        <a class="boton boton--principal tarjeta__accion" href="problematica.html">Ver cómo documentar y solicitar atención <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <h2 class="seccion__titulo seccion__titulo--izquierda">Diagnóstico fotográfico verificado en el Sector 4A</h2>
+                        <p class="tarjeta__texto">La acumulación de residuos en canales pluviales, aceras y laderas afecta directamente la salud colectiva y la seguridad del Sector 4A. Las 29 fotografías documentadas a continuación fueron levantadas en el terreno para respaldar solicitudes formales de recolección y dragado ante los entes municipales y regionales.</p>
+                        <p class="tarjeta__texto tarjeta__texto--separado">Haz clic en cualquiera de las imágenes para abrir el visor interactivo y examinar los detalles técnicos de cada punto crítico.</p>
+                        <a class="boton boton--principal tarjeta__accion" href="problematica.html#formulario-reporte">Preparar oficio formal para entes <i class="fa-solid fa-file-signature" aria-hidden="true"></i></a>
                     </div>
 
-
-
-
-
                     <article class="tarjeta">
-                        <img class="tarjeta__imagen" src="assets/photo_1_2026-11-03_22-52-02.jpg" alt="Residuos acumulados entre la vegetación y el agua en Campeche" loading="lazy">
+                        <img class="tarjeta__imagen" src="assets/campeche images/photo_13_2026-11-18_19-22-50.jpg" alt="Letrero vecinal en poste que indica No botar basura aquí en Campeche" loading="lazy">
                         <div class="tarjeta__contenido">
-                            <span class="etiqueta"><i class="fa-solid fa-image" aria-hidden="true"></i> Imagen ilustrativa</span>
-                            <h3 class="tarjeta__titulo tarjeta__titulo--separado">Visibilizar sin confundir</h3>
-                            <p class="tarjeta__texto">Una evidencia útil identifica cuándo y dónde se tomó la foto y qué situación muestra, sin exponer rostros, domicilios privados ni datos personales.</p>
+                            <span class="etiqueta"><i class="fa-solid fa-camera" aria-hidden="true"></i> Documentación comunitaria</span>
+                            <h3 class="tarjeta__titulo tarjeta__titulo--separado">Iniciativa y llamado vecinal</h3>
+                            <p class="tarjeta__texto">Letrero instalado por los vecinos del Sector 4A en un poste de alumbrado público que refleja la voluntad comunitaria de resguardar el espacio y evitar vertederos no autorizados.</p>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-
-        <!-- Retos ambientales -->
-        <section class="seccion seccion--suave" aria-labelledby="titulo-problematica">
+        <!-- SECCIÓN DE DOCUMENTACIÓN FOTOGRÁFICA COMPLETA DE CAMPECHE (29 IMÁGENES) -->
+        <section class="seccion seccion--suave" id="registro-documental" aria-labelledby="titulo-galeria">
             <div class="contenedor">
-                <p class="antetitulo">Situaciones que se deben verificar en campo</p>
-                <h2 class="seccion__titulo" id="titulo-problematica">¿Qué problemática queremos visibilizar?</h2>
-                <p class="seccion__subtitulo">Estos ejemplos son categorías de observación, no afirmaciones sobre puntos específicos del sector. Un diagnóstico participativo permite confirmar las condiciones reales.</p>
+                <p class="antetitulo">Levantamiento en campo · 29 Fotografías verificadas</p>
+                <h2 class="seccion__titulo" id="titulo-galeria">Documentación fotográfica integral de Campeche</h2>
+                <p class="seccion__subtitulo">Archivo visual estructurado por zonas y problemáticas observadas en el Sector 4A. Haz clic en cualquier fotografía para ampliarla en el visor interactivo.</p>
 
-                <div class="rejilla rejilla--3-columnas">
-                    <article class="tarjeta tarjeta-destacada">
-                        <div class="tarjeta__contenido">
-                            <span class="tarjeta__icono"><i class="fa-solid fa-water" aria-hidden="true"></i></span>
-                            <h3 class="tarjeta__titulo">Residuos en canales y drenajes</h3>
-                            <p class="tarjeta__texto">Registrar obstrucciones, residuos visibles y si se acumula agua después de la lluvia. No entrar al canal ni tocar desechos.</p>
+                <!-- ==================== SUBSECCIÓN 1: DRENAJES Y CANALES ==================== -->
+                <div id="drenajes" style="margin-top: 40px;">
+                    <h3 class="seccion__titulo seccion__titulo--izquierda" style="font-size: 1.55rem; margin-bottom: 8px;"><i class="fa-solid fa-water" style="color: var(--color-acento);"></i> 1. Red de drenajes pluviales y cauces colapsados</h3>
+                    <p class="seccion__introduccion seccion__introduccion--izquierda" style="margin-bottom: 22px;">Canalizaciones de concreto y zanjas de tierra cuya saturación por plásticos impide el desagüe natural de las lluvias.</p>
+
+                    <!-- Bloque destacado panorámico para el canal matriz -->
+                    <article class="tarjeta-panoramica" data-animar="deslizar-arriba">
+                        <div class="tarjeta-panoramica__multimedia">
+                            <span class="tarjeta-panoramica__insignia"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Punto crítico prioritario</span>
+                            <img class="tarjeta-panoramica__foto foto-ampliable" src="assets/campeche images/photo_14_2026-11-18_19-22-50.jpg" alt="Canal matriz de drenaje pluvial colapsado por sedimentos y botellas plásticas" loading="lazy">
+                            <span class="tarjeta-panoramica__lupa" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                        </div>
+                        <div class="tarjeta-panoramica__cuerpo">
+                            <p class="tarjeta-panoramica__antetitulo"><i class="fa-solid fa-water" aria-hidden="true"></i> Red hídrica principal</p>
+                            <h4 class="tarjeta-panoramica__titulo">Canal matriz colapsado por sedimentos y plásticos</h4>
+                            <p class="tarjeta-panoramica__descripcion">Cauce estructural de concreto ubicado entre hileras de viviendas en el Sector 4A. La acumulación crónica de botellas PET, bolsas y limo impide el desagüe natural hacia el Golfo de Cariaco, provocando desbordamientos durante lluvias intensas.</p>
+                            <ul class="tarjeta-panoramica__detalles">
+                                <li class="tarjeta-panoramica__detalle-item"><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i> <span><strong>Afectación directa:</strong> Obstrucción del 70% de la sección hidráulica del colector.</span></li>
+                                <li class="tarjeta-panoramica__detalle-item"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> <span><strong>Riesgo vecinal:</strong> Inundación de patios y proliferación de vectores infecciosos.</span></li>
+                            </ul>
+                            <div>
+                                <a class="boton boton--principal boton--pequeno" href="#ruta">Ver en la ruta <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                            </div>
                         </div>
                     </article>
-                    <article class="tarjeta tarjeta-destacada">
-                        <div class="tarjeta__contenido">
-                            <span class="tarjeta__icono"><i class="fa-solid fa-trash-can" aria-hidden="true"></i></span>
-                            <h3 class="tarjeta__titulo">Puntos de acumulación</h3>
-                            <p class="tarjeta__texto">Observar si un lugar se repite, qué tipos de residuos hay y si existe un servicio de recolección cercano.</p>
+
+                    <!-- Puntos secundarios del sistema de drenaje -->
+                    <div class="rejilla rejilla--2-columnas">
+                        <!-- Foto 15 -->
+                        <figure class="tarjeta">
+                            <img class="tarjeta__imagen foto-ampliable" src="assets/campeche images/photo_15_2026-11-18_19-22-50.jpg" alt="Zanja con agua estancada verde y ramas de poda arrojadas en el borde" loading="lazy">
+                            <figcaption class="tarjeta__contenido">
+                                <span class="tarjeta-galeria__etiqueta"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Zanja sin dragar</span>
+                                <h4 class="tarjeta__titulo">Estancamiento hídrico y restos de poda</h4>
+                                <p class="tarjeta__texto">Cauce con manto verde superficial de microalgas por falta de dragado, bloqueado por ramas secas que generan putrefacción y malos olores.</p>
+                            </figcaption>
+                        </figure>
+
+                        <!-- Foto 22 -->
+                        <figure class="tarjeta">
+                            <img class="tarjeta__imagen foto-ampliable" src="assets/campeche images/photo_22_2026-11-18_19-22-50.jpg" alt="Zanja lateral con piedras y maleza densa donde se enredan plásticos" loading="lazy">
+                            <figcaption class="tarjeta__contenido">
+                                <span class="tarjeta-galeria__etiqueta"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Cauce perimetral</span>
+                                <h4 class="tarjeta__titulo">Desagüe lateral invadido por maleza</h4>
+                                <p class="tarjeta__texto">Zanja de tierra y piedras al pie del muro de bloques donde la vegetación no controlada retiene bolsas plásticas y desechos domésticos.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- ==================== SUBSECCIÓN 2: AGUAS ESTANCADAS Y SALUD ==================== -->
+                <div id="salud-vectores" style="margin-top: 52px;">
+                    <h3 class="seccion__titulo seccion__titulo--izquierda" style="font-size: 1.55rem; margin-bottom: 8px;"><i class="fa-solid fa-mosquito" style="color: var(--color-acento);"></i> 2. Aguas estancadas y focos de proliferación de vectores</h3>
+                    <p class="seccion__introduccion seccion__introduccion--izquierda" style="margin-bottom: 22px;">Charcos y sedimentos con envases que funcionan como criaderos del mosquito del dengue a escasa distancia de los hogares.</p>
+
+                    <!-- Mosaico Bento asimétrico de alerta sanitaria -->
+                    <div class="mosaico-bento">
+                        <!-- Foto 28 (Principal en tarjeta overlay profunda) -->
+                        <div class="mosaico-bento__principal">
+                            <article class="tarjeta-overlay" style="width: 100%; min-height: 420px;" data-animar="deslizar-arriba">
+                                <span class="tarjeta-overlay__insignia" style="background: rgba(180, 69, 47, 0.95); color: #fff;"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Foco epidemiológico crítico</span>
+                                <img class="tarjeta-overlay__foto foto-ampliable" src="assets/campeche images/photo_28_2026-11-18_19-22-50.jpg" alt="Charco de agua estancada turbia con bolsas plásticas y envases sumergidos" loading="lazy">
+                                <span class="tarjeta-overlay__lupa" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                                <div class="tarjeta-overlay__degradado" aria-hidden="true"></div>
+                                <div class="tarjeta-overlay__contenido">
+                                    <h4 class="tarjeta-overlay__titulo">Charco estancado y riesgo de dengue</h4>
+                                    <p class="tarjeta-overlay__texto">Agua detenida a la intemperie a escasos metros de residencias familiares con bolsas plásticas sumergidas, generando el microclima óptimo para la reproducción del mosquito vector <em>Aedes aegypti</em>.</p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Secundarios en tarjetas de alerta sanitaria -->
+                        <div class="mosaico-bento__secundarios">
+                            <!-- Foto 31 -->
+                            <article class="tarjeta-alerta-sanitaria" data-animar="deslizar-arriba">
+                                <div class="tarjeta-alerta-sanitaria__multimedia">
+                                    <img class="tarjeta-alerta-sanitaria__foto foto-ampliable" src="assets/campeche images/photo_31_2026-11-18_19-22-50.jpg" alt="Detalle en primer plano de envases de anime y botellas plásticas en agua" loading="lazy">
+                                    <span class="tarjeta-alerta-sanitaria__lupa" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                                </div>
+                                <div class="tarjeta-alerta-sanitaria__cuerpo">
+                                    <span class="tarjeta-alerta-sanitaria__nivel"><i class="fa-solid fa-biohazard" aria-hidden="true"></i> Riesgo sanitario: Alto</span>
+                                    <h4 class="tarjeta-alerta-sanitaria__titulo">Bandejas de poliestireno y botellas en agua</h4>
+                                    <p class="tarjeta-alerta-sanitaria__texto">Primer plano de envases desechables acumulados en la charca, reteniendo humedad residual que multiplica bacterias y larvas.</p>
+                                </div>
+                            </article>
+
+                            <!-- Foto 25 -->
+                            <article class="tarjeta-alerta-sanitaria" data-animar="deslizar-arriba">
+                                <div class="tarjeta-alerta-sanitaria__multimedia">
+                                    <img class="tarjeta-alerta-sanitaria__foto foto-ampliable" src="assets/campeche images/photo_25_2026-11-18_19-22-50.jpg" alt="Zanja con maleza densa y acumulación de sedimentos orgánicos" loading="lazy">
+                                    <span class="tarjeta-alerta-sanitaria__lupa" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                                </div>
+                                <div class="tarjeta-alerta-sanitaria__cuerpo">
+                                    <span class="tarjeta-alerta-sanitaria__nivel"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Putrefacción orgánica</span>
+                                    <h4 class="tarjeta-alerta-sanitaria__titulo">Cauce periférico obstruido con ramajes</h4>
+                                    <p class="tarjeta-alerta-sanitaria__texto">Matorrales secos y restos de poda sobre el agua estancada, acelerando la fermentación anaeróbica y los malos olores.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== SUBSECCIÓN 3: VERTEDEROS EN LADERAS Y TERRENOS ==================== -->
+                <div id="laderas" style="margin-top: 52px;">
+                    <h3 class="seccion__titulo seccion__titulo--izquierda" style="font-size: 1.55rem; margin-bottom: 8px;"><i class="fa-solid fa-mountain" style="color: var(--color-acento);"></i> 3. Vertederos a cielo abierto en laderas y terrenos baldíos</h3>
+                    <p class="seccion__introduccion seccion__introduccion--izquierda" style="margin-bottom: 22px;">Pendientes naturales y descampados donde los desechos arrojados son dispersados por las corrientes de aire y escorrentías.</p>
+
+                    <!-- Banner panorámico: ladera del cerro (foto más impactante) -->
+                    <article class="banner-comunitario" data-animar="deslizar-arriba">
+                        <div class="banner-comunitario__multimedia">
+                            <img class="banner-comunitario__foto foto-ampliable" src="assets/campeche images/photo_29_2026-11-18_19-22-50.jpg" alt="Faldas de la colina de Campeche cubiertas de desperdicios plásticos" loading="lazy">
+                            <span class="banner-comunitario__lupa" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                        </div>
+                        <div>
+                            <p class="banner-comunitario__antetitulo"><i class="fa-solid fa-mountain" aria-hidden="true"></i> Vertedero a cielo abierto</p>
+                            <h4 class="banner-comunitario__titulo">Laderas del cerro cubiertas de plásticos y botellas</h4>
+                            <p class="banner-comunitario__texto">Las faldas del cerro que domina el Sector 4A acumulan toneladas de desechos arrastrados por el viento y las escorrentías pluviales hacia la vegetación xerófila, degradando el paisaje natural e impidiendo la recuperación del suelo.</p>
+                            <div class="banner-comunitario__pie">
+                                <a class="boton boton--principal boton--pequeno" href="problematica.html#visibilizar">Preparar reporte <i class="fa-solid fa-file-signature" aria-hidden="true"></i></a>
+                                <a class="boton boton--claro boton--pequeno" href="problematica.html#entes">Contactar SERVIAMSA</a>
+                            </div>
                         </div>
                     </article>
-                    <article class="tarjeta tarjeta-destacada">
-                        <div class="tarjeta__contenido">
-                            <span class="tarjeta__icono"><i class="fa-solid fa-mosquito" aria-hidden="true"></i></span>
-                            <h3 class="tarjeta__titulo">Riesgos sanitarios</h3>
-                            <p class="tarjeta__texto">Anotar condiciones observables, como agua estancada o presencia de vectores. No diagnosticar enfermedades ni atribuir casos sin evidencia sanitaria.</p>
+
+                    <!-- Rejilla de tarjetas overlay para el resto de laderas -->
+                    <div class="rejilla rejilla--3-columnas">
+                        <!-- Foto 10 -->
+                        <article class="tarjeta-overlay" data-animar="deslizar-arriba">
+                            <span class="tarjeta-overlay__insignia"><i class="fa-solid fa-eye" aria-hidden="true"></i> Zona alta</span>
+                            <img class="tarjeta-overlay__foto foto-ampliable" src="assets/campeche images/photo_10_2026-11-18_19-22-50.jpg" alt="Vista panorámica de terreno baldío en altura con desechos esparcidos" loading="lazy">
+                            <span class="tarjeta-overlay__lupa" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                            <div class="tarjeta-overlay__degradado" aria-hidden="true"></div>
+                            <div class="tarjeta-overlay__contenido">
+                                <h4 class="tarjeta-overlay__titulo">Terreno baldío en altura</h4>
+                                <p class="tarjeta-overlay__texto">Desperdicios dispersos en pendiente cercana a viviendas y centros educativos.</p>
+                            </div>
+                        </article>
+
+                        <!-- Foto 16 -->
+                        <article class="tarjeta-overlay" data-animar="deslizar-arriba">
+                            <span class="tarjeta-overlay__insignia"><i class="fa-solid fa-mound" aria-hidden="true"></i> Talud natural</span>
+                            <img class="tarjeta-overlay__foto foto-ampliable" src="assets/campeche images/photo_16_2026-11-18_19-22-50.jpg" alt="Talud del cerro con botellas y bolsas plásticas arrastradas por el viento" loading="lazy">
+                            <span class="tarjeta-overlay__lupa" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                            <div class="tarjeta-overlay__degradado" aria-hidden="true"></div>
+                            <div class="tarjeta-overlay__contenido">
+                                <h4 class="tarjeta-overlay__titulo">Ladera con acumulación de plásticos</h4>
+                                <p class="tarjeta-overlay__texto">Bolsas y botellas esparcidas en la falda arenosa, expuestas al arrastre pluvial.</p>
+                            </div>
+                        </article>
+
+                        <!-- Foto 20 -->
+                        <article class="tarjeta-overlay" data-animar="deslizar-arriba">
+                            <span class="tarjeta-overlay__insignia"><i class="fa-solid fa-square" aria-hidden="true"></i> Descampado</span>
+                            <img class="tarjeta-overlay__foto foto-ampliable" src="assets/campeche images/photo_20_2026-11-18_19-22-50.jpg" alt="Terreno baldío amplio con montículos de tierra y basura periférica" loading="lazy">
+                            <span class="tarjeta-overlay__lupa" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                            <div class="tarjeta-overlay__degradado" aria-hidden="true"></div>
+                            <div class="tarjeta-overlay__contenido">
+                                <h4 class="tarjeta-overlay__titulo">Terreno baldío y botadero informal</h4>
+                                <p class="tarjeta-overlay__texto">Extensión sin cerramiento con cúmulos informales de basura frente a galpones.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Rejilla compacta para los restantes puntos de laderas -->
+                    <div class="rejilla rejilla--2-columnas" style="margin-top: 22px;">
+                        <!-- Foto 23 -->
+                        <figure class="tarjeta">
+                            <img class="tarjeta__imagen foto-ampliable" src="assets/campeche images/photo_23_2026-11-18_19-22-50.jpg" alt="Suelo arenoso con huellas vehiculares y basura dispersa en esquinas" loading="lazy">
+                            <figcaption class="tarjeta__contenido">
+                                <span class="tarjeta-galeria__etiqueta"><i class="fa-solid fa-route" aria-hidden="true"></i> Suelo erosionado</span>
+                                <h4 class="tarjeta__titulo">Erosión y desechos periféricos</h4>
+                                <p class="tarjeta__texto">Terreno compactado por tránsito vehicular con residuos en los márgenes de parcelas.</p>
+                            </figcaption>
+                        </figure>
+
+                        <!-- Foto 27 -->
+                        <figure class="tarjeta">
+                            <img class="tarjeta__imagen foto-ampliable" src="assets/campeche images/photo_27_2026-11-18_19-22-50.jpg" alt="Franja de vegetación y residuos acumulados al pie de muro perimetral" loading="lazy">
+                            <figcaption class="tarjeta__contenido">
+                                <span class="tarjeta-galeria__etiqueta"><i class="fa-solid fa-leaf" aria-hidden="true"></i> Vegetación árida</span>
+                                <h4 class="tarjeta__titulo">Franja vegetal con residuos</h4>
+                                <p class="tarjeta__texto">Matorrales que retienen plásticos en los callejones traseros del Sector 4A.</p>
+                            </figcaption>
+                        </figure>
+
+                        <!-- Foto 32 -->
+                        <figure class="tarjeta">
+                            <img class="tarjeta__imagen foto-ampliable" src="assets/campeche images/photo_32_2026-11-18_19-22-50.jpg" alt="Terreno con troncos caídos y residuos plásticos frente a muro de bloques" loading="lazy">
+                            <figcaption class="tarjeta__contenido">
+                                <span class="tarjeta-galeria__etiqueta"><i class="fa-solid fa-tree" aria-hidden="true"></i> Troncos y maleza</span>
+                                <h4 class="tarjeta__titulo">Maleza y bolsas frente a muro</h4>
+                                <p class="tarjeta__texto">Vegetación y restos de madera como depósito irregular de bolsas y envases plásticos.</p>
+                            </figcaption>
+                        </figure>
+
+                        <!-- Foto 36 -->
+                        <figure class="tarjeta">
+                            <img class="tarjeta__imagen foto-ampliable" src="assets/campeche images/photo_36_2026-11-18_19-22-50.jpg" alt="Franja continua de residuos plásticos y tierra frente a muro exterior" loading="lazy">
+                            <figcaption class="tarjeta__contenido">
+                                <span class="tarjeta-galeria__etiqueta"><i class="fa-solid fa-border-all" aria-hidden="true"></i> Muro perimetral</span>
+                                <h4 class="tarjeta__titulo">Franja de residuos al pie del muro</h4>
+                                <p class="tarjeta__texto">Línea de desperdicios a lo largo del muro de bloques en calle secundaria.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <!-- Tarjeta panorámica de riesgo de incendio -->
+                    <article class="tarjeta-panoramica" style="margin-top: 22px;" data-animar="deslizar-arriba">
+                        <div class="tarjeta-panoramica__multimedia">
+                            <span class="tarjeta-panoramica__insignia tarjeta-panoramica__insignia--ambar"><i class="fa-solid fa-fire" aria-hidden="true"></i> Riesgo de ignición</span>
+                            <img class="tarjeta-panoramica__foto foto-ampliable" src="assets/campeche images/photo_5_2026-11-18_19-22-50.jpg" alt="Gran cúmulo de maleza seca, ramas podadas y plásticos al pie de muro" loading="lazy">
+                            <span class="tarjeta-panoramica__lupa" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                        </div>
+                        <div class="tarjeta-panoramica__cuerpo">
+                            <p class="tarjeta-panoramica__antetitulo"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Situación de peligro</p>
+                            <h4 class="tarjeta-panoramica__titulo">Maleza seca y desechos en calle principal</h4>
+                            <p class="tarjeta-panoramica__descripcion">Gran cúmulo de ramas secas, poda sin retirar y plásticos acumulados al borde de la vía asfaltada principal. En temporada seca representa un riesgo directo de incendio que podría afectar viviendas colindantes.</p>
+                            <ul class="tarjeta-panoramica__detalles">
+                                <li class="tarjeta-panoramica__detalle-item"><i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i> <span>Alta inflamabilidad en verano (temperatura &gt; 35 °C en la zona).</span></li>
+                                <li class="tarjeta-panoramica__detalle-item"><i class="fa-solid fa-house-fire" aria-hidden="true"></i> <span>Viviendas familiares a menos de 3 metros del cúmulo.</span></li>
+                            </ul>
                         </div>
                     </article>
+                </div>
+
+                <!-- ==================== SUBSECCIÓN 4: VÍA PÚBLICA, ESCOMBROS Y PODAS ==================== -->
+                <div id="vias-publicas" style="margin-top: 52px;">
+                    <h3 class="seccion__titulo seccion__titulo--izquierda" style="font-size: 1.55rem; margin-bottom: 8px;"><i class="fa-solid fa-trowel-bricks" style="color: var(--color-acento);"></i> 4. Invasión de vías públicas, escombros y podas</h3>
+                    <p class="seccion__introduccion seccion__introduccion--izquierda" style="margin-bottom: 22px;">Materiales de construcción, ramas de árboles talados y vertederos lineales que reducen la calzada transitable.</p>
+
+                    <!-- Tarjeta panorámica: cartel vecinal (foto emblemática de la resistencia comunitaria) -->
+                    <article class="tarjeta-panoramica" data-animar="deslizar-arriba">
+                        <div class="tarjeta-panoramica__multimedia">
+                            <span class="tarjeta-panoramica__insignia tarjeta-panoramica__insignia--verde"><i class="fa-solid fa-hand" aria-hidden="true"></i> Resistencia vecinal</span>
+                            <img class="tarjeta-panoramica__foto foto-ampliable" src="assets/campeche images/photo_24_2026-11-18_19-22-50.jpg" alt="Poste con letrero vecinal No botar basura aquí y residuos al pie" loading="lazy">
+                            <span class="tarjeta-panoramica__lupa" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                        </div>
+                        <div class="tarjeta-panoramica__cuerpo">
+                            <p class="tarjeta-panoramica__antetitulo"><i class="fa-solid fa-ban" aria-hidden="true"></i> Punto crítico en vía</p>
+                            <h4 class="tarjeta-panoramica__titulo">Punto crítico al pie del cartel de advertencia vecinal</h4>
+                            <p class="tarjeta-panoramica__descripcion">La comunidad del Sector 4A ha colocado avisos artesanales en postes ante la falta de respuesta institucional. A pesar del cartel, el vertedero informal persiste en ese mismo punto, evidenciando la urgencia de rutas de recolección continua.</p>
+                            <ul class="tarjeta-panoramica__detalles">
+                                <li class="tarjeta-panoramica__detalle-item"><i class="fa-solid fa-people-group" aria-hidden="true"></i> <span>Acción vecinal espontánea como respuesta a la ausencia del servicio.</span></li>
+                                <li class="tarjeta-panoramica__detalle-item"><i class="fa-solid fa-recycle" aria-hidden="true"></i> <span>Requiere programa formal de recolección con frecuencia mínima semanal.</span></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Rejilla compacta para los restantes puntos de vía pública -->
+                    <div class="rejilla rejilla--4-columnas" style="margin-top: 22px;">
+                        <!-- Foto 19 -->
+                        <figure class="tarjeta">
+                            <img class="tarjeta__imagen foto-ampliable" src="assets/campeche images/photo_19_2026-11-18_19-22-50.jpg" alt="Montículo de escombros de construcción y restos de bloques junto a poste" loading="lazy">
+                            <figcaption class="tarjeta__contenido">
+                                <span class="tarjeta-galeria__etiqueta"><i class="fa-solid fa-trowel-bricks" aria-hidden="true"></i> Escombros</span>
+                                <h4 class="tarjeta__titulo">Restos de construcción</h4>
+                                <p class="tarjeta__texto">Escombros de albañilería arrojados en la berma que obstaculizan el tránsito.</p>
+                            </figcaption>
+                        </figure>
+
+                        <!-- Foto 21 -->
+                        <figure class="tarjeta">
+                            <img class="tarjeta__imagen foto-ampliable" src="assets/campeche images/photo_21_2026-11-18_19-22-50.jpg" alt="Sacos de cemento viejos y restos pesados arrojados contra muro" loading="lazy">
+                            <figcaption class="tarjeta__contenido">
+                                <span class="tarjeta-galeria__etiqueta"><i class="fa-solid fa-box-archive" aria-hidden="true"></i> Material pesado</span>
+                                <h4 class="tarjeta__titulo">Sacos de cemento y basura</h4>
+                                <p class="tarjeta__texto">Material endurecido y bolsas en espacio común al borde de la vegetación.</p>
+                            </figcaption>
+                        </figure>
+
+                        <!-- Foto 30 -->
+                        <figure class="tarjeta">
+                            <img class="tarjeta__imagen foto-ampliable" src="assets/campeche images/photo_30_2026-11-18_19-22-50.jpg" alt="Basurero lineal continuo frente a muros perimetrales en curva" loading="lazy">
+                            <figcaption class="tarjeta__contenido">
+                                <span class="tarjeta-galeria__etiqueta"><i class="fa-solid fa-road" aria-hidden="true"></i> Curva barrial</span>
+                                <h4 class="tarjeta__titulo">Basurero lineal en curva</h4>
+                                <p class="tarjeta__texto">Foco continuo de residuos a lo largo de la pared que genera moscas y olores.</p>
+                            </figcaption>
+                        </figure>
+
+                        <!-- Foto 34 -->
+                        <figure class="tarjeta">
+                            <img class="tarjeta__imagen foto-ampliable" src="assets/campeche images/photo_34_2026-11-18_19-22-50.jpg" alt="Gran cúmulo de restos de poda y ramas secas sobre la calzada asfaltada" loading="lazy">
+                            <figcaption class="tarjeta__contenido">
+                                <span class="tarjeta-galeria__etiqueta"><i class="fa-solid fa-tree" aria-hidden="true"></i> Ramas secas</span>
+                                <h4 class="tarjeta__titulo">Podas extensas sobre vía</h4>
+                                <p class="tarjeta__texto">Ramas depositadas sobre el pavimento que reducen el ancho de circulación.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <!-- Dos tarjetas overlay para las calles residenciales -->
+                    <div class="rejilla rejilla--2-columnas" style="margin-top: 22px;">
+                        <article class="tarjeta-overlay" style="min-height: 280px;" data-animar="deslizar-arriba">
+                            <span class="tarjeta-overlay__insignia"><i class="fa-solid fa-car-side" aria-hidden="true"></i> Calle habitada</span>
+                            <img class="tarjeta-overlay__foto foto-ampliable" src="assets/campeche images/photo_35_2026-11-18_19-22-50.jpg" alt="Calle con vehículo abandonado y residuos acumulados entre maleza" loading="lazy">
+                            <span class="tarjeta-overlay__lupa" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                            <div class="tarjeta-overlay__degradado" aria-hidden="true"></div>
+                            <div class="tarjeta-overlay__contenido">
+                                <h4 class="tarjeta-overlay__titulo">Vehículo abandonado y desechos</h4>
+                                <p class="tarjeta-overlay__texto">Calle residencial donde un vehículo en desuso convive con acumulación de basura en la maleza lateral.</p>
+                            </div>
+                        </article>
+
+                        <article class="tarjeta-overlay" style="min-height: 280px;" data-animar="deslizar-arriba">
+                            <span class="tarjeta-overlay__insignia"><i class="fa-solid fa-horse" aria-hidden="true"></i> Entorno rural-urbano</span>
+                            <img class="tarjeta-overlay__foto foto-ampliable" src="assets/campeche images/photo_17_2026-11-18_19-22-50.jpg" alt="Calle vecinal de tierra y asfalto deteriorado con burros pastando" loading="lazy">
+                            <span class="tarjeta-overlay__lupa" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                            <div class="tarjeta-overlay__degradado" aria-hidden="true"></div>
+                            <div class="tarjeta-overlay__contenido">
+                                <h4 class="tarjeta-overlay__titulo">Calle vecinal y animales domésticos</h4>
+                                <p class="tarjeta-overlay__texto">Entorno barrial con calles deterioradas y animales de pastoreo que conviven con los residuos esparcidos.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Foto 18 en tarjeta sola, amplia -->
+                    <figure class="tarjeta" style="margin-top: 22px;">
+                        <img class="tarjeta__imagen foto-ampliable" src="assets/campeche images/photo_18_2026-11-18_19-22-50.jpg" alt="Perspectiva de calle residencial del Sector 4A con viviendas familiares" loading="lazy" style="max-height: 350px; width: 100%; object-fit: cover;">
+                        <figcaption class="tarjeta__contenido">
+                            <span class="tarjeta-galeria__etiqueta"><i class="fa-solid fa-house" aria-hidden="true"></i> Zona residencial</span>
+                            <h4 class="tarjeta__titulo">Calle residencial principal del Sector 4A</h4>
+                            <p class="tarjeta__texto">Vía que conecta las viviendas familiares del sector hacia el acceso principal a Cumaná. Requiere mantenimiento del pavimento, señalización y un servicio de recolección regular para garantizar la salubridad de sus habitantes.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <!-- ==================== SUBSECCIÓN 5: IDENTIDAD, CARTELES Y ORGANIZACIÓN ==================== -->
+                <div id="identidad-organizacion" style="margin-top: 52px;">
+                    <h3 class="seccion__titulo seccion__titulo--izquierda" style="font-size: 1.55rem; margin-bottom: 8px;"><i class="fa-solid fa-people-group" style="color: var(--color-acento);"></i> 5. Organización comunitaria, identidad barrial y fauna local</h3>
+                    <p class="seccion__introduccion seccion__introduccion--izquierda" style="margin-bottom: 22px;">Evidencias de la vida comunitaria, murales de brigadas vecinales y carteles de concientización ciudadana.</p>
+
+                    <!-- Mural de la brigada (banner inmersivo como protagonista) -->
+                    <article class="banner-comunitario" data-animar="deslizar-arriba">
+                        <div class="banner-comunitario__multimedia">
+                            <img class="banner-comunitario__foto foto-ampliable" src="assets/campeche images/photo_11_2026-11-18_19-22-50.jpg" alt="Mural comunitario de la brigada de acción con basura acumulada en acera" loading="lazy">
+                            <span class="banner-comunitario__lupa" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                        </div>
+                        <div>
+                            <p class="banner-comunitario__antetitulo"><i class="fa-solid fa-paint-roller" aria-hidden="true"></i> Brigada de Acción Comunitaria</p>
+                            <h4 class="banner-comunitario__titulo">Mural de la Brigada Campeche-Guarapiche: organización en pie</h4>
+                            <p class="banner-comunitario__texto">En el Sector 4A existe una red vecinal activa que ya ha tomado medidas: murales de concientización, carteles artesanales en postes y brigadas de limpieza. La fotografía muestra la acera frente al mural aún afectada por residuos, evidenciando que la voluntad comunitaria necesita respaldo institucional para sostenerse.</p>
+                            <div class="banner-comunitario__pie">
+                                <a class="boton boton--principal boton--pequeno" href="nosotros.html#metas">Ver propósito del proyecto <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tarjetas overlay para identidad barrial (foto 12, 13, panorámica 9) -->
+                    <div class="rejilla rejilla--3-columnas" style="margin-top: 22px;">
+                        <!-- Foto 12 -->
+                        <article class="tarjeta-overlay" style="min-height: 320px;" data-animar="deslizar-arriba">
+                            <span class="tarjeta-overlay__insignia"><i class="fa-solid fa-archway" aria-hidden="true"></i> La Victoria</span>
+                            <img class="tarjeta-overlay__foto foto-ampliable" src="assets/campeche images/photo_12_2026-11-18_19-22-50.jpg" alt="Perspectiva amplia del muro comunitario y entrada al Parcelamiento La Victoria" loading="lazy">
+                            <span class="tarjeta-overlay__lupa" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                            <div class="tarjeta-overlay__degradado" aria-hidden="true"></div>
+                            <div class="tarjeta-overlay__contenido">
+                                <h4 class="tarjeta-overlay__titulo">Muro perimetral y Parcelamiento La Victoria</h4>
+                                <p class="tarjeta-overlay__texto">Vista del muro comunal con murales institucionales y acceso al parcelamiento.</p>
+                            </div>
+                        </article>
+
+                        <!-- Foto 13 -->
+                        <article class="tarjeta-overlay" style="min-height: 320px;" data-animar="deslizar-arriba">
+                            <span class="tarjeta-overlay__insignia"><i class="fa-solid fa-hand" aria-hidden="true"></i> Conciencia vecinal</span>
+                            <img class="tarjeta-overlay__foto foto-ampliable" src="assets/campeche images/photo_13_2026-11-18_19-22-50.jpg" alt="Primer plano de letrero vecinal artesanal que dice No botar basura aquí" loading="lazy">
+                            <span class="tarjeta-overlay__lupa" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                            <div class="tarjeta-overlay__degradado" aria-hidden="true"></div>
+                            <div class="tarjeta-overlay__contenido">
+                                <h4 class="tarjeta-overlay__titulo">Letrero artesanal comunitario</h4>
+                                <p class="tarjeta-overlay__texto">Cartel elaborado por los residentes para defender el espacio ante la falta de servicio.</p>
+                            </div>
+                        </article>
+
+                        <!-- Foto 9: panorámica de cierre -->
+                        <article class="tarjeta-overlay" style="min-height: 320px;" data-animar="deslizar-arriba">
+                            <span class="tarjeta-overlay__insignia"><i class="fa-solid fa-panorama" aria-hidden="true"></i> Vista general</span>
+                            <img class="tarjeta-overlay__foto foto-ampliable" src="assets/campeche images/photo_9_2026-11-18_19-22-50.jpg" alt="Vista panorámica completa de la comunidad Campeche y montañas" loading="lazy">
+                            <span class="tarjeta-overlay__lupa" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                            <div class="tarjeta-overlay__degradado" aria-hidden="true"></div>
+                            <div class="tarjeta-overlay__contenido">
+                                <h4 class="tarjeta-overlay__titulo">Panorámica del Sector 4A</h4>
+                                <p class="tarjeta-overlay__texto">Techos, arboledas y serranía oriental de nuestra comunidad piloto.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Fauna local: tarjetas compactas -->
+                    <div class="rejilla rejilla--2-columnas" style="margin-top: 22px;">
+                        <!-- Foto 26 -->
+                        <figure class="tarjeta">
+                            <img class="tarjeta__imagen foto-ampliable" src="assets/campeche images/photo_26_2026-11-18_19-22-50.jpg" alt="Burro atado junto a fachada de vivienda con plantas en la acera" loading="lazy">
+                            <figcaption class="tarjeta__contenido">
+                                <span class="tarjeta-galeria__etiqueta"><i class="fa-solid fa-paw" aria-hidden="true"></i> Fauna doméstica</span>
+                                <h4 class="tarjeta__titulo">Animal doméstico en acera barrial</h4>
+                                <p class="tarjeta__texto">Muestra de la dinámica rural-urbana característica del Sector 4A de Campeche.</p>
+                            </figcaption>
+                        </figure>
+
+                        <!-- Foto 33 -->
+                        <figure class="tarjeta">
+                            <img class="tarjeta__imagen foto-ampliable" src="assets/campeche images/photo_33_2026-11-18_19-22-50.jpg" alt="Gato buscando alimento entre desperdicios y maleza en área común" loading="lazy">
+                            <figcaption class="tarjeta__contenido">
+                                <span class="tarjeta-galeria__etiqueta"><i class="fa-solid fa-cat" aria-hidden="true"></i> Riesgo zoosanitario</span>
+                                <h4 class="tarjeta__titulo">Animales en focos de residuos</h4>
+                                <p class="tarjeta__texto">Animales domésticos que dispersan desechos al buscar comida, propagando parásitos y bacterias hacia las casas.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="aviso" style="margin-top: 40px;">
+                    <p><strong>Privacidad y seguridad:</strong> Las fotografías han sido registradas para fundamentar diagnósticos técnicos ante organismos de saneamiento. No se deben publicar datos personales sin autorización. Para reportar formalmente, utiliza el <a href="problematica.html#formulario-reporte">generador de oficios para Serviamsa e INASERVIP</a>.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Galería -->
-        <section class="seccion" aria-labelledby="titulo-galeria">
-            <div class="contenedor">
-                <p class="antetitulo">Registro fotográfico de la comunidad</p>
-                <h2 class="seccion__titulo" id="titulo-galeria">Imágenes de la problemática de residuos en Campeche</h2>
-                <p class="seccion__subtitulo">Fotografías compartidas para visibilizar las condiciones observadas en la comunidad. Las imágenes no incluyen coordenadas ni fechas verificadas; confirma el punto exacto con residentes antes de presentar un reporte formal.</p>
-                <div class="rejilla rejilla--3-columnas">
-                    <figure class="tarjeta">
-                        <img class="tarjeta__imagen" src="assets/photo_1_2026-11-03_22-52-02.jpg" alt="Residuos plásticos y otros desechos acumulados entre la vegetación" loading="lazy">
-                        <figcaption class="tarjeta__contenido">
-                            <span class="tarjeta-galeria__etiqueta">Fotografía de la comunidad</span>
-                            <h3 class="tarjeta__titulo">Residuos junto a la vegetación</h3>
-                            <p class="tarjeta__texto">Se observa una acumulación de envases y otros residuos en un área con vegetación y agua estancada.</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="tarjeta">
-                        <img class="tarjeta__imagen" src="assets/photo_2_2026-11-03_22-52-02.jpg" alt="Acumulación de residuos visibles dentro de un drenaje de concreto" loading="lazy">
-                        <figcaption class="tarjeta__contenido">
-                            <span class="tarjeta-galeria__etiqueta">Fotografía de la comunidad</span>
-                            <h3 class="tarjeta__titulo">Desechos en un drenaje</h3>
-                            <p class="tarjeta__texto">El cauce está cubierto por residuos de distintos tipos y vegetación.</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="tarjeta">
-                        <img class="tarjeta__imagen" src="assets/photo_3_2026-11-03_22-52-02.jpg" alt="Vista amplia de residuos acumulados junto a un área verde y viviendas" loading="lazy">
-                        <figcaption class="tarjeta__contenido">
-                            <span class="tarjeta-galeria__etiqueta">Fotografía de la comunidad</span>
-                            <h3 class="tarjeta__titulo">Acumulación en espacio abierto</h3>
-                            <p class="tarjeta__texto">Una vista general ayuda a registrar la extensión del área afectada y su entorno.</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="tarjeta">
-                        <img class="tarjeta__imagen" src="assets/photo_4_2026-11-03_22-52-02.jpg" alt="Detalle de residuos y agua estancada entre vegetación" loading="lazy">
-                        <figcaption class="tarjeta__contenido">
-                            <span class="tarjeta-galeria__etiqueta">Fotografía de la comunidad</span>
-                            <h3 class="tarjeta__titulo">Agua estancada y residuos</h3>
-                            <p class="tarjeta__texto">La imagen muestra desechos acumulados en un área húmeda cubierta parcialmente por plantas.</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="tarjeta">
-                        <img class="tarjeta__imagen" src="assets/photo_5_2026-11-03_22-52-02.jpg" alt="Vegetación densa y residuos a lo largo de un cauce en zona habitada" loading="lazy">
-                        <figcaption class="tarjeta__contenido">
-                            <span class="tarjeta-galeria__etiqueta">Fotografía de la comunidad</span>
-                            <h3 class="tarjeta__titulo">Cauce con vegetación y desechos</h3>
-                            <p class="tarjeta__texto">En la fotografía se aprecia un cauce con maleza y residuos próximo a una vía pública.</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="tarjeta">
-                        <img class="tarjeta__imagen" src="assets/photo_6_2026-11-03_22-52-02.jpg" alt="Residuos y agua acumulados dentro de un canal junto a una calle" loading="lazy">
-                        <figcaption class="tarjeta__contenido">
-                            <span class="tarjeta-galeria__etiqueta">Fotografía de la comunidad</span>
-                            <h3 class="tarjeta__titulo">Canal con residuos</h3>
-                            <p class="tarjeta__texto">Se observan desechos dentro del canal. No se debe ingresar ni manipular el material acumulado.</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="tarjeta">
-                        <img class="tarjeta__imagen" src="assets/photo_7_2026-11-03_22-52-02.jpg" alt="Residuos y desechos orgánicos acumulados dentro de un canal" loading="lazy">
-                        <figcaption class="tarjeta__contenido">
-                            <span class="tarjeta-galeria__etiqueta">Fotografía de la comunidad</span>
-                            <h3 class="tarjeta__titulo">Acumulación en el canal</h3>
-                            <p class="tarjeta__texto">La imagen documenta residuos visibles y vegetación dentro de un cauce de concreto.</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="tarjeta">
-                        <img class="tarjeta__imagen" src="assets/photo_8_2026-11-03_22-52-02.jpg" alt="Desechos de construcción, ramas y basura en un terreno abierto" loading="lazy">
-                        <figcaption class="tarjeta__contenido">
-                            <span class="tarjeta-galeria__etiqueta">Fotografía de la comunidad</span>
-                            <h3 class="tarjeta__titulo">Desechos y restos de poda</h3>
-                            <p class="tarjeta__texto">Se aprecian ramas, material de construcción y otros residuos depositados en un terreno.</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="tarjeta">
-                        <img class="tarjeta__imagen" src="assets/photo_9_2026-11-03_22-52-02.jpg" alt="Terreno con ramas secas, residuos y un neumático usado" loading="lazy">
-                        <figcaption class="tarjeta__contenido">
-                            <span class="tarjeta-galeria__etiqueta">Fotografía de la comunidad</span>
-                            <h3 class="tarjeta__titulo">Residuos voluminosos</h3>
-                            <p class="tarjeta__texto">La fotografía muestra restos de poda y un neumático entre otros desechos en un espacio abierto.</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="tarjeta">
-                        <img class="tarjeta__imagen" src="assets/photo_10_2026-11-03_22-52-02.jpg" alt="Vista panorámica de residuos de construcción y restos vegetales en terreno abierto" loading="lazy">
-                        <figcaption class="tarjeta__contenido">
-                            <span class="tarjeta-galeria__etiqueta">Fotografía de la comunidad</span>
-                            <h3 class="tarjeta__titulo">Acumulación de escombros</h3>
-                            <p class="tarjeta__texto">La vista panorámica permite apreciar residuos de construcción y restos vegetales dispersos.</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="tarjeta">
-                        <img class="tarjeta__imagen" src="assets/photo_11_2026-11-03_22-52-02.jpg" alt="Desechos y ramas acumulados en un terreno con vegetación al fondo" loading="lazy">
-                        <figcaption class="tarjeta__contenido">
-                            <span class="tarjeta-galeria__etiqueta">Fotografía de la comunidad</span>
-                            <h3 class="tarjeta__titulo">Restos y residuos en terreno abierto</h3>
-                            <p class="tarjeta__texto">La escena muestra restos de poda y residuos dispersos; la ubicación exacta requiere confirmación comunitaria.</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="aviso">
-                    <p><strong>Privacidad y seguridad:</strong> evita fotografiar rostros, matrículas, interiores de viviendas o a menores de edad. No te acerques a residuos peligrosos ni a zonas inundadas. Para los reportes, anota fecha y referencia del sitio y confirma cada ubicación con la comunidad.</p>
-                </div>
-            </div>
-        </section>
-
+        <!-- VISOR MODAL ACCESIBLE DE IMÁGENES -->
         <dialog class="visor-imagen" id="visor-imagen" aria-labelledby="visor-imagen-descripcion">
             <button class="visor-imagen__cerrar" type="button" aria-label="Cerrar imagen ampliada">
                 <i class="fa-solid fa-xmark" aria-hidden="true"></i>
             </button>
-
             <figure class="visor-imagen__contenido">
                 <img class="visor-imagen__foto" src="" alt="">
                 <figcaption class="visor-imagen__descripcion" id="visor-imagen-descripcion"></figcaption>

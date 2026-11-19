@@ -57,8 +57,10 @@
                             <ul class="navegacion__submenu">
                                 <li><a class="navegacion__enlace" href="comunidades.html"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i> Red de comunidades</a></li>
                                 <li><a class="navegacion__enlace" href="campeche.html"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Campeche (Sector 4A)</a></li>
+                                <li><a class="navegacion__enlace" href="campeche.html#historia-comunidad"><i class="fa-solid fa-landmark" aria-hidden="true"></i> Reseña histórica</a></li>
+                                <li><a class="navegacion__enlace" href="campeche.html#carrusel-campeche"><i class="fa-solid fa-images" aria-hidden="true"></i> Galería inmersiva</a></li>
+                                <li><a class="navegacion__enlace" href="campeche.html#registro-documental"><i class="fa-solid fa-camera-retro" aria-hidden="true"></i> Evidencias en terreno</a></li>
                                 <li><a class="navegacion__enlace" href="campeche.html#ruta"><i class="fa-solid fa-route" aria-hidden="true"></i> Ruta comunitaria</a></li>
-                                <li><a class="navegacion__enlace" href="campeche.html#titulo-galeria"><i class="fa-solid fa-camera-retro" aria-hidden="true"></i> Registro de evidencias</a></li>
                                 <li><a class="navegacion__enlace" href="direcciones.html"><i class="fa-solid fa-compass" aria-hidden="true"></i> Ubicación y mapa</a></li>
                             </ul>
                         </details>
@@ -72,11 +74,12 @@
                                 <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                             </summary>
                             <ul class="navegacion__submenu">
-                                <li><a class="navegacion__enlace activo" href="problematica.html" aria-current="page"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Diagnóstico general</a></li>
-                                <li><a class="navegacion__enlace" href="problematica.html#prevencion"><i class="fa-solid fa-recycle" aria-hidden="true"></i> Clasificación de residuos</a></li>
+                                <li><a class="navegacion__enlace activo" href="problematica.html" aria-current="page"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Guía de recolección</a></li>
+                                <li><a class="navegacion__enlace" href="problematica.html#clasificacion"><i class="fa-solid fa-recycle" aria-hidden="true"></i> Clasificación de residuos</a></li>
+                                <li><a class="navegacion__enlace" href="problematica.html#punzocortantes"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Resguardo de punzocortantes</a></li>
                                 <li><a class="navegacion__enlace" href="problematica.html#salud"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i> Salud y prevención</a></li>
-                                <li><a class="navegacion__enlace" href="problematica.html#visibilizar"><i class="fa-solid fa-file-signature" aria-hidden="true"></i> Preparar un reporte</a></li>
-                                <li><a class="navegacion__enlace" href="problematica.html#entes"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> Entes competentes</a></li>
+                                <li><a class="navegacion__enlace" href="problematica.html#visibilizar"><i class="fa-solid fa-file-signature" aria-hidden="true"></i> Cómo documentar</a></li>
+                                <li><a class="navegacion__enlace" href="problematica.html#entes"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> Entes y reporte formal</a></li>
                             </ul>
                         </details>
                     </li>
@@ -102,59 +105,141 @@
     </header>
 
     <main id="contenido">
-        <!-- Retos ambientales -->
+        <!-- Retos ambientales: Encabezado pedagógico sobre recolección y reporte -->
         <section class="encabezado-pagina encabezado-pagina--con-imagen" aria-labelledby="titulo-pagina">
-            <img class="encabezado-pagina__imagen" src="assets/oo.jpg" alt="" aria-hidden="true" width="1040" height="780" fetchpriority="high">
+            <img class="encabezado-pagina__imagen" src="assets/ecologia/photo_1_2026-11-04_13-33-26.jpg" alt="Separación ordenada de residuos reciclables en el hogar" aria-hidden="true" width="960" height="540" fetchpriority="high">
             <div class="contenedor">
-                <p class="antetitulo">Información y acción ciudadana</p>
-                <h1 class="encabezado-pagina__titulo" id="titulo-pagina">Hacer visible la problemática es el primer paso para atenderla</h1>
-                <p class="encabezado-pagina__texto">Una solicitud clara permite comunicar qué ocurre, dónde, desde cuándo y qué respuesta se necesita. Esta guía ayuda a documentar la situación con seguridad y respeto.</p>
+                <p class="antetitulo">Educación ambiental · Guía de recolección · Reporte formal</p>
+                <h1 class="encabezado-pagina__titulo" id="titulo-pagina">Guía integral de recolección, manejo de residuos y reporte formal</h1>
+                <p class="encabezado-pagina__texto">Aprende a separar y preparar tus residuos en el hogar, resguardar objetos punzocortantes para proteger a los recolectores y documentar afectaciones ante los organismos públicos competentes.</p>
             </div>
         </section>
 
-        <section class="seccion" id="prevencion">
+        <!-- SECCIÓN 1: Guía completa de clasificación según tipo de residuo con fotos -->
+        <span id="prevencion" class="ancla-desplazamiento" aria-hidden="true"></span>
+        <section class="seccion" id="clasificacion" aria-labelledby="titulo-clasificacion" data-animar="deslizar-arriba">
             <div class="contenedor">
-                <p class="antetitulo">Prevención desde casa y el sector</p>
-                <h2 class="seccion__titulo">Clasifica y maneja los residuos correctamente</h2>
-                <p class="seccion__subtitulo">La recolección y las normas locales varían. Confirma los horarios y puntos autorizados con el servicio municipal antes de disponer tus residuos.</p>
+                <p class="antetitulo">Manual paso a paso</p>
+                <h2 class="seccion__titulo" id="titulo-clasificacion">Cómo clasificar los residuos según su tipo</h2>
+                <p class="seccion__subtitulo">Separar en origen reduce hasta un 60% la saturación de los canales y vertederos. Aplica estas pautas prácticas con tu familia y vecinos.</p>
+
                 <div class="rejilla rejilla--3-columnas">
-                    <article class="tarjeta tarjeta-destacada">
+                    <!-- Tarjeta 1: Plásticos y envases -->
+                    <article class="tarjeta">
+                        <img class="tarjeta__imagen" src="assets/ecologia/photo_1_2026-11-04_13-33-26.jpg" alt="Persona clasificando botellas de plástico, latas y cartón en contenedores limpios" loading="lazy">
                         <div class="tarjeta__contenido">
-                            <span class="tarjeta__icono"><i class="fa-solid fa-leaf" aria-hidden="true"></i></span>
-                            <h3 class="tarjeta__titulo">Orgánicos</h3>
-                            <p class="tarjeta__texto">Restos de frutas y verduras pueden separarse para compostaje cuando existan condiciones adecuadas. Manténlos cubiertos para no atraer animales.</p>
+                            <span class="tarjeta-galeria__etiqueta"><i class="fa-solid fa-bottle-water" aria-hidden="true"></i> Plásticos y Envases</span>
+                            <h3 class="tarjeta__titulo">Botellas PET y plásticos</h3>
+                            <p class="tarjeta__texto">Enjuaga y escurre botellas de refresco, recipientes de detergente y tapas. Aplástalos para reducir volumen y guárdalos limpios y secos en bolsas separadas.</p>
                         </div>
                     </article>
-                    <article class="tarjeta tarjeta-destacada">
+
+                    <!-- Tarjeta 2: Código de colores -->
+                    <article class="tarjeta">
+                        <img class="tarjeta__imagen" src="assets/ecologia/photo_5_2026-11-04_13-33-26.jpg" alt="Contenedores ecológicos identificados por colores para recolección organizada" loading="lazy">
                         <div class="tarjeta__contenido">
-                            <span class="tarjeta__icono"><i class="fa-solid fa-box" aria-hidden="true"></i></span>
-                            <h3 class="tarjeta__titulo">Reciclables y no reciclables</h3>
-                            <p class="tarjeta__texto">Separa papel, cartón, vidrio, metales y plásticos limpios cuando haya un sistema local que pueda recibirlos. Reduce los desechables cuando sea posible.</p>
+                            <span class="tarjeta-galeria__etiqueta"><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i> Código de Colores</span>
+                            <h3 class="tarjeta__titulo">Puntos limpios por color</h3>
+                            <p class="tarjeta__texto">Azul para papel y cartón; amarillo para plásticos y latas; verde para vidrio reutilizable; gris/negro para residuos comunes no aprovechables.</p>
                         </div>
                     </article>
-                    <article class="tarjeta tarjeta-destacada">
+
+                    <!-- Tarjeta 3: Vidrios y punzocortantes -->
+                    <article class="tarjeta">
+                        <img class="tarjeta__imagen" src="assets/ecologia/photo_4_2026-11-04_13-33-26.jpg" alt="Voluntarios con guantes resistentes preparando bolsas seguras de residuos" loading="lazy">
                         <div class="tarjeta__contenido">
-                            <span class="tarjeta__icono"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span>
-                            <h3 class="tarjeta__titulo">Residuos peligrosos</h3>
-                            <p class="tarjeta__texto">Pilas, medicamentos, aceites y productos químicos no deben mezclarse con residuos comunes ni verterse en drenajes. Busca orientación local para su manejo.</p>
+                            <span class="tarjeta-galeria__etiqueta"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Protección Laboral</span>
+                            <h3 class="tarjeta__titulo">Vidrio y punzocortantes</h3>
+                            <p class="tarjeta__texto">Vidrios rotos, latas con filo y bombillos deben empacarse dentro de cajas de cartón o garrafas plásticas rotuladas antes de entregarlos al camión.</p>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 4: Orgánicos y compost -->
+                    <article class="tarjeta">
+                        <img class="tarjeta__imagen" src="assets/ecologia/photo_2_2026-11-04_13-33-26.jpg" alt="Persona realizando labores de siembra y reforestación comunitaria" loading="lazy">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta-galeria__etiqueta"><i class="fa-solid fa-seedling" aria-hidden="true"></i> Residuos Orgánicos</span>
+                            <h3 class="tarjeta__titulo">Restos de cocina y compostaje</h3>
+                            <p class="tarjeta__texto">Conchas de frutas, verduras y café pueden convertirse en abono natural. Mantén los recipientes tapados para evitar moscas y malos olores.</p>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 5: Protección hídrica -->
+                    <article class="tarjeta">
+                        <img class="tarjeta__imagen" src="assets/ecologia/photo_3_2026-11-04_13-33-26.jpg" alt="Voluntarios saneando orillas de agua y retirando plásticos flotantes" loading="lazy">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta-galeria__etiqueta"><i class="fa-solid fa-water" aria-hidden="true"></i> Protección Hídrica</span>
+                            <h3 class="tarjeta__titulo">Cuidado de canales y drenajes</h3>
+                            <p class="tarjeta__texto">Nunca arrojes basura ni aguas servidas a canales pluviales. Su taponamiento provoca inundaciones barriales y contaminación costera en Cumaná.</p>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 6: Peligrosos y sanitarios -->
+                    <article class="tarjeta">
+                        <img class="tarjeta__imagen" src="assets/ecologia/photo_6_2026-11-04_13-33-26.jpg" alt="Equipo comunitario coordinando el retiro ordenado de materiales especiales" loading="lazy">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta-galeria__etiqueta"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Residuos Especiales</span>
+                            <h3 class="tarjeta__titulo">Pilas, químicos y medicinas</h3>
+                            <p class="tarjeta__texto">Baterías, aceites usados, bombillos fluorescentes y fármacos vencidos no deben ir a la basura común; entrégalos en puntos especiales o farmacias.</p>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section class="video-destacado" aria-labelledby="titulo-video-prevencion">
+        <!-- SECCIÓN 2: Protocolo especial de resguardo de punzocortantes -->
+        <section class="seccion seccion--suave" id="punzocortantes" aria-labelledby="titulo-punzocortantes">
+            <div class="contenedor">
+                <p class="antetitulo">Seguridad para los trabajadores del aseo</p>
+                <h2 class="seccion__titulo" id="titulo-punzocortantes">Protocolo de embalaje seguro para objetos punzocortantes</h2>
+                <p class="seccion__subtitulo">Los recolectores de basura manipulan cientos de bolsas al día. Un vidrio suelto o una lata filosa puede provocar heridas profundas, infecciones graves y tétanos.</p>
+
+                <div class="rejilla rejilla--3-columnas">
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-wine-bottle" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">1. Botellas y vidrios enteros</h3>
+                            <p class="tarjeta__texto">Colócalos separados en bolsas transparentes o cajas pequeñas cerradas. Si es posible, lávalos para eliminar azúcares que atraigan insectos.</p>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-box-tissue" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">2. Vidrio roto y cuchillas</h3>
+                            <p class="tarjeta__texto">Envuelve los trozos en varias capas de papel periódico, insértalos dentro de un envase plástico rígido (ej. botellón o caja de cartón gruesa) y séllalo con cinta adhesiva.</p>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta tarjeta-destacada">
+                        <div class="tarjeta__contenido">
+                            <span class="tarjeta__icono"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i></span>
+                            <h3 class="tarjeta__titulo">3. Rotula siempre la advertencia</h3>
+                            <p class="tarjeta__texto">Escribe en grande con marcador visible: <strong>«CUIDADO: VIDRIO ROTO / PUNZOCORTANTE»</strong>. Este simple aviso previene accidentes laborales.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="aviso" style="margin-top: 32px;">
+                    <p><strong>Recuerda:</strong> Jeringas y agujas médicas deben resguardarse en botellas plásticas con tapa rosca gruesa. Jamás las arrojes sueltas en bolsas plásticas comunes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: Video de recolección y acción comunitaria -->
+        <section class="video-destacado" id="video-recoleccion" aria-labelledby="titulo-video-prevencion">
             <picture>
                 <source srcset="assets/ecologia/photo_4_2026-11-04_13-33-26.jpg" media="(prefers-reduced-motion: reduce)">
-                <img class="video-destacado__medio" src="videos/portada-animada.webp" data-fallback-src="videos/portada-animada.gif" alt="" aria-hidden="true" width="960" height="540" loading="lazy" decoding="async">
+                <img class="video-destacado__medio" src="videos/comunidad-animada.webp" data-fallback-src="videos/comunidad-animada.gif" alt="Animación de recolección y limpieza comunitaria activa" width="960" height="540" loading="lazy" decoding="async">
             </picture>
             <div class="video-destacado__capa" aria-hidden="true"></div>
             <div class="contenedor video-destacado__contenido">
-                <p class="portada__antetitulo"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i> Nuestro entorno, nuestra responsabilidad</p>
-                <h2 class="video-destacado__titulo" id="titulo-video-prevencion">Prevenir también es cuidar la salud</h2>
-                <p class="video-destacado__texto">Una recolección ordenada ayuda a mantener calles, drenajes y espacios comunes en mejores condiciones higiénicas para todas las familias.</p>
+                <p class="portada__antetitulo"><i class="fa-solid fa-circle-play" aria-hidden="true"></i> Acción colectiva en video</p>
+                <h2 class="video-destacado__titulo" id="titulo-video-prevencion">La recolección ordenada transforma nuestro hábitat</h2>
+                <p class="video-destacado__texto">Observa cómo la coordinación vecinal, la separación en casa y el respeto a las rutas de aseo mantienen calles y canales despejados y seguros para todos.</p>
                 <div class="video-destacado__acciones">
-                    <a class="boton boton--claro" href="#salud">Conoce cómo prevenir riesgos <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                    <a class="boton boton--principal" href="#salud">Riesgos sanitarios y salud <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                    <a class="boton boton--claro" href="#visibilizar">Cómo documentar y reportar</a>
                 </div>
             </div>
         </section>

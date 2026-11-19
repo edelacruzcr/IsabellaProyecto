@@ -356,11 +356,10 @@ function inicializarReporteComunitario() {
 // Galería y carruseles
 /** Abre las imágenes de la galería en un diálogo y devuelve el foco al cerrarlo. */
 function inicializarVisorImagenes() {
-    // La galería se identifica por su título y el visor es un diálogo HTML.
-    const galeria = document.querySelector('[aria-labelledby="titulo-galeria"]');
+    // El visor es un diálogo HTML para ampliar evidencias fotográficas.
     const visor = document.getElementById("visor-imagen");
 
-    if (!galeria || !(visor instanceof HTMLDialogElement)) {
+    if (!(visor instanceof HTMLDialogElement)) {
         return;
     }
 
@@ -368,8 +367,8 @@ function inicializarVisorImagenes() {
     const descripcionVisor = visor.querySelector(".visor-imagen__descripcion");
     const botonCerrar = visor.querySelector(".visor-imagen__cerrar");
     
-    // Solo se habilitan las imágenes que pertenecen a esta galería.
-    const imagenes = galeria.querySelectorAll(".tarjeta__imagen");
+    // Se habilitan todas las imágenes de evidencias de la página (tarjetas, panorámicas, overlays y mosaicos).
+    const imagenes = document.querySelectorAll(".tarjeta__imagen, .foto-ampliable");
 
     // Se recuerda qué imagen abrió el diálogo para restaurar el foco al cerrarlo.
     let imagenActiva = null;
@@ -384,6 +383,10 @@ function inicializarVisorImagenes() {
         imagenVisor.src = imagen.src;
         imagenVisor.alt = imagen.alt;
         descripcionVisor.textContent = imagen.closest("figure")?.querySelector("h3")?.textContent
+            || imagen.closest(".tarjeta-panoramica")?.querySelector(".tarjeta-panoramica__titulo")?.textContent
+            || imagen.closest(".tarjeta-overlay")?.querySelector(".tarjeta-overlay__titulo")?.textContent
+            || imagen.closest(".tarjeta-alerta-sanitaria")?.querySelector(".tarjeta-alerta-sanitaria__titulo")?.textContent
+            || imagen.closest(".banner-comunitario")?.querySelector(".banner-comunitario__titulo")?.textContent
             || imagen.alt;
         visor.showModal();
         botonCerrar.focus();
