@@ -2137,3 +2137,13 @@ select {
         height: 220px;
     }
 }
+
+/* Cursor pointer en imágenes de todos los componentes ampliables */
+.tarjeta-panoramica__foto,
+.tarjeta-overlay__foto,
+.tarjeta-alerta-sanitaria__foto,
+.banner-comunitario__foto,
+.tarjeta-ecologica__foto,
+.foto-ampliable {
+    cursor: pointer;
+}

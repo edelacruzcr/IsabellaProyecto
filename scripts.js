@@ -355,6 +355,8 @@ function inicializarReporteComunitario() {
 
 // Galería y carruseles
 /** Abre las imágenes de la galería en un diálogo y devuelve el foco al cerrarlo. */
+// Galería y carruseles
+/** Abre las imágenes de la galería en un diálogo y devuelve el foco al cerrarlo. */
 function inicializarVisorImagenes() {
     // El visor es un diálogo HTML para ampliar evidencias fotográficas.
     const visor = document.getElementById("visor-imagen");
@@ -366,50 +368,87 @@ function inicializarVisorImagenes() {
     const imagenVisor = visor.querySelector(".visor-imagen__foto");
     const descripcionVisor = visor.querySelector(".visor-imagen__descripcion");
     const botonCerrar = visor.querySelector(".visor-imagen__cerrar");
-    
-    // Se habilitan todas las imágenes de evidencias de la página (tarjetas, panorámicas, overlays y mosaicos).
-    const imagenes = document.querySelectorAll(".tarjeta__imagen, .foto-ampliable");
-
-    // Se recuerda qué imagen abrió el diálogo para restaurar el foco al cerrarlo.
-    let imagenActiva = null;
 
     if (!imagenVisor || !descripcionVisor || !botonCerrar) {
         return;
     }
 
-    function abrirVisor(imagen) {
-        imagenActiva = imagen;
-        // Copia la imagen y su descripción al contenido ampliado del diálogo.
-        imagenVisor.src = imagen.src;
-        imagenVisor.alt = imagen.alt;
-        descripcionVisor.textContent = imagen.closest("figure")?.querySelector("h3")?.textContent
+    // Se recuerda qué elemento disparó el diálogo para restaurar el foco al cerrarlo.
+    let elementoActivo = null;
+
+    /**
+     * Extrae la <img> de un contenedor compuesto (tarjeta-overlay, panoramica…)
+     * o devuelve el propio elemento si ya es una <img>.
+     */
+    function obtenerImagen(elemento) {
+        if (elemento.tagName === "IMG") return elemento;
+        return elemento.querySelector("img");
+    }
+
+    function obtenerTitulo(imagen) {
+        return imagen.closest("figure")?.querySelector("h3")?.textContent
             || imagen.closest(".tarjeta-panoramica")?.querySelector(".tarjeta-panoramica__titulo")?.textContent
             || imagen.closest(".tarjeta-overlay")?.querySelector(".tarjeta-overlay__titulo")?.textContent
             || imagen.closest(".tarjeta-alerta-sanitaria")?.querySelector(".tarjeta-alerta-sanitaria__titulo")?.textContent
             || imagen.closest(".banner-comunitario")?.querySelector(".banner-comunitario__titulo")?.textContent
+            || imagen.closest(".tarjeta")?.querySelector("h3")?.textContent
             || imagen.alt;
+    }
+
+    function abrirVisor(elemento) {
+        const imagen = obtenerImagen(elemento);
+        if (!imagen || !imagen.src) return;
+        elementoActivo = elemento;
+        // Copia la imagen y su descripción al contenido ampliado del diálogo.
+        imagenVisor.src = imagen.src;
+        imagenVisor.alt = imagen.alt;
+        descripcionVisor.textContent = obtenerTitulo(imagen);
         visor.showModal();
         botonCerrar.focus();
     }
 
-    imagenes.forEach(function (imagen) {
-        // Hace que cada imagen se pueda usar como botón con ratón o teclado.
-        imagen.tabIndex = 0;
-        imagen.setAttribute("role", "button");
-        imagen.setAttribute("aria-haspopup", "dialog");
-        imagen.setAttribute("aria-label", "Ampliar imagen: " + imagen.alt);
-
-        imagen.addEventListener("click", function () {
-            abrirVisor(imagen);
-        });
-
-        imagen.addEventListener("keydown", function (evento) {
-            // Enter y Espacio activan la imagen igual que un clic.
+    /**
+     * Registra el listener de clic en un elemento, haciéndolo navegable por teclado.
+     */
+    function habilitarElemento(elemento) {
+        elemento.tabIndex = 0;
+        elemento.setAttribute("role", "button");
+        elemento.setAttribute("aria-haspopup", "dialog");
+        elemento.addEventListener("click", function () { abrirVisor(elemento); });
+        elemento.addEventListener("keydown", function (evento) {
+            // Enter y Espacio activan el elemento igual que un clic.
             if (evento.key === "Enter" || evento.key === " ") {
                 evento.preventDefault();
-                abrirVisor(imagen);
+                abrirVisor(elemento);
             }
         });
+    }
+
+    // Componentes con capas CSS encima: el degradado/overlay intercepta el clic.
+    // Se registra el listener en el contenedor que contiene directamente la imagen.
+    const contenedoresCompuestos = document.querySelectorAll([
+        ".tarjeta-overlay",                      // article completo: foto + degradado + contenido superpuesto
+        ".tarjeta-alerta-sanitaria__multimedia", // div con la foto; el texto está fuera
+        ".banner-comunitario__multimedia",       // div con la foto; el texto está fuera
+        ".tarjeta-panoramica__multimedia"        // div con la foto; el texto está fuera
+    ].join(", "));
+    contenedoresCompuestos.forEach(habilitarElemento);
+
+    // Imágenes simples donde no hay capas intermedias que bloqueen el clic.
+    const imagenesSimples = document.querySelectorAll([
+        ".tarjeta__imagen",
+        ".foto-ampliable",
+        ".tarjeta-ecologica__foto"
+    ].join(", "));
+    imagenesSimples.forEach(function (img) {
+        // Evitar duplicar si ya está cubierta por un contenedor compuesto registrado.
+        const yaRegistrada = img.closest([
+            ".tarjeta-overlay",
+            ".tarjeta-alerta-sanitaria__multimedia",
+            ".banner-comunitario__multimedia",
+            ".tarjeta-panoramica__multimedia"
+        ].join(", "));
+        if (!yaRegistrada) habilitarElemento(img);
     });
 
     botonCerrar.addEventListener("click", function () {
@@ -424,12 +463,13 @@ function inicializarVisorImagenes() {
     });
 
     visor.addEventListener("close", function () {
-        // Devuelve el foco a la imagen que abrió el diálogo y limpia la vista.
-        imagenActiva?.focus();
-        imagenActiva = null;
+        // Devuelve el foco al elemento que abrió el diálogo y limpia la vista.
+        if (elementoActivo) elementoActivo.focus();
+        elementoActivo = null;
         imagenVisor.removeAttribute("src");
     });
 }
+
 
 /** Inicializa los controles, indicadores, avance automático y gestos de los carruseles. */
 function inicializarCarruselesSumergidos() {
